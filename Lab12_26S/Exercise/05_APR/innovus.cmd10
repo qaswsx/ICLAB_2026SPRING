@@ -1,0 +1,253 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Thu May 28 15:24:31 2026                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v20.15-s105_1 (64bit) 07/27/2021 14:15 (Linux 2.6.32-431.11.2.el6.x86_64)
+#@(#)CDS: NanoRoute 20.15-s105_1 NR210726-1341/20_15-UB (database version 18.20.554) {superthreading v2.14}
+#@(#)CDS: AAE 20.15-s020 (64bit) 07/27/2021 (Linux 2.6.32-431.11.2.el6.x86_64)
+#@(#)CDS: CTE 20.15-s024_1 () Jul 23 2021 04:46:45 ( )
+#@(#)CDS: SYNTECH 20.15-s012_1 () Jul 12 2021 23:29:38 ( )
+#@(#)CDS: CPE v20.15-s071
+#@(#)CDS: IQuantus/TQuantus 20.1.1-s460 (64bit) Fri Mar 5 18:46:16 PST 2021 (Linux 2.6.32-431.11.2.el6.x86_64)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+getVersion
+win
+encMessage warning 0
+encMessage debug 0
+encMessage info 0
+is_common_ui_mode
+restoreDesign /RAID2/COURSE/2026_Spring/iclab/iclab062/Lab12_26S/Exercise/05_APR/DBS/CHIP.inn.dat CHIP
+setDrawView fplan
+encMessage warning 1
+encMessage debug 0
+encMessage info 1
+set_power_analysis_mode -reset
+set_power_analysis_mode -method static -corner max -create_binary_db true -write_static_currents true -honor_negative_energy true -ignore_control_signals true
+set_power_output_dir -reset
+set_power_output_dir power_log
+set_default_switching_activity -reset
+set_default_switching_activity -input_activity 0.2 -period 10.0
+read_activity_file -reset
+read_activity_file -format FSDB -fsdb_scope TESTBED/u_CHIP -start {} -end {} -fsdb_block {} ../06_POST/CHIP.fsdb
+set_power -reset
+set_powerup_analysis -reset
+set_dynamic_power_simulation -reset
+report_power -rail_analysis_format VS -outfile power_log/CHIP.rpt
+set_pg_library_mode -celltype techonly -default_area_cap 0.5 -filler_cells {FILL1 FILL16 FILL2 FILL32 FILL4 FILL64 FILL8} -extraction_tech_file RC/icecaps.tch -lef_layermap layermap/lefdef.layermap.libgen -power_pins {VCC 1.8} -ground_pins GND
+generate_pg_library -output power_log
+set_pg_library_mode -celltype stdcells -filler_cells {FILL1 FILL16 FILL2 FILL32 FILL4 FILL64 FILL8} -extraction_tech_file RC/icecaps.tch -lef_layermap layermap/lefdef.layermap.libgen -power_pins {VCC 1.8} -ground_pins GND -current_distribution propagation
+set_rail_analysis_mode -method static -power_switch_eco false -accuracy xd -power_grid_library {power_log/techonly.cl power_log/stdcells.cl} -process_techgen_em_rules false -enable_rlrp_analysis false -vsrc_search_distance 50 -ignore_shorts false -enable_manufacturing_effects false -report_via_current_direction false
+setDrawView place
+create_power_pads -net VCC -auto_fetch
+setDrawView place
+create_power_pads -net VCC -vsrc_file power_log/CHIP_VCC.pp
+setDrawView place
+create_power_pads -net GND -auto_fetch
+setDrawView place
+create_power_pads -net GND -vsrc_file power_log/CHIP_GND.pp
+set_pg_nets -net VCC -voltage 1.8 -threshold 1.7
+set_pg_nets -net GND -voltage 0 -threshold 0.1
+set_rail_analysis_domain -name PD -pwrnets { VCC} -gndnets { GND}
+set_power_data -reset
+set_power_data -format current -scale 1 {power_log/static_VCC.ptiavg power_log/static_GND.ptiavg}
+set_power_pads -reset
+set_power_pads -net VCC -format xy -file power_log/CHIP_VCC.pp
+set_power_pads -net GND -format xy -file power_log/CHIP_GND.pp
+set_package -reset
+set_package -spice {} -mapping {}
+set_net_group -reset
+set_advanced_rail_options -reset
+analyze_rail -type domain -results_directory power_log PD
+setLayerPreference powerNet -color {#0000FF #0010DE #0020BD #00319C #00417B #00525A #006239 #007318 #088300 #299400 #4AA400 #6AB400 #8BC500 #ACD500 #CDE600 #EEF600 #FFF900 #FFED00 #FFE200 #FFD600 #FFCB00 #FFBF00 #FFB400 #FFA800 #FF9500 #FF8000 #FF6A00 #FF5500 #FF4000 #FF2A00 #FF1500 #FF0000}
+set_power_rail_display -plot none
+setLayerPreference powerNet -color {#0000ff #0010de #0020bd #00319c #00417b #00525a #006239 #007318 #088300 #299400 #4aa400 #6ab400 #8bc500 #acd500 #cde600 #eef600 #fff900 #ffed00 #ffe200 #ffd600 #ffcb00 #ffbf00 #ffb400 #ffa800 #ff9500 #ff8000 #ff6a00 #ff5500 #ff4000 #ff2a00 #ff1500 #ff0000}
+set_power_rail_display -enable_voltage_sources 0
+set_power_rail_display -enable_percentage_range 0
+fit
+::read_power_rail_results -power_db power_log/power_1.db -rail_directory power_log/PD_25C_avg_2 -instance_voltage_window { timing  whole  } -instance_voltage_method {  worst  best  avg  worstavg worstslidingavg bestslidingavg }
+set_power_rail_display -plot none
+setLayerPreference powerNet -color {#0000ff #0010de #0020bd #00319c #00417b #00525a #006239 #007318 #088300 #299400 #4aa400 #6ab400 #8bc500 #acd500 #cde600 #eef600 #fff900 #ffed00 #ffe200 #ffd600 #ffcb00 #ffbf00 #ffb400 #ffa800 #ff9500 #ff8000 #ff6a00 #ff5500 #ff4000 #ff2a00 #ff1500 #ff0000}
+set_power_rail_display -plot ir
+setLayerPreference powerNet -color {#0000ff #0010de #0020bd #00319c #00417b #00525a #006239 #007318 #088300 #299400 #4aa400 #6ab400 #8bc500 #acd500 #cde600 #eef600 #fff900 #ffed00 #ffe200 #ffd600 #ffcb00 #ffbf00 #ffb400 #ffa800 #ff9500 #ff8000 #ff6a00 #ff5500 #ff4000 #ff2a00 #ff1500 #ff0000}
+set_power_rail_display -enable_result_browser 1
+set_power_rail_display -enable_result_browser 0
+zoomIn
+zoomIn
+zoomIn
+zoomIn
+zoomOut
+zoomOut
+zoomOut
+zoomOut
+zoomOut
+zoomOut
+fit
+setLayerPreference violation -isVisible 1
+violationBrowser -all -no_display_false -displayByLayer
+violationBrowserClose
+setDrawView fplan
+setDrawView place
+setDrawView ameba
+setDrawView place
+set_power_rail_display -enable_result_browser 1
+set_power_rail_display -enable_result_browser 0
+uiSetTool ruler
+zoomBox -476.00600 954.39900 2310.95800 2566.78800
+zoomBox -374.17100 1079.95700 1994.74900 2450.48800
+zoomBox -43.12200 1346.25600 1007.98200 1954.36900
+zoomBox 129.25800 1471.29300 595.64000 1741.11700
+zoomBox 205.74500 1526.77200 412.68200 1646.49500
+zoomBox 232.52900 1543.78100 382.04200 1630.28100
+zoomBox 220.20400 1535.96600 396.10200 1637.73100
+zoomBox 155.72600 1492.78400 442.14700 1658.49200
+zoomBox 124.55300 1459.36200 520.98500 1688.71600
+zoomBox 145.01000 1513.52100 351.95100 1633.24600
+zoomBox 151.48800 1530.01400 301.00200 1616.51500
+zoomBox 144.33500 1504.39900 387.79500 1645.25200
+zoomBox 139.25400 1461.13000 535.68700 1690.48500
+zoomBox 141.05300 1503.89900 384.51300 1644.75200
+zoomBox 142.35200 1530.16400 291.86800 1616.66600
+zoomBox 142.53800 1536.43400 269.62700 1609.96100
+uiSetTool ruler
+uiSetTool select
+selectWire 154.1400 155.4000 163.1400 3149.5000 2 VCC
+deselectAll
+selectWire 181.9800 164.6800 190.9800 3140.2200 2 GND
+setLayerPreference metal3 -isVisible 0
+setLayerPreference metal3 -isVisible 1
+setLayerPreference via2 -isVisible 0
+setLayerPreference via2 -isVisible 1
+deselectAll
+selectObject Resistor R21857
+deselectAll
+selectObject Resistor R21858
+setLayerPreference node_overlay -isVisible 1
+setLayerPreference congestH -color {#000066 #0000c9 #0053ff #00fcfa #00a953 #53a900 #f9fc00 #ff5300 #ff5858 #ffffff}
+setLayerPreference congestV -color {#000066 #0000c9 #0053ff #00fcfa #00a953 #53a900 #f9fc00 #ff5300 #ff5858 #ffffff}
+setLayerPreference node_overlay -isVisible 0
+fit
+zoomBox -1206.16900 504.07100 3233.16600 2735.75100
+zoomBox -565.62100 969.80800 1751.74000 2134.75900
+zoomBox -150.12200 1244.99800 878.10500 1761.89400
+zoomBox 28.38900 1367.78900 484.62000 1597.13900
+zoomBox 91.37300 1422.60300 329.52900 1542.32500
+zoomBox 109.77200 1440.00800 281.84100 1526.50800
+setLayerPreference blkLink -isVisible 0
+deselectAll
+setLayerPreference blkLink -isVisible 1
+setLayerPreference macroOnly -isVisible 0
+setLayerPreference macroOnly -isVisible 1
+uiSetTool ruler
+uiSetTool select
+selectWire 154.1400 155.4000 163.1400 3149.5000 2 VCC
+deselectAll
+selectWire 154.1400 155.4000 163.1400 3149.5000 2 VCC
+uiSetTool ruler
+uiSetTool select
+zoomBox 53.85800 1369.04800 441.66100 1563.99900
+zoomBox -18.15000 1289.71100 613.32300 1607.15600
+zoomBox 85.77800 1403.77700 365.96600 1544.62900
+zoomBox 131.89100 1454.38900 256.21200 1516.88600
+zoomBox 118.65300 1439.57300 290.72600 1526.07500
+setLayerPreference substrateNoise -isVisible 1
+setLayerPreference netRect -isVisible 1
+setLayerPreference metal1 -isVisible 0
+setLayerPreference metal1 -isVisible 1
+setLayerPreference metal1 -isVisible 0
+setLayerPreference via -isVisible 0
+setLayerPreference metal2 -isVisible 0
+setLayerPreference via2 -isVisible 0
+setLayerPreference metal3 -isVisible 0
+setLayerPreference via3 -isVisible 0
+setLayerPreference metal4 -isVisible 0
+setLayerPreference via4 -isVisible 0
+setLayerPreference metal5 -isVisible 0
+setLayerPreference via5 -isVisible 0
+setLayerPreference metal6 -isVisible 0
+setLayerPreference node_bump -isVisible 0
+setLayerPreference node_layer -isVisible 1
+setLayerPreference node_net -isVisible 0
+setLayerPreference node_net -isVisible 1
+setLayerPreference node_route -isVisible 0
+setLayerPreference node_route -isVisible 1
+setLayerPreference node_power -isVisible 0
+setLayerPreference node_power -isVisible 1
+setLayerPreference node_power -isVisible 0
+setLayerPreference node_power -isVisible 1
+setLayerPreference node_power -isVisible 0
+setLayerPreference node_power -isVisible 1
+zoomBox 96.30600 1411.87600 376.49900 1552.73100
+zoomBox 13.07400 1355.68600 644.56300 1673.13900
+zoomBox 82.22800 1381.46000 411.87000 1547.17300
+zoomBox 129.26500 1398.98900 253.59200 1461.48900
+zoomBox 145.10900 1404.89400 200.27500 1432.62600
+zoomBox 137.16600 1401.93400 226.99600 1447.09200
+deselectAll
+uiSetTool ruler
+zoomBox 118.19200 1391.95500 264.46700 1465.48800
+zoomBox 109.51500 1387.39100 281.60300 1473.90100
+zoomBox 125.60500 1397.49300 231.29100 1450.62200
+zoomBox 138.54500 1405.26800 193.71400 1433.00200
+zoomBox 145.55300 1409.35900 174.35300 1423.83700
+zoomBox 149.40900 1411.49500 164.44400 1419.05300
+zoomBox 151.42000 1412.60900 159.27200 1416.55600
+zoomBox 152.53400 1413.17300 157.35600 1415.59700
+zoomBox 150.30300 1412.05000 161.17600 1417.51600
+zoomBox 143.65800 1408.74300 172.49100 1423.23800
+zoomBox 146.59800 1409.53300 171.10700 1421.85400
+zoomBox 131.59100 1402.40000 186.83100 1430.16900
+zoomBox 106.65500 1390.80900 212.47800 1444.00700
+zoomBox 61.92900 1377.50900 234.24600 1464.13400
+zoomBox 21.73200 1362.98200 260.23400 1482.87800
+zoomBox -3.85500 1353.74400 276.73500 1494.79800
+zoomBox -33.95800 1342.87600 296.14800 1508.82200
+zoomBox -121.31400 1314.97200 335.58000 1544.65500
+zoomBox -236.47000 1257.91800 395.91000 1575.81900
+zoomOut
+fit
+zoomBox -1370.69800 290.77800 3852.04600 2916.28300
+zoomBox -562.20100 1194.63700 2164.10600 2565.16800
+zoomBox -168.04300 1686.50300 1255.10800 2401.92900
+zoomBox -1.94200 1893.88200 872.05100 2333.24300
+zoomBox 50.70700 1980.51000 682.16700 2297.94900
+zoomBox 93.69700 2043.41500 549.92700 2272.76500
+zoomBox 124.75600 2088.86400 454.38400 2254.57000
+uiSetTool ruler
+zoomBox 143.23100 2151.58500 315.30000 2238.08500
+zoomBox 154.45400 2189.68800 230.80300 2228.06900
+zoomBox 157.59000 2201.52200 204.47800 2225.09300
+zoomBox 159.98600 2210.53700 184.46500 2222.84300
+zoomBox 161.45100 2216.00700 172.31300 2221.46700
+zoomBox 160.57000 2212.41700 181.38100 2222.87900
+zoomBox 160.25100 2209.54200 189.05700 2224.02300
+zoomBox 160.04200 2207.71400 193.93300 2224.75100
+zoomBox 159.45400 2200.06500 214.64100 2227.80800
+zoomBox 158.07700 2192.21400 234.46000 2230.61200
+zoomBox 156.17200 2181.34700 261.89200 2234.49300
+zoomBox 154.70200 2174.51500 279.07900 2237.04000
+zoomBox 148.59200 2145.89600 351.12000 2247.70800
+zoomBox 151.03500 2174.28000 275.41300 2236.80600
+zoomBox 152.11200 2186.81500 241.97800 2231.99100
+zoomBox 153.67400 2204.97000 193.54800 2225.01500
+zoomBox 153.83300 2210.55800 178.32300 2222.86900
+zoomBox 153.87000 2211.89100 174.68700 2222.35600
+zoomBox 154.00000 2216.59900 161.85300 2220.54700
+zoomBox 153.95100 2216.08000 163.19000 2220.72500
+zoomBox 153.89200 2215.47000 164.76300 2220.93500
+zoomBox 153.96200 2216.72500 161.81700 2220.67400
+zoomBox 153.16200 2215.00500 165.95300 2221.43500
+zoomBox 152.79500 2214.21900 167.84400 2221.78400
+zoomBox 146.21800 2208.29900 180.13600 2225.35000
+zoomBox 127.62800 2194.58800 204.07400 2233.01800
+zoomBox 70.85800 2163.27400 243.15100 2249.88700
+zoomBox -44.03100 2112.42300 286.03300 2278.34800
+zoomBox -314.82800 2017.00800 317.47500 2334.87000
+zoomOut
+zoomBox -333.75300 1957.03600 656.44600 2454.81500
+zoomBox -43.73000 2082.26500 473.16100 2342.10900
+zoomBox 73.31300 2120.47400 446.76800 2308.21200

@@ -1,0 +1,261 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Fri May 29 17:50:14 2026                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v20.15-s105_1 (64bit) 07/27/2021 14:15 (Linux 2.6.32-431.11.2.el6.x86_64)
+#@(#)CDS: NanoRoute 20.15-s105_1 NR210726-1341/20_15-UB (database version 18.20.554) {superthreading v2.14}
+#@(#)CDS: AAE 20.15-s020 (64bit) 07/27/2021 (Linux 2.6.32-431.11.2.el6.x86_64)
+#@(#)CDS: CTE 20.15-s024_1 () Jul 23 2021 04:46:45 ( )
+#@(#)CDS: SYNTECH 20.15-s012_1 () Jul 12 2021 23:29:38 ( )
+#@(#)CDS: CPE v20.15-s071
+#@(#)CDS: IQuantus/TQuantus 20.1.1-s460 (64bit) Fri Mar 5 18:46:16 PST 2021 (Linux 2.6.32-431.11.2.el6.x86_64)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+getVersion
+win
+set init_design_uniquify 1
+setDesignMode -process 180
+suppressMessage TECHLIB 1318
+suppressMessage ENCEXT-2799
+encMessage warning 0
+encMessage debug 0
+encMessage info 0
+is_common_ui_mode
+restoreDesign /RAID2/COURSE/2026_Spring/iclab/iclab062/Lab12_26S/Exercise/05_APR/CHIP_floorplan.inn.dat CHIP
+setDrawView fplan
+encMessage warning 1
+encMessage debug 0
+encMessage info 1
+getIoFlowFlag
+setIoFlowFlag 0
+floorPlan -site core_5040 -r 0.979223619464 0.542895 200 200 200 200
+uiSetTool select
+getIoFlowFlag
+fit
+uiSetTool move
+selectInst CORE/u_v_sram_SRAM2
+setObjFPlanBox Instance CORE/u_v_sram_SRAM2 807.148 397.69 1022.748 2296.75
+saveDesign DBS/CHIP_floorplan.inn
+saveDesign CHIP_floorplan.inn
+clearGlobalNets
+globalNetConnect VCC -type pgpin -pin VCC -instanceBasename *
+globalNetConnect VCC -type net -net VCC
+globalNetConnect VCC -type tiehi -pin VCC -instanceBasename *
+globalNetConnect GND -type pgpin -pin GND -instanceBasename *
+globalNetConnect GND -type net -net GND
+globalNetConnect GND -type tielo -pin GND -instanceBasename *
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+addRing -nets {GND VCC} -type core_rings -follow core -layer {top metal3 bottom metal3 left metal2 right metal2} -width {top 9 bottom 9 left 9 right 9} -spacing {top 0.28 bottom 0.28 left 0.28 right 0.28} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 1 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None -use_wire_group 1 -use_wire_group_bits 12 -use_interleaving_wire_group 1
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+addRing -nets {GND VCC} -type block_rings -around each_block -layer {top metal3 bottom metal3 left metal2 right metal2} -width {top 2 bottom 2 left 2 right 2} -spacing {top 0.28 bottom 0.28 left 0.28 right 0.28} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+setSrouteMode -viaConnectToShape { ring blockring }
+sroute -connect { blockPin padPin } -layerChangeRange { metal1(1) metal6(6) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -allowJogging 1 -crossoverViaLayerRange { metal1(1) metal6(6) } -nets { GND VCC } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { metal1(1) metal6(6) }
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+addStripe -nets {GND VCC} -layer metal2 -direction vertical -width 4 -spacing 0.28 -set_to_set_distance 80 -start_from left -start_offset 50 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit metal6 -padcore_ring_bottom_layer_limit metal1 -block_ring_top_layer_limit metal6 -block_ring_bottom_layer_limit metal1 -use_wire_group 0 -snap_wire_center_to_grid None
+setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+addStripe -nets {GND VCC} -layer metal3 -direction horizontal -width 4 -spacing 0.28 -set_to_set_distance 80 -start_from bottom -start_offset 50 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit metal6 -padcore_ring_bottom_layer_limit metal1 -block_ring_top_layer_limit metal6 -block_ring_bottom_layer_limit metal1 -use_wire_group 0 -snap_wire_center_to_grid None
+setSrouteMode -viaConnectToShape { ring stripe blockring }
+sroute -connect { corePin } -layerChangeRange { metal1(1) metal6(6) } -blockPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -allowJogging 1 -crossoverViaLayerRange { metal1(1) metal6(6) } -nets { GND VCC } -allowLayerChange 1 -targetViaLayerRange { metal1(1) metal6(6) }
+getMultiCpuUsage -localCpu
+get_verify_drc_mode -disable_rules -quiet
+get_verify_drc_mode -quiet -area
+get_verify_drc_mode -quiet -layer_range
+get_verify_drc_mode -check_ndr_spacing -quiet
+get_verify_drc_mode -check_only -quiet
+get_verify_drc_mode -check_same_via_cell -quiet
+get_verify_drc_mode -exclude_pg_net -quiet
+get_verify_drc_mode -ignore_trial_route -quiet
+get_verify_drc_mode -max_wrong_way_halo -quiet
+get_verify_drc_mode -use_min_spacing_on_block_obs -quiet
+get_verify_drc_mode -limit -quiet
+set_verify_drc_mode -disable_rules {} -check_ndr_spacing auto -check_only default -check_same_via_cell false -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report CHIP.drc.rpt -limit 1000
+verify_drc
+set_verify_drc_mode -area {0 0 0 0}
+verifyConnectivity -net {GND VCC} -type special -error 1000 -warning 50
+saveDesign ./DBS/CHIP_powerplan.inn
+zoomBox -1072.40500 139.59000 3935.65400 2657.17100
+zoomBox 279.17500 910.28400 2893.41300 2224.47700
+zoomBox 687.48700 1147.15800 2576.27300 2096.66200
+zoomBox 1096.82500 1385.13500 2256.77700 1968.25000
+zoomBox 1192.55700 1440.16800 2178.51700 1935.81600
+zoomBox 1400.64200 1560.50400 2006.14700 1864.89500
+zoomBox 1492.38500 1613.65100 1929.86200 1833.57300
+uiSetTool select
+deselectAll
+selectWire 1731.0800 1751.0400 2611.8800 1755.0400 3 GND
+editTrim
+zoomBox 1346.76300 1534.64100 2059.12000 1892.74700
+zoomBox 1256.94600 1494.28400 2242.90700 1989.93200
+zoomBox 1141.74100 1446.86900 2506.39300 2132.88800
+zoomBox 996.75900 1403.71500 2885.55100 2353.22200
+zoomBox 796.09100 1344.38700 3410.33900 2658.58500
+fit
+zoomBox -1145.21100 80.06900 3862.84800 2597.65000
+zoomBox -170.70600 554.18400 2904.86900 2100.29400
+zoomBox 435.17600 860.33600 2323.96500 1809.84100
+zoomBox 971.59400 1131.38800 1809.66100 1552.68900
+zoomBox 1089.65800 1193.00300 1695.16200 1497.39300
+zoomBox 1172.91400 1238.77300 1610.39100 1458.69500
+zoomBox 1228.24800 1268.41100 1544.32600 1427.30500
+zoomBox 1283.10700 1298.33300 1477.22000 1395.91500
+zoomBox 1306.10300 1311.15900 1446.35200 1381.66300
+zoomBox 1340.89300 1330.11200 1403.12500 1361.39600
+zoomBox 1344.98400 1332.36800 1397.88200 1358.96000
+zoomBox 1351.45000 1335.91500 1389.67100 1355.12900
+zoomBox 1356.32900 1338.57500 1383.94400 1352.45700
+zoomBox 1359.80300 1340.80500 1379.75600 1350.83500
+deselectAll
+selectInst CORE/u_k_sram_SRAM2
+editTrim
+uiSetTool move
+editTrim
+uiSetTool select
+fit
+zoomBox -650.36500 59.50000 2967.95900 1878.45300
+zoomBox 138.20000 234.90900 1743.67100 1041.98900
+zoomBox 318.22800 274.02200 1478.18100 857.13700
+zoomBox 547.86800 324.23700 1153.37200 628.62700
+zoomBox 617.88800 344.54500 1055.36500 564.46700
+zoomBox 668.41000 359.21800 984.48700 518.11200
+zoomBox 718.86800 372.81800 912.98000 470.39900
+zoomBox 740.82900 378.38900 881.07500 448.89100
+deselectAll
+selectWire 125.4200 391.0400 798.8200 395.0400 3 GND
+editTrim
+deselectAll
+selectWire 794.6600 341.4900 798.6600 2351.5500 2 VCC
+editTrim
+zoomBox 726.44500 362.06600 920.55600 459.64700
+zoomBox 700.32600 319.83000 1016.40400 478.72400
+fit
+zoomBox -524.31000 -7.80300 3732.54000 2132.14100
+zoomBox 506.89000 120.60200 3121.12900 1434.79600
+zoomBox 1291.35600 218.28300 2656.00900 904.30200
+zoomBox 1685.17400 280.83900 2397.53500 638.94700
+zoomBox 1797.38700 299.73900 2312.06800 558.47200
+zoomBox 1873.39300 312.02700 2245.25100 498.96200
+zoomBox 1928.18300 319.90700 2196.85100 454.96800
+deselectAll
+selectWire 2074.6600 341.4900 2078.6600 407.6100 2 VCC
+editTrim
+getMultiCpuUsage -localCpu
+get_verify_drc_mode -disable_rules -quiet
+get_verify_drc_mode -quiet -area
+get_verify_drc_mode -quiet -layer_range
+get_verify_drc_mode -check_ndr_spacing -quiet
+get_verify_drc_mode -check_only -quiet
+get_verify_drc_mode -check_same_via_cell -quiet
+get_verify_drc_mode -exclude_pg_net -quiet
+get_verify_drc_mode -ignore_trial_route -quiet
+get_verify_drc_mode -max_wrong_way_halo -quiet
+get_verify_drc_mode -use_min_spacing_on_block_obs -quiet
+get_verify_drc_mode -limit -quiet
+set_verify_drc_mode -disable_rules {} -check_ndr_spacing auto -check_only default -check_same_via_cell false -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report CHIP.drc.rpt -limit 1000
+verify_drc
+set_verify_drc_mode -area {0 0 0 0}
+fixVia -short
+get_verify_drc_mode -disable_rules -quiet
+get_verify_drc_mode -quiet -area
+get_verify_drc_mode -quiet -layer_range
+get_verify_drc_mode -check_ndr_spacing -quiet
+get_verify_drc_mode -check_only -quiet
+get_verify_drc_mode -check_same_via_cell -quiet
+get_verify_drc_mode -exclude_pg_net -quiet
+get_verify_drc_mode -ignore_trial_route -quiet
+get_verify_drc_mode -max_wrong_way_halo -quiet
+get_verify_drc_mode -use_min_spacing_on_block_obs -quiet
+get_verify_drc_mode -limit -quiet
+set_verify_drc_mode -disable_rules {} -check_ndr_spacing auto -check_only default -check_same_via_cell false -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report CHIP.drc.rpt -limit 1000
+verify_drc
+set_verify_drc_mode -area {0 0 0 0}
+setLayerPreference metal4 -isVisible 0
+setLayerPreference via3 -isVisible 0
+setLayerPreference via -isVisible 0
+setLayerPreference metal1 -isVisible 0
+setLayerPreference via4 -isVisible 0
+setLayerPreference metal5 -isVisible 0
+setLayerPreference via5 -isVisible 0
+setLayerPreference metal6 -isVisible 0
+fit
+zoomBox -582.31600 -0.92100 3674.53400 2139.02300
+zoomBox 443.94600 124.52200 3058.18400 1438.71500
+zoomBox 1222.52400 219.95100 2587.17300 905.96800
+zoomBox 1458.20800 248.87000 2444.16800 744.51800
+zoomBox 1802.44600 290.09600 2239.92200 510.01800
+zoomBox 1908.42200 302.78500 2177.08800 437.84500
+zoomBox 1955.31600 309.91300 2149.42700 407.49400
+zoomBox 1989.00500 315.74300 2129.25100 386.24500
+zoomBox 2022.68500 322.21800 2108.81400 365.51600
+deselectAll
+selectMarker 0.0000 0.0000 2737.3000 2692.6000 -1 3 7
+verifyConnectivity -net {GND VCC} -type special -error 1000 -warning 50
+fit
+zoomBox -1131.92500 85.38400 3876.13400 2602.96500
+zoomBox -158.13000 566.47100 2917.44500 2112.58100
+zoomBox 439.90200 861.91800 2328.69000 1811.42300
+zoomBox 807.16800 1043.36000 1967.12100 1626.47500
+zoomBox 894.84400 1086.67500 1880.80500 1582.32300
+zoomBox 1086.55900 1181.38900 1692.06300 1485.77900
+zoomBox 707.66800 987.37800 2072.32300 1673.39800
+zoomBox 279.71100 768.24400 2501.82600 1885.31400
+zoomBox -146.25800 550.12600 2929.33500 2096.24500
+zoomBox -1551.85800 -169.60900 4340.01600 2792.27100
+zoomBox -2681.30200 -747.93900 5473.54200 3351.55000

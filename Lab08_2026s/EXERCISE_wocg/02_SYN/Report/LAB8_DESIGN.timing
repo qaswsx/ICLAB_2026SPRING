@@ -1,0 +1,294 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 3
+Design : LAB8_DESIGN
+Version: T-2022.03
+Date   : Mon May  4 00:11:00 2026
+****************************************
+
+Operating Conditions: WCCOM   Library: fsa0m_a_generic_core_ss1p62v125c
+Wire Load Model Mode: enclosed
+
+  Startpoint: cnt_reg[0] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: B_flat_reg[7][9]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  LAB8_DESIGN        enG30K                fsa0m_a_generic_core_ss1p62v125c
+  DIV_8_BY_4         enG5K                 fsa0m_a_generic_core_ss1p62v125c
+  MULT_4X8_0         enG5K                 fsa0m_a_generic_core_ss1p62v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  cnt_reg[0]/CK (QDFFRBT)                  0.00       0.00 r
+  cnt_reg[0]/Q (QDFFRBT)                   0.60       0.60 r
+  U4166/O (INV6CK)                         0.18       0.77 f
+  U4169/O (NR2T)                           0.16       0.93 r
+  U3157/O (INV3)                           0.08       1.02 f
+  U3172/O (INV6)                           0.27       1.29 r
+  U6181/O (AOI22S)                         0.19       1.48 f
+  U6182/O (ND2S)                           0.21       1.69 r
+  U6186/O (AOI22S)                         0.16       1.84 f
+  U4105/O (ND3S)                           0.23       2.07 r
+  U6187/O (OR2T)                           0.31       2.38 r
+  u_single_div/den[0] (DIV_8_BY_4)         0.00       2.38 r
+  u_single_div/U25/O (INV3)                0.18       2.56 f
+  u_single_div/U38/O (NR2T)                0.16       2.72 r
+  u_single_div/U39/O (OAI12HS)             0.15       2.88 f
+  u_single_div/U40/O (ND3P)                0.20       3.07 r
+  u_single_div/U53/O (OAI12H)              0.14       3.21 f
+  u_single_div/U57/O (ND3P)                0.13       3.34 r
+  u_single_div/U58/O (XNR2H)               0.18       3.52 r
+  u_single_div/U59/O (INV2)                0.11       3.62 f
+  u_single_div/U73/O (OAI112H)             0.26       3.88 r
+  u_single_div/U12/O (OAI12HP)             0.18       4.06 f
+  u_single_div/U77/O (ND2F)                0.12       4.18 r
+  u_single_div/U78/O (XNR2HP)              0.16       4.34 r
+  u_single_div/U94/O (ND2S)                0.12       4.46 f
+  u_single_div/U95/O (ND3)                 0.21       4.67 r
+  u_single_div/U101/O (ND3HT)              0.23       4.90 f
+  u_single_div/U5/O (ND2T)                 0.13       5.02 r
+  u_single_div/U112/O (XNR2H)              0.18       5.20 r
+  u_single_div/U113/O (NR2P)               0.13       5.33 f
+  u_single_div/U114/O (NR2P)               0.15       5.48 r
+  u_single_div/U18/O (OR2)                 0.20       5.68 r
+  u_single_div/U140/O (ND3P)               0.09       5.78 f
+  u_single_div/U17/OB (MXL2HS)             0.19       5.96 f
+  u_single_div/U141/O (OAI12HS)            0.15       6.11 r
+  u_single_div/U142/O (OAI12H)             0.16       6.27 f
+  u_single_div/U143/O (NR2)                0.16       6.43 r
+  u_single_div/U21/O (NR2)                 0.11       6.54 f
+  u_single_div/U146/O (NR2P)               0.21       6.76 r
+  u_single_div/U9/O (OAI12HP)              0.13       6.89 f
+  u_single_div/U150/O (OAI112HT)           0.14       7.02 r
+  u_single_div/quo[1] (DIV_8_BY_4)         0.00       7.02 r
+  U3149/O (BUF3)                           0.41       7.43 r
+  U3179/O (ND2)                            0.80       8.23 f
+  U4131/O (NR2)                            0.49       8.72 r
+  U3526/O (INV1S)                          0.15       8.87 f
+  U3525/O (ND2S)                           0.15       9.03 r
+  u_mult_3/in_b[1] (MULT_4X8_0)            0.00       9.03 r
+  u_mult_3/U5/O (INV1S)                    0.27       9.29 f
+  u_mult_3/U15/O (NR2)                     0.22       9.52 r
+  u_mult_3/U3/C (HA1S)                     0.26       9.78 r
+  u_mult_3/U59/S (FA1S)                    0.53      10.30 f
+  u_mult_3/U66/CO (FA1S)                   0.50      10.80 f
+  u_mult_3/U61/CO (FA1)                    0.38      11.19 f
+  u_mult_3/U67/CO (FA1)                    0.36      11.55 f
+  u_mult_3/U62/CO (FA1)                    0.35      11.89 f
+  u_mult_3/U65/CO (FA1S)                   0.47      12.36 f
+  u_mult_3/U64/CO (FA1S)                   0.49      12.85 f
+  u_mult_3/U63/S (FA1S)                    1.06      13.91 r
+  u_mult_3/out[9] (MULT_4X8_0)             0.00      13.91 r
+  U4141/O (INV1S)                          0.52      14.44 f
+  U5949/O (OAI222S)                        0.42      14.86 r
+  B_flat_reg[7][9]/D (QDFFS)               0.00      14.86 r
+  data arrival time                                  14.86
+
+  clock clk (rise edge)                   15.00      15.00
+  clock network delay (ideal)              0.00      15.00
+  B_flat_reg[7][9]/CK (QDFFS)              0.00      15.00 r
+  library setup time                      -0.14      14.86
+  data required time                                 14.86
+  -----------------------------------------------------------
+  data required time                                 14.86
+  data arrival time                                 -14.86
+  -----------------------------------------------------------
+  slack (MET)                                         0.01
+
+
+  Startpoint: cnt_reg[0] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: B_flat_reg[3][9]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  LAB8_DESIGN        enG30K                fsa0m_a_generic_core_ss1p62v125c
+  DIV_8_BY_4         enG5K                 fsa0m_a_generic_core_ss1p62v125c
+  MULT_4X8_0         enG5K                 fsa0m_a_generic_core_ss1p62v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  cnt_reg[0]/CK (QDFFRBT)                  0.00       0.00 r
+  cnt_reg[0]/Q (QDFFRBT)                   0.60       0.60 r
+  U4166/O (INV6CK)                         0.18       0.77 f
+  U4169/O (NR2T)                           0.16       0.93 r
+  U3157/O (INV3)                           0.08       1.02 f
+  U3172/O (INV6)                           0.27       1.29 r
+  U6181/O (AOI22S)                         0.19       1.48 f
+  U6182/O (ND2S)                           0.21       1.69 r
+  U6186/O (AOI22S)                         0.16       1.84 f
+  U4105/O (ND3S)                           0.23       2.07 r
+  U6187/O (OR2T)                           0.31       2.38 r
+  u_single_div/den[0] (DIV_8_BY_4)         0.00       2.38 r
+  u_single_div/U25/O (INV3)                0.18       2.56 f
+  u_single_div/U38/O (NR2T)                0.16       2.72 r
+  u_single_div/U39/O (OAI12HS)             0.15       2.88 f
+  u_single_div/U40/O (ND3P)                0.20       3.07 r
+  u_single_div/U53/O (OAI12H)              0.14       3.21 f
+  u_single_div/U57/O (ND3P)                0.13       3.34 r
+  u_single_div/U58/O (XNR2H)               0.18       3.52 r
+  u_single_div/U59/O (INV2)                0.11       3.62 f
+  u_single_div/U73/O (OAI112H)             0.26       3.88 r
+  u_single_div/U12/O (OAI12HP)             0.18       4.06 f
+  u_single_div/U77/O (ND2F)                0.12       4.18 r
+  u_single_div/U78/O (XNR2HP)              0.16       4.34 r
+  u_single_div/U94/O (ND2S)                0.12       4.46 f
+  u_single_div/U95/O (ND3)                 0.21       4.67 r
+  u_single_div/U101/O (ND3HT)              0.23       4.90 f
+  u_single_div/U5/O (ND2T)                 0.13       5.02 r
+  u_single_div/U112/O (XNR2H)              0.18       5.20 r
+  u_single_div/U113/O (NR2P)               0.13       5.33 f
+  u_single_div/U114/O (NR2P)               0.15       5.48 r
+  u_single_div/U18/O (OR2)                 0.20       5.68 r
+  u_single_div/U140/O (ND3P)               0.09       5.78 f
+  u_single_div/U17/OB (MXL2HS)             0.19       5.96 f
+  u_single_div/U141/O (OAI12HS)            0.15       6.11 r
+  u_single_div/U142/O (OAI12H)             0.16       6.27 f
+  u_single_div/U143/O (NR2)                0.16       6.43 r
+  u_single_div/U21/O (NR2)                 0.11       6.54 f
+  u_single_div/U146/O (NR2P)               0.21       6.76 r
+  u_single_div/U9/O (OAI12HP)              0.13       6.89 f
+  u_single_div/U150/O (OAI112HT)           0.14       7.02 r
+  u_single_div/quo[1] (DIV_8_BY_4)         0.00       7.02 r
+  U3149/O (BUF3)                           0.41       7.43 r
+  U3179/O (ND2)                            0.80       8.23 f
+  U4131/O (NR2)                            0.49       8.72 r
+  U3526/O (INV1S)                          0.15       8.87 f
+  U3525/O (ND2S)                           0.15       9.03 r
+  u_mult_3/in_b[1] (MULT_4X8_0)            0.00       9.03 r
+  u_mult_3/U5/O (INV1S)                    0.27       9.29 f
+  u_mult_3/U15/O (NR2)                     0.22       9.52 r
+  u_mult_3/U3/C (HA1S)                     0.26       9.78 r
+  u_mult_3/U59/S (FA1S)                    0.53      10.30 f
+  u_mult_3/U66/CO (FA1S)                   0.50      10.80 f
+  u_mult_3/U61/CO (FA1)                    0.38      11.19 f
+  u_mult_3/U67/CO (FA1)                    0.36      11.55 f
+  u_mult_3/U62/CO (FA1)                    0.35      11.89 f
+  u_mult_3/U65/CO (FA1S)                   0.47      12.36 f
+  u_mult_3/U64/CO (FA1S)                   0.49      12.85 f
+  u_mult_3/U63/S (FA1S)                    1.06      13.91 r
+  u_mult_3/out[9] (MULT_4X8_0)             0.00      13.91 r
+  U4141/O (INV1S)                          0.52      14.44 f
+  U5948/O (OAI222S)                        0.42      14.86 r
+  B_flat_reg[3][9]/D (QDFFS)               0.00      14.86 r
+  data arrival time                                  14.86
+
+  clock clk (rise edge)                   15.00      15.00
+  clock network delay (ideal)              0.00      15.00
+  B_flat_reg[3][9]/CK (QDFFS)              0.00      15.00 r
+  library setup time                      -0.14      14.86
+  data required time                                 14.86
+  -----------------------------------------------------------
+  data required time                                 14.86
+  data arrival time                                 -14.86
+  -----------------------------------------------------------
+  slack (MET)                                         0.01
+
+
+  Startpoint: cnt_reg[0] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: B_flat_reg[11][9]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  LAB8_DESIGN        enG30K                fsa0m_a_generic_core_ss1p62v125c
+  DIV_8_BY_4         enG5K                 fsa0m_a_generic_core_ss1p62v125c
+  MULT_4X8_0         enG5K                 fsa0m_a_generic_core_ss1p62v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  cnt_reg[0]/CK (QDFFRBT)                  0.00       0.00 r
+  cnt_reg[0]/Q (QDFFRBT)                   0.60       0.60 r
+  U4166/O (INV6CK)                         0.18       0.77 f
+  U4169/O (NR2T)                           0.16       0.93 r
+  U3157/O (INV3)                           0.08       1.02 f
+  U3172/O (INV6)                           0.27       1.29 r
+  U6181/O (AOI22S)                         0.19       1.48 f
+  U6182/O (ND2S)                           0.21       1.69 r
+  U6186/O (AOI22S)                         0.16       1.84 f
+  U4105/O (ND3S)                           0.23       2.07 r
+  U6187/O (OR2T)                           0.31       2.38 r
+  u_single_div/den[0] (DIV_8_BY_4)         0.00       2.38 r
+  u_single_div/U25/O (INV3)                0.18       2.56 f
+  u_single_div/U38/O (NR2T)                0.16       2.72 r
+  u_single_div/U39/O (OAI12HS)             0.15       2.88 f
+  u_single_div/U40/O (ND3P)                0.20       3.07 r
+  u_single_div/U53/O (OAI12H)              0.14       3.21 f
+  u_single_div/U57/O (ND3P)                0.13       3.34 r
+  u_single_div/U58/O (XNR2H)               0.18       3.52 r
+  u_single_div/U59/O (INV2)                0.11       3.62 f
+  u_single_div/U73/O (OAI112H)             0.26       3.88 r
+  u_single_div/U12/O (OAI12HP)             0.18       4.06 f
+  u_single_div/U77/O (ND2F)                0.12       4.18 r
+  u_single_div/U78/O (XNR2HP)              0.16       4.34 r
+  u_single_div/U94/O (ND2S)                0.12       4.46 f
+  u_single_div/U95/O (ND3)                 0.21       4.67 r
+  u_single_div/U101/O (ND3HT)              0.23       4.90 f
+  u_single_div/U5/O (ND2T)                 0.13       5.02 r
+  u_single_div/U112/O (XNR2H)              0.18       5.20 r
+  u_single_div/U113/O (NR2P)               0.13       5.33 f
+  u_single_div/U114/O (NR2P)               0.15       5.48 r
+  u_single_div/U18/O (OR2)                 0.20       5.68 r
+  u_single_div/U140/O (ND3P)               0.09       5.78 f
+  u_single_div/U17/OB (MXL2HS)             0.19       5.96 f
+  u_single_div/U141/O (OAI12HS)            0.15       6.11 r
+  u_single_div/U142/O (OAI12H)             0.16       6.27 f
+  u_single_div/U143/O (NR2)                0.16       6.43 r
+  u_single_div/U21/O (NR2)                 0.11       6.54 f
+  u_single_div/U146/O (NR2P)               0.21       6.76 r
+  u_single_div/U9/O (OAI12HP)              0.13       6.89 f
+  u_single_div/U150/O (OAI112HT)           0.14       7.02 r
+  u_single_div/quo[1] (DIV_8_BY_4)         0.00       7.02 r
+  U3149/O (BUF3)                           0.41       7.43 r
+  U3179/O (ND2)                            0.80       8.23 f
+  U4131/O (NR2)                            0.49       8.72 r
+  U3526/O (INV1S)                          0.15       8.87 f
+  U3525/O (ND2S)                           0.15       9.03 r
+  u_mult_3/in_b[1] (MULT_4X8_0)            0.00       9.03 r
+  u_mult_3/U5/O (INV1S)                    0.27       9.29 f
+  u_mult_3/U15/O (NR2)                     0.22       9.52 r
+  u_mult_3/U3/C (HA1S)                     0.26       9.78 r
+  u_mult_3/U59/S (FA1S)                    0.53      10.30 f
+  u_mult_3/U66/CO (FA1S)                   0.50      10.80 f
+  u_mult_3/U61/CO (FA1)                    0.38      11.19 f
+  u_mult_3/U67/CO (FA1)                    0.36      11.55 f
+  u_mult_3/U62/CO (FA1)                    0.35      11.89 f
+  u_mult_3/U65/CO (FA1S)                   0.47      12.36 f
+  u_mult_3/U64/CO (FA1S)                   0.49      12.85 f
+  u_mult_3/U63/S (FA1S)                    1.06      13.91 r
+  u_mult_3/out[9] (MULT_4X8_0)             0.00      13.91 r
+  U4141/O (INV1S)                          0.52      14.44 f
+  U5950/O (OAI222S)                        0.42      14.86 r
+  B_flat_reg[11][9]/D (QDFFS)              0.00      14.86 r
+  data arrival time                                  14.86
+
+  clock clk (rise edge)                   15.00      15.00
+  clock network delay (ideal)              0.00      15.00
+  B_flat_reg[11][9]/CK (QDFFS)             0.00      15.00 r
+  library setup time                      -0.14      14.86
+  data required time                                 14.86
+  -----------------------------------------------------------
+  data required time                                 14.86
+  data arrival time                                 -14.86
+  -----------------------------------------------------------
+  slack (MET)                                         0.01
+
+
+1

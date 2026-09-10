@@ -1,0 +1,762 @@
+ 
+****************************************
+Report : port
+Design : HARVESTER_TOP
+Version: T-2022.03
+Date   : Mon May 18 18:29:46 2026
+****************************************
+
+
+
+Attributes:
+    d - dont_touch_network
+
+                       Pin      Wire     Max     Max     Connection
+Port           Dir     Load     Load     Trans   Cap     Class      Attrs
+--------------------------------------------------------------------------------
+clk1           in      0.0000   0.0000    3.00    0.15   --         d
+clk2           in      0.0000   0.0000    3.00    0.15   --         d
+clk3           in      0.0000   0.0000    3.00    0.15   --         d
+dram_rdata_clk3[0]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[1]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[2]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[3]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[4]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[5]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[6]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[7]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[8]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[9]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[10]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[11]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[12]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[13]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[14]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[15]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[16]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[17]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[18]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[19]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[20]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[21]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[22]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[23]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[24]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[25]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[26]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[27]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[28]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[29]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[30]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[31]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[32]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[33]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[34]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[35]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[36]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[37]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[38]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[39]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[40]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[41]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[42]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[43]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[44]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[45]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[46]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[47]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[48]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[49]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[50]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[51]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[52]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[53]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[54]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[55]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[56]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[57]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[58]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[59]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[60]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[61]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[62]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_rdata_clk3[63]
+               in      0.0000   0.0000    3.00    0.15   --         
+dram_valid_clk3
+               in      0.0000   0.0000    3.00    0.15   --         
+in_bank[0]     in      0.0000   0.0000    3.00    0.15   --         
+in_bank[1]     in      0.0000   0.0000    3.00    0.15   --         
+in_mode        in      0.0000   0.0000    3.00    0.15   --         
+in_mode_valid  in      0.0000   0.0000    3.00    0.15   --         
+in_src_row[0]  in      0.0000   0.0000    3.00    0.15   --         
+in_src_row[1]  in      0.0000   0.0000    3.00    0.15   --         
+in_src_row[2]  in      0.0000   0.0000    3.00    0.15   --         
+in_src_row[3]  in      0.0000   0.0000    3.00    0.15   --         
+in_src_row[4]  in      0.0000   0.0000    3.00    0.15   --         
+in_src_row[5]  in      0.0000   0.0000    3.00    0.15   --         
+in_valid       in      0.0000   0.0000    3.00    0.15   --         
+rst_n          in      0.0000   0.0000    3.00    0.15   --         
+ar_addr_clk2[0]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk2[1]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk2[2]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk2[3]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk2[4]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk2[5]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk2[6]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk2[7]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk2[8]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk2[9]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk2[10]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk2[11]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk2[12]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk2[13]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk2[14]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk2[15]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk2[16]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk2[17]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk2[18]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk2[19]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk2[20]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk2[21]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk2[22]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk2[23]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk2[24]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk2[25]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk2[26]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk2[27]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk2[28]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk2[29]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk2[30]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk2[31]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk3[0]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk3[1]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk3[2]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk3[3]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk3[4]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk3[5]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk3[6]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk3[7]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk3[8]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk3[9]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk3[10]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk3[11]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk3[12]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk3[13]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk3[14]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk3[15]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk3[16]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk3[17]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk3[18]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk3[19]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk3[20]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk3[21]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk3[22]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk3[23]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk3[24]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk3[25]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk3[26]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk3[27]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk3[28]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk3[29]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk3[30]
+               out     0.0500   0.0000   --      --      --         
+ar_addr_clk3[31]
+               out     0.0500   0.0000   --      --      --         
+ar_ready_clk2  out     0.0500   0.0000   --      --      --         
+ar_ready_clk3  out     0.0500   0.0000   --      --      --         
+ar_valid_clk2  out     0.0500   0.0000   --      --      --         
+ar_valid_clk3  out     0.0500   0.0000   --      --      --         
+dram_addr_clk3[0]
+               out     0.0500   0.0000   --      --      --         
+dram_addr_clk3[1]
+               out     0.0500   0.0000   --      --      --         
+dram_addr_clk3[2]
+               out     0.0500   0.0000   --      --      --         
+dram_addr_clk3[3]
+               out     0.0500   0.0000   --      --      --         
+dram_addr_clk3[4]
+               out     0.0500   0.0000   --      --      --         
+dram_addr_clk3[5]
+               out     0.0500   0.0000   --      --      --         
+dram_addr_clk3[6]
+               out     0.0500   0.0000   --      --      --         
+dram_addr_clk3[7]
+               out     0.0500   0.0000   --      --      --         
+dram_addr_clk3[8]
+               out     0.0500   0.0000   --      --      --         
+dram_addr_clk3[9]
+               out     0.0500   0.0000   --      --      --         
+dram_addr_clk3[10]
+               out     0.0500   0.0000   --      --      --         
+dram_ba_clk3[0]
+               out     0.0500   0.0000   --      --      --         
+dram_ba_clk3[1]
+               out     0.0500   0.0000   --      --      --         
+dram_cmd_clk3[0]
+               out     0.0500   0.0000   --      --      --         
+dram_cmd_clk3[1]
+               out     0.0500   0.0000   --      --      --         
+dram_cmd_clk3[2]
+               out     0.0500   0.0000   --      --      --         
+dram_cmd_clk3[3]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[0]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[1]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[2]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[3]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[4]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[5]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[6]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[7]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[8]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[9]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[10]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[11]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[12]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[13]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[14]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[15]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[16]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[17]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[18]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[19]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[20]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[21]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[22]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[23]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[24]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[25]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[26]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[27]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[28]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[29]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[30]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[31]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[32]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[33]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[34]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[35]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[36]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[37]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[38]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[39]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[40]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[41]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[42]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[43]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[44]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[45]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[46]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[47]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[48]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[49]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[50]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[51]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[52]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[53]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[54]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[55]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[56]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[57]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[58]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[59]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[60]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[61]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[62]
+               out     0.0500   0.0000   --      --      --         
+dram_wdata_clk3[63]
+               out     0.0500   0.0000   --      --      --         
+out_data[0]    out     0.0500   0.0000   --      --      --         
+out_data[1]    out     0.0500   0.0000   --      --      --         
+out_data[2]    out     0.0500   0.0000   --      --      --         
+out_data[3]    out     0.0500   0.0000   --      --      --         
+out_data[4]    out     0.0500   0.0000   --      --      --         
+out_data[5]    out     0.0500   0.0000   --      --      --         
+out_data[6]    out     0.0500   0.0000   --      --      --         
+out_data[7]    out     0.0500   0.0000   --      --      --         
+out_data[8]    out     0.0500   0.0000   --      --      --         
+out_data[9]    out     0.0500   0.0000   --      --      --         
+out_data[10]   out     0.0500   0.0000   --      --      --         
+out_data[11]   out     0.0500   0.0000   --      --      --         
+out_data[12]   out     0.0500   0.0000   --      --      --         
+out_data[13]   out     0.0500   0.0000   --      --      --         
+out_data[14]   out     0.0500   0.0000   --      --      --         
+out_data[15]   out     0.0500   0.0000   --      --      --         
+out_data[16]   out     0.0500   0.0000   --      --      --         
+out_data[17]   out     0.0500   0.0000   --      --      --         
+out_data[18]   out     0.0500   0.0000   --      --      --         
+out_data[19]   out     0.0500   0.0000   --      --      --         
+out_data[20]   out     0.0500   0.0000   --      --      --         
+out_data[21]   out     0.0500   0.0000   --      --      --         
+out_data[22]   out     0.0500   0.0000   --      --      --         
+out_data[23]   out     0.0500   0.0000   --      --      --         
+out_data[24]   out     0.0500   0.0000   --      --      --         
+out_data[25]   out     0.0500   0.0000   --      --      --         
+out_data[26]   out     0.0500   0.0000   --      --      --         
+out_data[27]   out     0.0500   0.0000   --      --      --         
+out_data[28]   out     0.0500   0.0000   --      --      --         
+out_data[29]   out     0.0500   0.0000   --      --      --         
+out_data[30]   out     0.0500   0.0000   --      --      --         
+out_data[31]   out     0.0500   0.0000   --      --      --         
+out_data[32]   out     0.0500   0.0000   --      --      --         
+out_data[33]   out     0.0500   0.0000   --      --      --         
+out_data[34]   out     0.0500   0.0000   --      --      --         
+out_data[35]   out     0.0500   0.0000   --      --      --         
+out_data[36]   out     0.0500   0.0000   --      --      --         
+out_data[37]   out     0.0500   0.0000   --      --      --         
+out_data[38]   out     0.0500   0.0000   --      --      --         
+out_data[39]   out     0.0500   0.0000   --      --      --         
+out_data[40]   out     0.0500   0.0000   --      --      --         
+out_data[41]   out     0.0500   0.0000   --      --      --         
+out_data[42]   out     0.0500   0.0000   --      --      --         
+out_data[43]   out     0.0500   0.0000   --      --      --         
+out_data[44]   out     0.0500   0.0000   --      --      --         
+out_data[45]   out     0.0500   0.0000   --      --      --         
+out_data[46]   out     0.0500   0.0000   --      --      --         
+out_data[47]   out     0.0500   0.0000   --      --      --         
+out_data[48]   out     0.0500   0.0000   --      --      --         
+out_data[49]   out     0.0500   0.0000   --      --      --         
+out_data[50]   out     0.0500   0.0000   --      --      --         
+out_data[51]   out     0.0500   0.0000   --      --      --         
+out_data[52]   out     0.0500   0.0000   --      --      --         
+out_data[53]   out     0.0500   0.0000   --      --      --         
+out_data[54]   out     0.0500   0.0000   --      --      --         
+out_data[55]   out     0.0500   0.0000   --      --      --         
+out_data[56]   out     0.0500   0.0000   --      --      --         
+out_data[57]   out     0.0500   0.0000   --      --      --         
+out_data[58]   out     0.0500   0.0000   --      --      --         
+out_data[59]   out     0.0500   0.0000   --      --      --         
+out_data[60]   out     0.0500   0.0000   --      --      --         
+out_data[61]   out     0.0500   0.0000   --      --      --         
+out_data[62]   out     0.0500   0.0000   --      --      --         
+out_data[63]   out     0.0500   0.0000   --      --      --         
+out_valid      out     0.0500   0.0000   --      --      --         
+r_data_clk2[0] out     0.0500   0.0000   --      --      --         
+r_data_clk2[1] out     0.0500   0.0000   --      --      --         
+r_data_clk2[2] out     0.0500   0.0000   --      --      --         
+r_data_clk2[3] out     0.0500   0.0000   --      --      --         
+r_data_clk2[4] out     0.0500   0.0000   --      --      --         
+r_data_clk2[5] out     0.0500   0.0000   --      --      --         
+r_data_clk2[6] out     0.0500   0.0000   --      --      --         
+r_data_clk2[7] out     0.0500   0.0000   --      --      --         
+r_data_clk2[8] out     0.0500   0.0000   --      --      --         
+r_data_clk2[9] out     0.0500   0.0000   --      --      --         
+r_data_clk2[10]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[11]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[12]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[13]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[14]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[15]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[16]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[17]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[18]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[19]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[20]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[21]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[22]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[23]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[24]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[25]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[26]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[27]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[28]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[29]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[30]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[31]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[32]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[33]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[34]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[35]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[36]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[37]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[38]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[39]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[40]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[41]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[42]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[43]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[44]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[45]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[46]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[47]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[48]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[49]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[50]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[51]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[52]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[53]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[54]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[55]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[56]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[57]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[58]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[59]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[60]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[61]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[62]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk2[63]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[0] out     0.0500   0.0000   --      --      --         
+r_data_clk3[1] out     0.0500   0.0000   --      --      --         
+r_data_clk3[2] out     0.0500   0.0000   --      --      --         
+r_data_clk3[3] out     0.0500   0.0000   --      --      --         
+r_data_clk3[4] out     0.0500   0.0000   --      --      --         
+r_data_clk3[5] out     0.0500   0.0000   --      --      --         
+r_data_clk3[6] out     0.0500   0.0000   --      --      --         
+r_data_clk3[7] out     0.0500   0.0000   --      --      --         
+r_data_clk3[8] out     0.0500   0.0000   --      --      --         
+r_data_clk3[9] out     0.0500   0.0000   --      --      --         
+r_data_clk3[10]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[11]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[12]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[13]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[14]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[15]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[16]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[17]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[18]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[19]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[20]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[21]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[22]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[23]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[24]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[25]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[26]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[27]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[28]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[29]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[30]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[31]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[32]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[33]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[34]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[35]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[36]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[37]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[38]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[39]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[40]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[41]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[42]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[43]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[44]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[45]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[46]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[47]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[48]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[49]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[50]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[51]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[52]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[53]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[54]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[55]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[56]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[57]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[58]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[59]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[60]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[61]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[62]
+               out     0.0500   0.0000   --      --      --         
+r_data_clk3[63]
+               out     0.0500   0.0000   --      --      --         
+r_ready_clk2   out     0.0500   0.0000   --      --      --         
+r_ready_clk3   out     0.0500   0.0000   --      --      --         
+r_valid_clk2   out     0.0500   0.0000   --      --      --         
+r_valid_clk3   out     0.0500   0.0000   --      --      --         
+
+1

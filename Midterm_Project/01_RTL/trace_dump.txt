@@ -1,0 +1,45 @@
+===================== Register/Timeout Debug =====================
+Error Core: 1
+Error IC  : 10
+HW IC     : Core1=10 Core2=10
+Stall     : Core1=0 Core2=0
+
+[Core 1] DUT vs Golden
+ r0: DUT      0 | GOLDEN      0
+ r1: DUT     10 | GOLDEN     10
+ r2: DUT     20 | GOLDEN     20
+ r3: DUT      0 | GOLDEN      0
+ r4: DUT     20 | GOLDEN      0
+ r5: DUT     40 | GOLDEN     40
+ r6: DUT      0 | GOLDEN      0
+ r7: DUT    128 | GOLDEN    128
+
+[Core 2] DUT vs Golden
+ r0: DUT      0 | GOLDEN      0
+ r1: DUT     10 | GOLDEN     10
+ r2: DUT     20 | GOLDEN     20
+ r3: DUT     20 | GOLDEN     20
+ r4: DUT      0 | GOLDEN      0
+ r5: DUT     40 | GOLDEN      0
+ r6: DUT      0 | GOLDEN      0
+ r7: DUT    128 | GOLDEN    128
+
+===================== Interface snapshot =====================
+HW IC / stall : ic1=10 ic2=10 stall1=0 stall2=0
+[AXI data] aw=0/0 w=0/0 b=0/0 ar=0/0 r=0/0 rlast=0
+
+===================== Previous 20 Instruction Trace =====================
+ IC   | C1 PC | C1 Inst | Core 1 Golden Registers                         | C2 PC | C2 Inst | Core 2 Golden Registers
+----------------------------------------------------------------------------------------------------------------------------------------
+   0 | 0000  | ADDI 408a |      0     10      0      0      0      0      0      0 | 0000  | ADDI 408a |      0     10      0      0      0      0      0      0
+   1 | 0002  | ADDI 4114 |      0     10     20      0      0      0      0      0 | 0002  | ADDI 4114 |      0     10     20      0      0      0      0      0
+   2 | 0004  |   SH a500 |      0     10     20      0      0      0      0      0 | 0004  |   LH 8580 |      0     10     20     20      0      0      0      0
+   3 | 0006  |   LH 8600 |      0     10     20      0     20      0      0      0 | 0006  |  ADD 0000 |      0     10     20     20      0      0      0      0
+   4 | 0008  |  ADD 1150 |      0     10     20      0     20     40      0      0 | 0008  |  ADD 0d50 |      0     10     20     20      0     40      0      0
+   5 | 000a  | ADDI 43bf |      0     10     20      0     20     40      0     63 | 000a  | ADDI 43bf |      0     10     20     20      0     40      0     63
+   6 | 000c  | ADDI 5fbf |      0     10     20      0     20     40      0    126 | 000c  | ADDI 5fbf |      0     10     20     20      0     40      0    126
+   7 | 000e  | ADDI 5f82 |      0     10     20      0     20     40      0    128 | 000e  | ADDI 5f82 |      0     10     20     20      0     40      0    128
+   8 | 0010  |    J e100 |      0     10     20      0     20     40      0    128 | 0010  |    J e10e |      0     10     20     20      0     40      0    128
+   9 | 0100  |    J e200 |      0     10     20      0     20     40      0    128 | 010e  |    J e20e |      0     10     20     20      0     40      0    128
+  10 | 0200  |   LH 8200 |      0     10     20      0      0     40      0    128 | 020e  |   LH 9e80 |      0     10     20     20      0      0      0    128 <--- ERROR HERE
+==========================================================================

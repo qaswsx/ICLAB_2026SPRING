@@ -1,0 +1,25 @@
+RAIL ANALYSIS REPORT
+Generated Date: Fri May 29 18:39:25 2026
+Host Name: ee28
+
+
+==============================
+
+==============================
+User: iclab062 
+Hostname: ee28 
+Peak Memory: 0 Mbytes 
+Total CPU time: 00:00:17 
+Total Wall Clock time: 00:00:35 
+Exit status: Successful 
+State Directory: power_log/PD_25C_avg_1 
+Units: Volt, Amp, Ohm, fF 
+
+
+==============================
+POWER NETS
+==============================
+Net Name: GND
+Net Name: VCC
+Analysis Method: static 
+

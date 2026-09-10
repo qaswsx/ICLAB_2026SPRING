@@ -1,0 +1,22 @@
+ 
+****************************************
+Report : clocks
+Design : HARVESTER_TOP
+Version: T-2022.03
+Date   : Mon May 18 18:29:46 2026
+****************************************
+
+Attributes:
+    d - dont_touch_network
+    f - fix_hold
+    p - propagated_clock
+    G - generated_clock
+    g - lib_generated_clock
+
+Clock          Period   Waveform            Attrs     Sources
+--------------------------------------------------------------------------------
+clk1            20.10   {0 10.05}           d f       {clk1}
+clk2            11.30   {0 5.65}            d f       {clk2}
+clk3            34.70   {0 17.35}           d f       {clk3}
+--------------------------------------------------------------------------------
+1

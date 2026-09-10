@@ -1,0 +1,15 @@
+MacroModel pin inst_reg_2_reg_8_/CK  85.40ps 85.40ps 85.40ps 85.40ps 0pf av_func_mode_max
+MacroModel pin cs_reg_2_/CK  266.10ps 266.10ps 266.10ps 266.10ps 0pf av_func_mode_max
+MacroModel pin inst_reg_2_reg_8_/CK  126.70ps 126.70ps 126.70ps 126.70ps 0pf av_func_mode_max
+MacroModel pin cs_reg_2_/CK  266.10ps 266.10ps 266.10ps 266.10ps 0pf av_func_mode_max
+MacroModel pin inst_reg_1_reg_2_/CK  62.80ps 62.80ps 62.80ps 62.80ps 0pf av_func_mode_max
+MacroModel pin cs_reg_3_/CK  43.80ps 43.80ps 43.80ps 43.80ps 0pf av_func_mode_max
+MacroModel pin inst_reg_2_reg_10_/CK  33.30ps 33.30ps 33.30ps 33.30ps 0pf av_func_mode_max
+MacroModel pin inst_reg_2_reg_7_/CK  26.50ps 26.50ps 26.50ps 26.50ps 0pf av_func_mode_max
+MacroModel pin inst_reg_2_reg_11_/CK  26.00ps 26.00ps 26.00ps 26.00ps 0pf av_func_mode_max
+MacroModel pin inst_reg_1_reg_9_/CK  24.80ps 24.80ps 24.80ps 24.80ps 0pf av_func_mode_max
+MacroModel pin mem_addr_r_reg_1_/CK  194.50ps 194.50ps 194.50ps 194.50ps 0pf av_func_mode_max
+MacroModel pin mem_addr_r_reg_0_/CK  144.90ps 144.90ps 144.90ps 144.90ps 0pf av_func_mode_max
+MacroModel pin mem_addr_r_reg_5_/CK  40.60ps 40.60ps 40.60ps 40.60ps 0pf av_func_mode_max
+MacroModel pin mem_addr_r_reg_6_/CK  67.90ps 67.90ps 67.90ps 67.90ps 0pf av_func_mode_max
+MacroModel pin mem_addr_r_reg_3_/CK  135.00ps 135.00ps 135.00ps 135.00ps 0pf av_func_mode_max

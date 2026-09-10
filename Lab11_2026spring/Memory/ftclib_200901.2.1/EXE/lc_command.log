@@ -1,0 +1,9 @@
+#@ # 
+#@ # Running lc_shell Version T-2022.03 for linux64 -- Feb 22, 2022
+#@ # Date:   Fri May  1 21:00:52 2026
+#@ # Run by: iclabTA07@ee25
+#@ 
+
+read_lib SUMA180_4096X12_WC.lib
+write_lib SUMA180_4096X12_WC -output SUMA180_4096X12_WC.db
+exit

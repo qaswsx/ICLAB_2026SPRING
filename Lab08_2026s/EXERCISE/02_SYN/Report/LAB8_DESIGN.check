@@ -1,0 +1,69 @@
+ 
+****************************************
+check_design summary:
+Version:     T-2022.03
+Date:        Mon May  4 16:57:01 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      4
+    Feedthrough (LINT-29)                                           4
+
+Cells                                                              48
+    Cells do not drive (LINT-1)                                    48
+--------------------------------------------------------------------------------
+
+Warning: In design 'LAB8_DESIGN', cell 'B_141' does not drive any nets. (LINT-1)
+Warning: In design 'LAB8_DESIGN', cell 'B_142' does not drive any nets. (LINT-1)
+Warning: In design 'LAB8_DESIGN', cell 'C8284' does not drive any nets. (LINT-1)
+Warning: In design 'LAB8_DESIGN', cell 'B_145' does not drive any nets. (LINT-1)
+Warning: In design 'LAB8_DESIGN', cell 'B_146' does not drive any nets. (LINT-1)
+Warning: In design 'LAB8_DESIGN', cell 'B_147' does not drive any nets. (LINT-1)
+Warning: In design 'LAB8_DESIGN', cell 'B_148' does not drive any nets. (LINT-1)
+Warning: In design 'LAB8_DESIGN', cell 'B_149' does not drive any nets. (LINT-1)
+Warning: In design 'LAB8_DESIGN', cell 'B_150' does not drive any nets. (LINT-1)
+Warning: In design 'LAB8_DESIGN', cell 'B_151' does not drive any nets. (LINT-1)
+Warning: In design 'LAB8_DESIGN', cell 'B_152' does not drive any nets. (LINT-1)
+Warning: In design 'LAB8_DESIGN', cell 'B_153' does not drive any nets. (LINT-1)
+Warning: In design 'LAB8_DESIGN', cell 'B_154' does not drive any nets. (LINT-1)
+Warning: In design 'LAB8_DESIGN', cell 'B_155' does not drive any nets. (LINT-1)
+Warning: In design 'LAB8_DESIGN', cell 'B_156' does not drive any nets. (LINT-1)
+Warning: In design 'LAB8_DESIGN', cell 'B_157' does not drive any nets. (LINT-1)
+Warning: In design 'LAB8_DESIGN', cell 'B_158' does not drive any nets. (LINT-1)
+Warning: In design 'LAB8_DESIGN', cell 'B_159' does not drive any nets. (LINT-1)
+Warning: In design 'LAB8_DESIGN', cell 'B_160' does not drive any nets. (LINT-1)
+Warning: In design 'LAB8_DESIGN', cell 'B_161' does not drive any nets. (LINT-1)
+Warning: In design 'LAB8_DESIGN', cell 'B_162' does not drive any nets. (LINT-1)
+Warning: In design 'LAB8_DESIGN', cell 'B_163' does not drive any nets. (LINT-1)
+Warning: In design 'LAB8_DESIGN', cell 'B_164' does not drive any nets. (LINT-1)
+Warning: In design 'LAB8_DESIGN', cell 'B_165' does not drive any nets. (LINT-1)
+Warning: In design 'LAB8_DESIGN', cell 'B_166' does not drive any nets. (LINT-1)
+Warning: In design 'LAB8_DESIGN', cell 'B_167' does not drive any nets. (LINT-1)
+Warning: In design 'LAB8_DESIGN', cell 'B_168' does not drive any nets. (LINT-1)
+Warning: In design 'LAB8_DESIGN', cell 'B_169' does not drive any nets. (LINT-1)
+Warning: In design 'LAB8_DESIGN', cell 'B_170' does not drive any nets. (LINT-1)
+Warning: In design 'LAB8_DESIGN', cell 'B_171' does not drive any nets. (LINT-1)
+Warning: In design 'LAB8_DESIGN', cell 'B_172' does not drive any nets. (LINT-1)
+Warning: In design 'LAB8_DESIGN', cell 'B_173' does not drive any nets. (LINT-1)
+Warning: In design 'LAB8_DESIGN', cell 'B_174' does not drive any nets. (LINT-1)
+Warning: In design 'LAB8_DESIGN', cell 'B_175' does not drive any nets. (LINT-1)
+Warning: In design 'LAB8_DESIGN', cell 'B_176' does not drive any nets. (LINT-1)
+Warning: In design 'LAB8_DESIGN', cell 'B_177' does not drive any nets. (LINT-1)
+Warning: In design 'LAB8_DESIGN', cell 'B_178' does not drive any nets. (LINT-1)
+Warning: In design 'LAB8_DESIGN', cell 'B_179' does not drive any nets. (LINT-1)
+Warning: In design 'LAB8_DESIGN', cell 'B_180' does not drive any nets. (LINT-1)
+Warning: In design 'LAB8_DESIGN', cell 'B_181' does not drive any nets. (LINT-1)
+Warning: In design 'LAB8_DESIGN', cell 'B_182' does not drive any nets. (LINT-1)
+Warning: In design 'DIV_8_BY_4', cell 'B_8' does not drive any nets. (LINT-1)
+Warning: In design 'DIV_8_BY_4', cell 'B_10' does not drive any nets. (LINT-1)
+Warning: In design 'DIV_8_BY_4', cell 'B_12' does not drive any nets. (LINT-1)
+Warning: In design 'DIV_8_BY_4', cell 'B_14' does not drive any nets. (LINT-1)
+Warning: In design 'DIV_8_BY_4', cell 'B_16' does not drive any nets. (LINT-1)
+Warning: In design 'DIV_8_BY_4', cell 'B_18' does not drive any nets. (LINT-1)
+Warning: In design 'DIV_8_BY_4', cell 'B_20' does not drive any nets. (LINT-1)
+Warning: In design 'XOR_12X8', input port 'in_a[11]' is connected directly to output port 'out[11]'. (LINT-29)
+Warning: In design 'XOR_12X8', input port 'in_a[10]' is connected directly to output port 'out[10]'. (LINT-29)
+Warning: In design 'XOR_12X8', input port 'in_a[9]' is connected directly to output port 'out[9]'. (LINT-29)
+Warning: In design 'XOR_12X8', input port 'in_a[8]' is connected directly to output port 'out[8]'. (LINT-29)
+1

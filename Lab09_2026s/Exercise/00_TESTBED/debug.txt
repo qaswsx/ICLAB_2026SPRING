@@ -1,0 +1,76 @@
+============================================================
+DSS PATTERN DEBUG DUMP
+============================================================
+Reason        : Latency over 1000 cycles
+Pattern index : 11
+Latency       : 1000
+Seed          : 5487
+
+---------------- INPUT ----------------
+Action        : 0
+Dessert type  : 6
+Order mode    : 3
+Date          : 12/31
+Data no       : 33
+Hire staff    : 1
+Restock input : flour=x butter=x milk=x sugar=x fruit=x
+
+---------------- SHOP BEFORE GOLDEN ----------------
+word0         : 35ba2a0c0bf2201f
+word1         : e200070e0c477858
+date          : 12/31
+flour         : 859
+butter        : 2602
+milk          : 191
+sugar         : 544
+fruit         : 3616
+sales         : 7
+staff         : 14
+balance       : 804728
+level         : 88
+
+---------------- GOLDEN INTERMEDIATE ----------------
+legal_date    : 1
+earlier_date  : 0
+scale         : 8
+use ingredients: flour=640 butter=800 milk=0 sugar=800 fruit=0
+base_price    : 100
+price_each    : 217
+income        : 1736
+new_sales     : 87
+step_need     : 80
+level_inc     : 1
+unit_costs    : flour=x butter=x milk=x sugar=x fruit=x
+req_cost      : 4700
+real_add      : flour=x butter=x milk=x sugar=x fruit=x
+real_cost     : 4700
+fee_one       : 4700
+real_hire     : 1
+salary_one    : x
+total_salary  : x
+
+---------------- SHOP AFTER GOLDEN ----------------
+golden word0  : 35ba2a0c0bf2201f
+golden word1  : e200070e0c477858
+date          : 12/31
+flour         : 859
+butter        : 2602
+milk          : 191
+sugar         : 544
+fruit         : 3616
+sales         : 7
+staff         : 14
+balance       : 804728
+level         : 88
+
+---------------- OUTPUT ----------------
+Golden warn_msg : 3
+Golden complete : 0
+HW warn_msg     : 0
+HW complete     : 0
+HW out_valid    : 0
+
+---------------- AXI SNAPSHOT ----------------
+AR_VALID=0 AR_ADDR=10218 R_READY=0
+AW_VALID=x AW_ADDR=1021X W_VALID=x W_DATA=xxxxxx0XxxxxxxXx B_READY=x
+============================================================

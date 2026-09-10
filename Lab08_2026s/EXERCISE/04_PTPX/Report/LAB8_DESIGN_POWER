@@ -1,0 +1,53 @@
+Information: Running time_based power analysis... (PWR-601)
+Information: Reading vcd file '/RAID2/COURSE/2026_Spring/iclab/iclab062/Lab08_2026s/EXERCISE/04_PTPX/LAB8_DESIGN_SYN.fsdb'
+Information: The waveform options are:
+		File name:	vcd.out
+		File format:	out
+		Time interval:	1ns
+		Hierarchical level:	all
+
+Information: Power analysis is running, please wait ...
+
+Information: analysis is done for time window (0ns - 199928ns)
+
+Information: Total simulation time = 199927.500000 ns
+****************************************
+Report : Time Based Power
+Design : LAB8_DESIGN
+Version: P-2019.03-SP5-1
+Date   : Mon May  4 16:36:43 2026
+****************************************
+
+
+
+  Attributes
+  ----------
+      i  -  Including register clock pin internal power
+      u  -  User defined power group
+
+                        Internal  Switching  Leakage    Total
+Power Group             Power     Power      Power      Power   (     %)  Attrs
+--------------------------------------------------------------------------------
+clock_network           1.287e-04 9.263e-04 4.002e-08 1.055e-03 (20.18%)  
+register                1.617e-03 5.882e-05 2.024e-06 1.678e-03 (32.10%)  i
+combinational           8.814e-04 1.609e-03 3.918e-06 2.494e-03 (47.71%)  
+sequential                 0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+memory                     0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+io_pad                     0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+black_box                  0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+
+  Net Switching Power  = 2.594e-03   (49.62%)
+  Cell Internal Power  = 2.627e-03   (50.26%)
+  Cell Leakage Power   = 5.983e-06   ( 0.11%)
+    Intrinsic Leakage  = 5.983e-06
+    Gate Leakage       =    0.0000
+                         ---------
+Total Power            = 5.227e-03  (100.00%)
+
+X Transition Power     = 1.918e-06
+Glitching Power        =    0.0000
+
+Peak Power             =    0.0306
+Peak Time              =     49652
+
+1

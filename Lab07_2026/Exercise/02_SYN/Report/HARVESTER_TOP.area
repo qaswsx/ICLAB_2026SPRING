@@ -1,0 +1,131 @@
+ 
+****************************************
+Report : area
+Design : HARVESTER_TOP
+Version: T-2022.03
+Date   : Mon May 18 18:29:45 2026
+****************************************
+
+Library(s) Used:
+
+    fsa0m_a_generic_core_ss1p62v125c (File: /RAID2/COURSE/BackUp/2023_Spring/iclab/iclabta01/UMC018_CBDK/CIC/SynopsysDC/db/fsa0m_a_generic_core_ss1p62v125c.db)
+    DUAL_64X32X1BM1_WC (File: /RAID2/COURSE/2026_Spring/iclab/iclab062/Lab07_2026/Exercise/04_MEM/DUAL_64X32X1BM1_WC.db)
+
+Number of ports:                          922
+Number of nets:                         28069
+Number of cells:                        25003
+Number of combinational cells:          20815
+Number of sequential cells:              4140
+Number of macros/black boxes:               3
+Number of buf/inv:                       2631
+Number of references:                     119
+
+Combinational area:             440703.047148
+Buf/Inv area:                    20939.284639
+Noncombinational area:          237953.522900
+Macro/Black Box area:           510759.515625
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:               1189416.085673
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area                  Local cell area
+                                  ---------------------  ------------------------------------- 
+Hierarchical cell                 Absolute      Percent  Combi-       Noncombi-    Black-
+                                  Total         Total    national     national     boxes        Design
+--------------------------------  ------------  -------  -----------  -----------  -----------  ------------
+HARVESTER_TOP                     1189416.0857    100.0  366432.8000  142709.6172  510759.5156  HARVESTER_TOP
+u_DRAM_SYS                         164289.4872     13.8   74270.2471   90019.2400       0.0000  CLK_3_MODULE
+u_FIFO_syn_AR/read_to_write_sync/genblk1[0].u_NDFF_syn
+                                      118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+u_FIFO_syn_AR/read_to_write_sync/genblk1[1].u_NDFF_syn
+                                      118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+u_FIFO_syn_AR/read_to_write_sync/genblk1[2].u_NDFF_syn
+                                      118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+u_FIFO_syn_AR/read_to_write_sync/genblk1[3].u_NDFF_syn
+                                      118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+u_FIFO_syn_AR/read_to_write_sync/genblk1[4].u_NDFF_syn
+                                      118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+u_FIFO_syn_AR/read_to_write_sync/genblk1[5].u_NDFF_syn
+                                      118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+u_FIFO_syn_AR/read_to_write_sync/genblk1[6].u_NDFF_syn
+                                      118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+u_FIFO_syn_AR/write_to_read_sync/genblk1[0].u_NDFF_syn
+                                      118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+u_FIFO_syn_AR/write_to_read_sync/genblk1[1].u_NDFF_syn
+                                      118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+u_FIFO_syn_AR/write_to_read_sync/genblk1[2].u_NDFF_syn
+                                      118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+u_FIFO_syn_AR/write_to_read_sync/genblk1[3].u_NDFF_syn
+                                      118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+u_FIFO_syn_AR/write_to_read_sync/genblk1[4].u_NDFF_syn
+                                      118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+u_FIFO_syn_AR/write_to_read_sync/genblk1[5].u_NDFF_syn
+                                      118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+u_FIFO_syn_AR/write_to_read_sync/genblk1[6].u_NDFF_syn
+                                      118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+u_FIFO_syn_R/read_to_write_sync/genblk1[0].u_NDFF_syn
+                                      118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+u_FIFO_syn_R/read_to_write_sync/genblk1[1].u_NDFF_syn
+                                      118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+u_FIFO_syn_R/read_to_write_sync/genblk1[2].u_NDFF_syn
+                                      118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+u_FIFO_syn_R/read_to_write_sync/genblk1[3].u_NDFF_syn
+                                      118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+u_FIFO_syn_R/read_to_write_sync/genblk1[4].u_NDFF_syn
+                                      118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+u_FIFO_syn_R/read_to_write_sync/genblk1[5].u_NDFF_syn
+                                      118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+u_FIFO_syn_R/read_to_write_sync/genblk1[6].u_NDFF_syn
+                                      118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+u_FIFO_syn_R/write_to_read_sync/genblk1[0].u_NDFF_syn
+                                      118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+u_FIFO_syn_R/write_to_read_sync/genblk1[1].u_NDFF_syn
+                                      118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+u_FIFO_syn_R/write_to_read_sync/genblk1[2].u_NDFF_syn
+                                      118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+u_FIFO_syn_R/write_to_read_sync/genblk1[3].u_NDFF_syn
+                                      118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+u_FIFO_syn_R/write_to_read_sync/genblk1[4].u_NDFF_syn
+                                      118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+u_FIFO_syn_R/write_to_read_sync/genblk1[5].u_NDFF_syn
+                                      118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+u_FIFO_syn_R/write_to_read_sync/genblk1[6].u_NDFF_syn
+                                      118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+u_FIFO_syn_output/read_to_write_sync/genblk1[0].u_NDFF_syn
+                                      118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+u_FIFO_syn_output/read_to_write_sync/genblk1[1].u_NDFF_syn
+                                      118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+u_FIFO_syn_output/read_to_write_sync/genblk1[2].u_NDFF_syn
+                                      118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+u_FIFO_syn_output/read_to_write_sync/genblk1[3].u_NDFF_syn
+                                      118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+u_FIFO_syn_output/read_to_write_sync/genblk1[4].u_NDFF_syn
+                                      118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+u_FIFO_syn_output/read_to_write_sync/genblk1[5].u_NDFF_syn
+                                      118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+u_FIFO_syn_output/read_to_write_sync/genblk1[6].u_NDFF_syn
+                                      118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+u_FIFO_syn_output/write_to_read_sync/genblk1[0].u_NDFF_syn
+                                      118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+u_FIFO_syn_output/write_to_read_sync/genblk1[1].u_NDFF_syn
+                                      118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+u_FIFO_syn_output/write_to_read_sync/genblk1[2].u_NDFF_syn
+                                      118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+u_FIFO_syn_output/write_to_read_sync/genblk1[3].u_NDFF_syn
+                                      118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+u_FIFO_syn_output/write_to_read_sync/genblk1[4].u_NDFF_syn
+                                      118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+u_FIFO_syn_output/write_to_read_sync/genblk1[5].u_NDFF_syn
+                                      118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+u_FIFO_syn_output/write_to_read_sync/genblk1[6].u_NDFF_syn
+                                      118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+u_Handshake_syn/ack_sync              118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+u_Handshake_syn/req_sync              118.7424      0.0       0.0000     118.7424       0.0000  NDFF_syn
+--------------------------------  ------------  -------  -----------  -----------  -----------  ------------
+Total                                                    440703.0471  237953.5229  510759.5156
+
+1

@@ -1,0 +1,72 @@
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : LAB8_DESIGN
+Version: T-2022.03
+Date   : Mon May  4 00:11:00 2026
+****************************************
+
+
+Library(s) Used:
+
+    fsa0m_a_generic_core_ss1p62v125c (File: /RAID2/COURSE/BackUp/2023_Spring/iclab/iclabta01/UMC018_CBDK/CIC/SynopsysDC/db/fsa0m_a_generic_core_ss1p62v125c.db)
+
+
+Operating Conditions: WCCOM   Library: fsa0m_a_generic_core_ss1p62v125c
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+LAB8_DESIGN            enG30K            fsa0m_a_generic_core_ss1p62v125c
+DIV_8_BY_4             enG5K             fsa0m_a_generic_core_ss1p62v125c
+MAC                    enG5K             fsa0m_a_generic_core_ss1p62v125c
+MOD_15_PLUS_1_3        enG5K             fsa0m_a_generic_core_ss1p62v125c
+MULT_4X8_3             enG5K             fsa0m_a_generic_core_ss1p62v125c
+XOR_12X8_3             enG5K             fsa0m_a_generic_core_ss1p62v125c
+XOR_12X8_0             enG5K             fsa0m_a_generic_core_ss1p62v125c
+XOR_12X8_1             enG5K             fsa0m_a_generic_core_ss1p62v125c
+XOR_12X8_2             enG5K             fsa0m_a_generic_core_ss1p62v125c
+MULT_4X8_0             enG5K             fsa0m_a_generic_core_ss1p62v125c
+MULT_4X8_1             enG5K             fsa0m_a_generic_core_ss1p62v125c
+MULT_4X8_2             enG5K             fsa0m_a_generic_core_ss1p62v125c
+MOD_15_PLUS_1_0        enG5K             fsa0m_a_generic_core_ss1p62v125c
+MOD_15_PLUS_1_1        enG5K             fsa0m_a_generic_core_ss1p62v125c
+MOD_15_PLUS_1_2        enG5K             fsa0m_a_generic_core_ss1p62v125c
+
+
+Global Operating Voltage = 1.62 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  =   1.4834 mW   (91%)
+  Net Switching Power  = 144.2630 uW    (9%)
+                         ---------
+Total Dynamic Power    =   1.6277 mW  (100%)
+
+Cell Leakage Power     =   5.7643 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      1.4442            0.0000            0.0000            0.0000  (   0.00%)  i
+register       1.0413e-02        1.3626e-02        1.9592e+06            1.4702  (  90.00%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  2.8842e-02            0.1306        3.8051e+06            0.1633  (  10.00%)
+--------------------------------------------------------------------------------------------------
+Total              1.4834 mW         0.1443 mW     5.7643e+06 pW         1.6335 mW
+1

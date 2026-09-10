@@ -1,0 +1,1787 @@
+[05/29 17:50:00      0s] 
+[05/29 17:50:00      0s] Cadence Innovus(TM) Implementation System.
+[05/29 17:50:00      0s] Copyright 2020 Cadence Design Systems, Inc. All rights reserved worldwide.
+[05/29 17:50:00      0s] 
+[05/29 17:50:00      0s] Version:	v20.15-s105_1, built Tue Jul 27 14:15:35 PDT 2021
+[05/29 17:50:00      0s] Options:	
+[05/29 17:50:00      0s] Date:		Fri May 29 17:50:00 2026
+[05/29 17:50:00      0s] Host:		ee28 (x86_64 w/Linux 3.10.0-1160.88.1.el7.x86_64) (64cores*256cpus*AMD EPYC 7713 64-Core Processor 512KB)
+[05/29 17:50:00      0s] OS:		CentOS Linux release 7.9.2009 (Core)
+[05/29 17:50:00      0s] 
+[05/29 17:50:00      0s] License:
+[05/29 17:50:00      0s] 		invs	Innovus Implementation System	20.1	checkout succeeded
+[05/29 17:50:00      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[05/29 17:50:13     11s] @(#)CDS: Innovus v20.15-s105_1 (64bit) 07/27/2021 14:15 (Linux 2.6.32-431.11.2.el6.x86_64)
+[05/29 17:50:13     11s] @(#)CDS: NanoRoute 20.15-s105_1 NR210726-1341/20_15-UB (database version 18.20.554) {superthreading v2.14}
+[05/29 17:50:13     11s] @(#)CDS: AAE 20.15-s020 (64bit) 07/27/2021 (Linux 2.6.32-431.11.2.el6.x86_64)
+[05/29 17:50:13     11s] @(#)CDS: CTE 20.15-s024_1 () Jul 23 2021 04:46:45 ( )
+[05/29 17:50:13     11s] @(#)CDS: SYNTECH 20.15-s012_1 () Jul 12 2021 23:29:38 ( )
+[05/29 17:50:13     11s] @(#)CDS: CPE v20.15-s071
+[05/29 17:50:13     11s] @(#)CDS: IQuantus/TQuantus 20.1.1-s460 (64bit) Fri Mar 5 18:46:16 PST 2021 (Linux 2.6.32-431.11.2.el6.x86_64)
+[05/29 17:50:13     11s] @(#)CDS: OA 22.60-p058 Tue Jun 15 18:38:04 2021
+[05/29 17:50:13     11s] @(#)CDS: SGN 20.10-d001 (01-Jun-2020) (64 bit executable, Qt5.9.0)
+[05/29 17:50:13     11s] @(#)CDS: RCDB 11.15.0
+[05/29 17:50:13     11s] @(#)CDS: STYLUS 20.10-p029_1 (06/24/2021 01:33 PDT)
+[05/29 17:50:13     11s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_131641_ee28_iclab062_yzzEG9.
+
+[05/29 17:50:13     11s] Change the soft stacksize limit to 0.2%RAM (2063 mbytes). Set global soft_stack_size_limit to change the value.
+[05/29 17:50:15     13s] 
+[05/29 17:50:15     13s] **INFO:  MMMC transition support version v31-84 
+[05/29 17:50:15     13s] 
+[05/29 17:50:15     13s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[05/29 17:50:15     13s] <CMD> suppressMessage ENCEXT-2799
+[05/29 17:50:15     13s] <CMD> getVersion
+[05/29 17:50:15     13s] [INFO] Loading Pegasus 21.21 fill procedures
+[05/29 17:50:16     13s] <CMD> win
+[05/29 17:50:16     13s] <CMD> set init_design_uniquify 1
+[05/29 17:50:16     13s] <CMD> setDesignMode -process 180
+[05/29 17:50:16     13s] ##  Process: 180           (User Set)               
+[05/29 17:50:16     13s] ##     Node: (not set)                           
+[05/29 17:50:16     13s] 
+##  Check design process and node:  
+##  Design tech node is not set.
+
+[05/29 17:50:16     13s] Applying the recommended capacitance filtering threshold values for 180nm process node: total_c_th=5, relative_c_th=0.03 and coupling_c_th=3.
+[05/29 17:50:16     13s] 	These values will be used by all post-route extraction engines, including TQuantus, IQuantus and Quantus QRC extraction.
+[05/29 17:50:16     13s] 	For postRoute effortLevel low extraction, the coupling_c_th value will be used only when the -capFilterMode parameter of the setExtractRCMode command is set to relAndCoup or relOrCoup. Default value of -capFilterMode parameter in postRoute extraction effortLevel low is relOnly.
+[05/29 17:50:16     13s] 	The accuracy mode for postRoute effortLevel low extraction will be set to 'standard'.
+[05/29 17:50:16     13s] 	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode is 'low'.
+[05/29 17:50:20     13s] <CMD> suppressMessage TECHLIB 1318
+[05/29 17:50:25     13s] <CMD> suppressMessage ENCEXT-2799
+[05/29 17:50:40     14s] <CMD> encMessage warning 0
+[05/29 17:50:40     14s] Suppress "**WARN ..." messages.
+[05/29 17:50:40     14s] <CMD> encMessage debug 0
+[05/29 17:50:40     14s] <CMD> encMessage info 0
+[05/29 17:50:41     15s] **WARN: (IMPLF-119):	LAYER 'metal1' has been found in the database. Its content except ANTENNA* data will be ignored.
+[05/29 17:50:41     15s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/29 17:50:41     15s] **WARN: (IMPLF-119):	LAYER 'metal2' has been found in the database. Its content except ANTENNA* data will be ignored.
+[05/29 17:50:41     15s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/29 17:50:41     15s] **WARN: (IMPLF-119):	LAYER 'metal3' has been found in the database. Its content except ANTENNA* data will be ignored.
+[05/29 17:50:41     15s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/29 17:50:41     15s] **WARN: (IMPLF-119):	LAYER 'metal4' has been found in the database. Its content except ANTENNA* data will be ignored.
+[05/29 17:50:41     15s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/29 17:50:41     15s] **WARN: (IMPLF-119):	LAYER 'metal5' has been found in the database. Its content except ANTENNA* data will be ignored.
+[05/29 17:50:41     15s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/29 17:50:41     15s] **WARN: (IMPLF-119):	LAYER 'metal6' has been found in the database. Its content except ANTENNA* data will be ignored.
+[05/29 17:50:41     15s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/29 17:50:41     15s] **WARN: (IMPLF-58):	MACRO 'AN2' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[05/29 17:50:41     15s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/29 17:50:41     15s] **WARN: (IMPLF-58):	MACRO 'AN2B1' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[05/29 17:50:41     15s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/29 17:50:41     15s] **WARN: (IMPLF-58):	MACRO 'AN2B1P' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[05/29 17:50:41     15s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/29 17:50:41     15s] **WARN: (IMPLF-58):	MACRO 'AN2B1S' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[05/29 17:50:41     15s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/29 17:50:41     15s] **WARN: (IMPLF-58):	MACRO 'AN2B1T' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[05/29 17:50:41     15s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/29 17:50:41     15s] **WARN: (IMPLF-58):	MACRO 'AN2P' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[05/29 17:50:41     15s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/29 17:50:41     15s] **WARN: (IMPLF-58):	MACRO 'AN2S' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[05/29 17:50:41     15s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/29 17:50:41     15s] **WARN: (IMPLF-58):	MACRO 'AN2T' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[05/29 17:50:41     15s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/29 17:50:41     15s] **WARN: (IMPLF-58):	MACRO 'AN3' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[05/29 17:50:41     15s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/29 17:50:41     15s] **WARN: (IMPLF-58):	MACRO 'AN3B1' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[05/29 17:50:41     15s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/29 17:50:41     15s] **WARN: (IMPLF-58):	MACRO 'AN3B1P' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[05/29 17:50:41     15s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/29 17:50:41     15s] **WARN: (IMPLF-58):	MACRO 'AN3B1S' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[05/29 17:50:41     15s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/29 17:50:41     15s] **WARN: (IMPLF-58):	MACRO 'AN3B1T' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[05/29 17:50:41     15s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/29 17:50:41     15s] **WARN: (IMPLF-58):	MACRO 'AN3B2' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[05/29 17:50:41     15s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/29 17:50:41     15s] **WARN: (IMPLF-58):	MACRO 'AN3B2P' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[05/29 17:50:41     15s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/29 17:50:41     15s] **WARN: (IMPLF-58):	MACRO 'AN3B2S' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[05/29 17:50:41     15s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/29 17:50:41     15s] **WARN: (IMPLF-58):	MACRO 'AN3B2T' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[05/29 17:50:41     15s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/29 17:50:41     15s] **WARN: (IMPLF-58):	MACRO 'AN3P' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[05/29 17:50:41     15s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/29 17:50:41     15s] **WARN: (IMPLF-58):	MACRO 'AN3S' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[05/29 17:50:41     15s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/29 17:50:41     15s] **WARN: (IMPLF-58):	MACRO 'AN3T' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+[05/29 17:50:41     15s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/29 17:50:41     15s] **WARN: (EMS-27):	Message (IMPLF-58) has exceeded the current message display limit of 20.
+[05/29 17:50:41     15s] To increase the message display limit, refer to the product command reference manual.
+[05/29 17:50:41     15s] **WARN: (IMPLF-119):	LAYER 'metal1' has been found in the database. Its content except ANTENNA* data will be ignored.
+[05/29 17:50:41     15s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/29 17:50:41     15s] **WARN: (IMPLF-119):	LAYER 'metal2' has been found in the database. Its content except ANTENNA* data will be ignored.
+[05/29 17:50:41     15s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/29 17:50:41     15s] **WARN: (IMPLF-119):	LAYER 'metal3' has been found in the database. Its content except ANTENNA* data will be ignored.
+[05/29 17:50:41     15s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/29 17:50:41     15s] **WARN: (IMPLF-119):	LAYER 'metal4' has been found in the database. Its content except ANTENNA* data will be ignored.
+[05/29 17:50:41     15s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/29 17:50:41     15s] **WARN: (IMPLF-119):	LAYER 'metal5' has been found in the database. Its content except ANTENNA* data will be ignored.
+[05/29 17:50:41     15s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/29 17:50:41     15s] **WARN: (IMPLF-119):	LAYER 'metal6' has been found in the database. Its content except ANTENNA* data will be ignored.
+[05/29 17:50:41     15s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/29 17:50:41     15s] **WARN: (IMPLF-61):	392 duplicated MACRO definitions have been found in the LEF file(s). Their content except DENSITY and PIN ANTENNA* data, and certain properties, have been ignored.
+[05/29 17:50:41     15s] Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+[05/29 17:50:41     15s] **WARN: (IMPLF-201):	Pin 'DO63' in macro 'SRAM_82X64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/29 17:50:41     15s] **WARN: (IMPLF-200):	Pin 'DI63' in macro 'SRAM_82X64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/29 17:50:41     15s] **WARN: (IMPLF-201):	Pin 'DO62' in macro 'SRAM_82X64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/29 17:50:41     15s] **WARN: (IMPLF-200):	Pin 'DI62' in macro 'SRAM_82X64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/29 17:50:41     15s] **WARN: (IMPLF-201):	Pin 'DO61' in macro 'SRAM_82X64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/29 17:50:41     15s] **WARN: (IMPLF-200):	Pin 'DI61' in macro 'SRAM_82X64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/29 17:50:41     15s] **WARN: (IMPLF-201):	Pin 'DO60' in macro 'SRAM_82X64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/29 17:50:41     15s] **WARN: (IMPLF-200):	Pin 'DI60' in macro 'SRAM_82X64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/29 17:50:41     15s] **WARN: (IMPLF-201):	Pin 'DO59' in macro 'SRAM_82X64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/29 17:50:41     15s] **WARN: (IMPLF-200):	Pin 'DI59' in macro 'SRAM_82X64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/29 17:50:41     15s] **WARN: (IMPLF-201):	Pin 'DO58' in macro 'SRAM_82X64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/29 17:50:41     15s] **WARN: (IMPLF-200):	Pin 'DI58' in macro 'SRAM_82X64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/29 17:50:41     15s] **WARN: (IMPLF-201):	Pin 'DO57' in macro 'SRAM_82X64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/29 17:50:41     15s] **WARN: (IMPLF-200):	Pin 'DI57' in macro 'SRAM_82X64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/29 17:50:41     15s] **WARN: (IMPLF-201):	Pin 'DO56' in macro 'SRAM_82X64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/29 17:50:41     15s] **WARN: (IMPLF-200):	Pin 'DI56' in macro 'SRAM_82X64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/29 17:50:41     15s] **WARN: (IMPLF-201):	Pin 'DO55' in macro 'SRAM_82X64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/29 17:50:41     15s] **WARN: (IMPLF-200):	Pin 'DI55' in macro 'SRAM_82X64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/29 17:50:41     15s] **WARN: (IMPLF-201):	Pin 'DO54' in macro 'SRAM_82X64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/29 17:50:41     15s] **WARN: (IMPLF-200):	Pin 'DI54' in macro 'SRAM_82X64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/29 17:50:41     15s] **WARN: (IMPLF-201):	Pin 'DO53' in macro 'SRAM_82X64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/29 17:50:41     15s] **WARN: (IMPLF-200):	Pin 'DI53' in macro 'SRAM_82X64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/29 17:50:41     15s] **WARN: (IMPLF-201):	Pin 'DO52' in macro 'SRAM_82X64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/29 17:50:41     15s] **WARN: (IMPLF-200):	Pin 'DI52' in macro 'SRAM_82X64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/29 17:50:41     15s] **WARN: (IMPLF-201):	Pin 'DO51' in macro 'SRAM_82X64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/29 17:50:41     15s] **WARN: (IMPLF-200):	Pin 'DI51' in macro 'SRAM_82X64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/29 17:50:41     15s] **WARN: (IMPLF-201):	Pin 'DO50' in macro 'SRAM_82X64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/29 17:50:41     15s] **WARN: (IMPLF-200):	Pin 'DI50' in macro 'SRAM_82X64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/29 17:50:41     15s] **WARN: (IMPLF-201):	Pin 'DO49' in macro 'SRAM_82X64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/29 17:50:41     15s] **WARN: (IMPLF-200):	Pin 'DI49' in macro 'SRAM_82X64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/29 17:50:41     15s] **WARN: (IMPLF-201):	Pin 'DO48' in macro 'SRAM_82X64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/29 17:50:41     15s] **WARN: (IMPLF-200):	Pin 'DI48' in macro 'SRAM_82X64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/29 17:50:41     15s] **WARN: (IMPLF-201):	Pin 'DO47' in macro 'SRAM_82X64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/29 17:50:41     15s] **WARN: (IMPLF-200):	Pin 'DI47' in macro 'SRAM_82X64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/29 17:50:41     15s] **WARN: (IMPLF-201):	Pin 'DO46' in macro 'SRAM_82X64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/29 17:50:41     15s] **WARN: (IMPLF-200):	Pin 'DI46' in macro 'SRAM_82X64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/29 17:50:41     15s] **WARN: (IMPLF-201):	Pin 'DO45' in macro 'SRAM_82X64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/29 17:50:41     15s] **WARN: (IMPLF-200):	Pin 'DI45' in macro 'SRAM_82X64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/29 17:50:41     15s] **WARN: (IMPLF-201):	Pin 'DO44' in macro 'SRAM_82X64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/29 17:50:41     15s] **WARN: (IMPLF-200):	Pin 'DI44' in macro 'SRAM_82X64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/29 17:50:41     15s] **WARN: (EMS-27):	Message (IMPLF-201) has exceeded the current message display limit of 20.
+[05/29 17:50:41     15s] To increase the message display limit, refer to the product command reference manual.
+[05/29 17:50:41     15s] **WARN: (EMS-27):	Message (IMPLF-200) has exceeded the current message display limit of 20.
+[05/29 17:50:41     15s] To increase the message display limit, refer to the product command reference manual.
+[05/29 17:50:41     15s] Loading view definition file from /RAID2/COURSE/2026_Spring/iclab/iclab062/Lab12_26S/Exercise/05_APR/CHIP_floorplan.inn.dat/viewDefinition.tcl
+[05/29 17:50:41     15s] **WARN: (TECHLIB-302):	No function defined for cell 'ANTENNA'. The cell will only be used for analysis. (File /RAID2/COURSE/BackUp/2023_Spring/iclab/iclabta01/UMC018_CBDK/orig_lib/fsa0m_a/2009Q2v2.0/GENERIC_CORE/FrontEnd/synopsys/fsa0m_a_generic_core_ss1p62v125c.lib)
+[05/29 17:50:42     16s] **WARN: (TECHLIB-302):	No function defined for cell 'ANTENNA'. The cell will only be used for analysis. (File /RAID2/COURSE/BackUp/2023_Spring/iclab/iclabta01/UMC018_CBDK/orig_lib/fsa0m_a/2009Q2v2.0/GENERIC_CORE/FrontEnd/synopsys/fsa0m_a_generic_core_ff1p98vm40c.lib)
+[05/29 17:50:42     16s] *** End library_loading (cpu=0.03min, real=0.02min, mem=21.9M, fe_cpu=0.28min, fe_real=0.70min, fe_mem=940.6M) ***
+[05/29 17:50:42     16s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR4T' is defined in LEF but not in the timing library.
+[05/29 17:50:42     16s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR4T' is defined in LEF but not in the timing library.
+[05/29 17:50:42     16s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR4S' is defined in LEF but not in the timing library.
+[05/29 17:50:42     16s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR4S' is defined in LEF but not in the timing library.
+[05/29 17:50:42     16s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR4P' is defined in LEF but not in the timing library.
+[05/29 17:50:42     16s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR4P' is defined in LEF but not in the timing library.
+[05/29 17:50:42     16s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR4' is defined in LEF but not in the timing library.
+[05/29 17:50:42     16s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR4' is defined in LEF but not in the timing library.
+[05/29 17:50:42     16s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR3T' is defined in LEF but not in the timing library.
+[05/29 17:50:42     16s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR3T' is defined in LEF but not in the timing library.
+[05/29 17:50:42     16s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR3S' is defined in LEF but not in the timing library.
+[05/29 17:50:42     16s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR3S' is defined in LEF but not in the timing library.
+[05/29 17:50:42     16s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR3P' is defined in LEF but not in the timing library.
+[05/29 17:50:42     16s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR3P' is defined in LEF but not in the timing library.
+[05/29 17:50:42     16s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR3' is defined in LEF but not in the timing library.
+[05/29 17:50:42     16s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR3' is defined in LEF but not in the timing library.
+[05/29 17:50:42     16s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR2HT' is defined in LEF but not in the timing library.
+[05/29 17:50:42     16s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR2HT' is defined in LEF but not in the timing library.
+[05/29 17:50:42     16s] **WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR2HS' is defined in LEF but not in the timing library.
+[05/29 17:50:42     16s] **WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR2HS' is defined in LEF but not in the timing library.
+[05/29 17:50:42     16s] **WARN: (EMS-27):	Message (IMPVL-159) has exceeded the current message display limit of 20.
+[05/29 17:50:42     16s] To increase the message display limit, refer to the product command reference manual.
+[05/29 17:50:43     17s] *** Netlist is unique.
+[05/29 17:50:43     17s] **WARN: (IMPFP-3961):	The techSite 'iocore_f' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[05/29 17:50:43     17s] **WARN: (IMPFP-3961):	The techSite 'iocore_e' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[05/29 17:50:43     17s] **WARN: (IMPFP-3961):	The techSite 'iocore_ds' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[05/29 17:50:43     17s] **WARN: (IMPFP-3961):	The techSite 'iocore_cs' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[05/29 17:50:43     17s] **WARN: (IMPFP-3961):	The techSite 'iocore_d' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[05/29 17:50:43     17s] **WARN: (IMPFP-3961):	The techSite 'iocore_c' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[05/29 17:50:43     17s] **WARN: (IMPFP-3961):	The techSite 'iocore_b' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[05/29 17:50:43     17s] **WARN: (IMPFP-3961):	The techSite 'iocore_a' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[05/29 17:50:43     17s] Loading preference file /RAID2/COURSE/2026_Spring/iclab/iclab062/Lab12_26S/Exercise/05_APR/CHIP_floorplan.inn.dat/gui.pref.tcl ...
+[05/29 17:50:43     17s] 
+[05/29 17:50:43     17s] TimeStamp Creating Cell Server ...(0, 1, 1, 1) in restoreDesign Begin ...
+[05/29 17:50:43     17s] 
+[05/29 17:50:43     17s] TimeStamp Creating Cell Server ...(0, 1, 1, 1) in restoreDesign End ...
+[05/29 17:50:43     17s] 
+[05/29 17:50:43     17s] TimeStamp Deleting Cell Server Begin ...
+[05/29 17:50:43     17s] 
+[05/29 17:50:43     17s] TimeStamp Deleting Cell Server End ...
+[05/29 17:50:43     17s] 
+[05/29 17:50:43     17s] TimeStamp Creating Cell Server ...(0, 0, 0, 0) in restoreDesign Begin ...
+[05/29 17:50:43     17s] 
+[05/29 17:50:43     17s] TimeStamp Creating Cell Server ...(0, 0, 0, 0) in restoreDesign End ...
+[05/29 17:50:43     17s] **WARN: (IMPSYC-2):	Timing information is not defined for cell VCCKD; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+[05/29 17:50:43     17s] **WARN: (IMPSYC-2):	Timing information is not defined for cell VCC3IOD; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+[05/29 17:50:43     17s] **WARN: (IMPSYC-2):	Timing information is not defined for cell GNDKD; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+[05/29 17:50:43     17s] **WARN: (IMPSYC-2):	Timing information is not defined for cell GNDIOD; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+[05/29 17:50:44     17s] **WARN: (IMPFP-3961):	The techSite 'iocore_f' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[05/29 17:50:44     17s] **WARN: (IMPFP-3961):	The techSite 'iocore_e' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[05/29 17:50:44     17s] **WARN: (IMPFP-3961):	The techSite 'iocore_ds' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[05/29 17:50:44     17s] **WARN: (IMPFP-3961):	The techSite 'iocore_cs' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[05/29 17:50:44     17s] **WARN: (IMPFP-3961):	The techSite 'iocore_d' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[05/29 17:50:44     17s] **WARN: (IMPFP-3961):	The techSite 'iocore_c' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[05/29 17:50:44     17s] **WARN: (IMPFP-3961):	The techSite 'iocore_b' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[05/29 17:50:44     17s] **WARN: (IMPFP-3961):	The techSite 'iocore_a' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[05/29 17:50:44     18s] Loading place ...
+[05/29 17:50:45     18s] **WARN: (IMPEXT-6202):	In addition to the technology file, the capacitance table file is specified for all the RC corners. If the technology file  is already specified for all the RC corners, the capacitance table file is not required for preRoute and postRoute extraction. In a new session, the capacitance table files can be removed from the create_rc_corner command to enable the technology file to be used for preRoute and postRoute (effort level medium/high/signoff) extraction engines.
+[05/29 17:50:45     18s] {RT RC_Corner 0 6 6 {5 0} 1}
+[05/29 17:50:45     18s] 
+[05/29 17:50:45     18s] TimeStamp Deleting Cell Server Begin ...
+[05/29 17:50:45     18s] 
+[05/29 17:50:45     18s] TimeStamp Deleting Cell Server End ...
+[05/29 17:50:45     18s] 
+[05/29 17:50:45     18s] TimeStamp Creating Cell Server ...(0, 1, 1, 1) in restoreDesign Begin ...
+[05/29 17:50:45     18s] 
+[05/29 17:50:45     18s] TimeStamp Creating Cell Server ...(0, 1, 1, 1) in restoreDesign End ...
+[05/29 17:50:45     18s] 
+[05/29 17:50:45     18s] TimeStamp Deleting Cell Server Begin ...
+[05/29 17:50:45     18s] 
+[05/29 17:50:45     18s] TimeStamp Deleting Cell Server End ...
+[05/29 17:50:45     18s] **WARN: (IMPCTE-107):	The following globals have been obsoleted since version 20.15-s105_1. They will be removed in the next release. 
+[05/29 17:50:45     18s] timing_enable_default_delay_arc
+[05/29 17:50:48     19s] <CMD> getIoFlowFlag
+[05/29 17:50:54     19s] <CMD> setIoFlowFlag 0
+[05/29 17:50:54     19s] <CMD> floorPlan -site core_5040 -r 0.979223619464 0.542895 200 200 200 200
+[05/29 17:50:54     19s] Adjusting Core to Bottom to: 200.9200.
+[05/29 17:50:54     19s] **WARN: (IMPFP-3961):	The techSite 'iocore_f' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[05/29 17:50:54     19s] Type 'man IMPFP-3961' for more detail.
+[05/29 17:50:54     19s] **WARN: (IMPFP-3961):	The techSite 'iocore_e' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[05/29 17:50:54     19s] Type 'man IMPFP-3961' for more detail.
+[05/29 17:50:54     19s] **WARN: (IMPFP-3961):	The techSite 'iocore_ds' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[05/29 17:50:54     19s] Type 'man IMPFP-3961' for more detail.
+[05/29 17:50:54     19s] **WARN: (IMPFP-3961):	The techSite 'iocore_cs' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[05/29 17:50:54     19s] Type 'man IMPFP-3961' for more detail.
+[05/29 17:50:54     19s] **WARN: (IMPFP-3961):	The techSite 'iocore_d' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[05/29 17:50:54     19s] Type 'man IMPFP-3961' for more detail.
+[05/29 17:50:54     19s] **WARN: (IMPFP-3961):	The techSite 'iocore_c' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[05/29 17:50:54     19s] Type 'man IMPFP-3961' for more detail.
+[05/29 17:50:54     19s] **WARN: (IMPFP-3961):	The techSite 'iocore_b' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[05/29 17:50:54     19s] Type 'man IMPFP-3961' for more detail.
+[05/29 17:50:54     19s] **WARN: (IMPFP-3961):	The techSite 'iocore_a' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[05/29 17:50:54     19s] Type 'man IMPFP-3961' for more detail.
+[05/29 17:50:54     19s] Start create_tracks
+[05/29 17:50:54     19s] Generated pitch 2.48 in metal6 is different from 2.4 defined in technology file in preferred direction.
+[05/29 17:50:54     19s] **WARN: (IMPFP-325):	Floorplan of the design is resized. All current floorplan objects are automatically derived based on specified new floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
+[05/29 17:50:54     19s] <CMD> uiSetTool select
+[05/29 17:50:54     19s] <CMD> getIoFlowFlag
+[05/29 17:50:54     19s] <CMD> fit
+[05/29 17:51:00     20s] <CMD> uiSetTool move
+[05/29 17:51:01     20s] <CMD> selectInst CORE/u_v_sram_SRAM2
+[05/29 17:51:02     20s] <CMD> setObjFPlanBox Instance CORE/u_v_sram_SRAM2 807.148 397.69 1022.748 2296.75
+[05/29 17:51:17     21s] <CMD> saveDesign DBS/CHIP_floorplan.inn
+[05/29 17:51:17     21s] #% Begin save design ... (date=05/29 17:51:17, mem=1465.6M)
+[05/29 17:51:17     21s] % Begin Save ccopt configuration ... (date=05/29 17:51:17, mem=1468.6M)
+[05/29 17:51:17     21s] % End Save ccopt configuration ... (date=05/29 17:51:17, total cpu=0:00:00.0, real=0:00:00.0, peak res=1469.4M, current mem=1469.4M)
+[05/29 17:51:17     21s] % Begin Save netlist data ... (date=05/29 17:51:17, mem=1489.2M)
+[05/29 17:51:17     21s] Writing Binary DB to DBS/CHIP_floorplan.inn.dat.tmp/CHIP.v.bin in single-threaded mode...
+[05/29 17:51:17     21s] % End Save netlist data ... (date=05/29 17:51:17, total cpu=0:00:00.1, real=0:00:00.0, peak res=1489.5M, current mem=1489.5M)
+[05/29 17:51:17     21s] Saving symbol-table file ...
+[05/29 17:51:18     21s] Saving congestion map file DBS/CHIP_floorplan.inn.dat.tmp/CHIP.route.congmap.gz ...
+[05/29 17:51:18     21s] % Begin Save AAE data ... (date=05/29 17:51:18, mem=1490.3M)
+[05/29 17:51:18     21s] Saving AAE Data ...
+[05/29 17:51:18     21s] % End Save AAE data ... (date=05/29 17:51:18, total cpu=0:00:00.0, real=0:00:00.0, peak res=1490.3M, current mem=1490.3M)
+[05/29 17:51:18     21s] Saving preference file DBS/CHIP_floorplan.inn.dat.tmp/gui.pref.tcl ...
+[05/29 17:51:18     21s] Saving mode setting ...
+[05/29 17:51:18     21s] Saving global file ...
+[05/29 17:51:18     21s] % Begin Save floorplan data ... (date=05/29 17:51:18, mem=1493.1M)
+[05/29 17:51:18     21s] Saving floorplan file ...
+[05/29 17:51:18     21s] % End Save floorplan data ... (date=05/29 17:51:18, total cpu=0:00:00.1, real=0:00:00.0, peak res=1493.1M, current mem=1493.1M)
+[05/29 17:51:18     21s] Saving Drc markers ...
+[05/29 17:51:18     21s] ... No Drc file written since there is no markers found.
+[05/29 17:51:18     21s] % Begin Save placement data ... (date=05/29 17:51:18, mem=1493.2M)
+[05/29 17:51:18     21s] ** Saving stdCellPlacement_binary (version# 2) ...
+[05/29 17:51:18     21s] Save Adaptive View Pruning View Names to Binary file
+[05/29 17:51:18     21s] *** Completed savePlace (cpu=0:00:00.0 real=0:00:00.0 mem=2261.7M) ***
+[05/29 17:51:18     21s] % End Save placement data ... (date=05/29 17:51:18, total cpu=0:00:00.0, real=0:00:00.0, peak res=1493.4M, current mem=1493.4M)
+[05/29 17:51:18     21s] % Begin Save routing data ... (date=05/29 17:51:18, mem=1493.4M)
+[05/29 17:51:18     21s] Saving route file ...
+[05/29 17:51:19     21s] *** Completed saveRoute (cpu=0:00:00.0 real=0:00:01.0 mem=2258.7M) ***
+[05/29 17:51:19     21s] % End Save routing data ... (date=05/29 17:51:19, total cpu=0:00:00.0, real=0:00:01.0, peak res=1493.6M, current mem=1493.6M)
+[05/29 17:51:19     21s] Saving property file DBS/CHIP_floorplan.inn.dat.tmp/CHIP.prop
+[05/29 17:51:19     21s] *** Completed saveProperty (cpu=0:00:00.0 real=0:00:00.0 mem=2261.7M) ***
+[05/29 17:51:19     21s] % Begin Save power constraints data ... (date=05/29 17:51:19, mem=1494.1M)
+[05/29 17:51:19     21s] % End Save power constraints data ... (date=05/29 17:51:19, total cpu=0:00:00.0, real=0:00:00.0, peak res=1494.2M, current mem=1494.2M)
+[05/29 17:51:19     21s] Generated self-contained design CHIP_floorplan.inn.dat.tmp
+[05/29 17:51:19     22s] #% End save design ... (date=05/29 17:51:19, total cpu=0:00:00.8, real=0:00:02.0, peak res=1523.9M, current mem=1496.3M)
+[05/29 17:51:19     22s] *** Message Summary: 0 warning(s), 0 error(s)
+[05/29 17:51:19     22s] 
+[05/29 17:51:30     23s] <CMD> saveDesign CHIP_floorplan.inn
+[05/29 17:51:31     23s] #% Begin save design ... (date=05/29 17:51:30, mem=1495.9M)
+[05/29 17:51:31     23s] % Begin Save ccopt configuration ... (date=05/29 17:51:31, mem=1495.9M)
+[05/29 17:51:31     23s] % End Save ccopt configuration ... (date=05/29 17:51:31, total cpu=0:00:00.0, real=0:00:00.0, peak res=1495.9M, current mem=1495.9M)
+[05/29 17:51:31     23s] % Begin Save netlist data ... (date=05/29 17:51:31, mem=1495.9M)
+[05/29 17:51:31     23s] Writing Binary DB to CHIP_floorplan.inn.dat.tmp/CHIP.v.bin in single-threaded mode...
+[05/29 17:51:31     23s] % End Save netlist data ... (date=05/29 17:51:31, total cpu=0:00:00.1, real=0:00:00.0, peak res=1495.9M, current mem=1495.9M)
+[05/29 17:51:31     23s] Saving symbol-table file ...
+[05/29 17:51:31     23s] Saving congestion map file CHIP_floorplan.inn.dat.tmp/CHIP.route.congmap.gz ...
+[05/29 17:51:31     23s] % Begin Save AAE data ... (date=05/29 17:51:31, mem=1495.9M)
+[05/29 17:51:31     23s] Saving AAE Data ...
+[05/29 17:51:31     23s] % End Save AAE data ... (date=05/29 17:51:31, total cpu=0:00:00.0, real=0:00:00.0, peak res=1495.9M, current mem=1495.9M)
+[05/29 17:51:31     23s] Saving preference file CHIP_floorplan.inn.dat.tmp/gui.pref.tcl ...
+[05/29 17:51:31     23s] Saving mode setting ...
+[05/29 17:51:31     23s] Saving global file ...
+[05/29 17:51:31     23s] % Begin Save floorplan data ... (date=05/29 17:51:31, mem=1496.0M)
+[05/29 17:51:31     23s] Saving floorplan file ...
+[05/29 17:51:32     23s] % End Save floorplan data ... (date=05/29 17:51:32, total cpu=0:00:00.1, real=0:00:01.0, peak res=1496.0M, current mem=1496.0M)
+[05/29 17:51:32     23s] Saving Drc markers ...
+[05/29 17:51:32     23s] ... No Drc file written since there is no markers found.
+[05/29 17:51:32     23s] % Begin Save placement data ... (date=05/29 17:51:32, mem=1496.0M)
+[05/29 17:51:32     23s] ** Saving stdCellPlacement_binary (version# 2) ...
+[05/29 17:51:32     23s] Save Adaptive View Pruning View Names to Binary file
+[05/29 17:51:32     23s] *** Completed savePlace (cpu=0:00:00.0 real=0:00:00.0 mem=2298.2M) ***
+[05/29 17:51:32     23s] % End Save placement data ... (date=05/29 17:51:32, total cpu=0:00:00.0, real=0:00:00.0, peak res=1496.0M, current mem=1496.0M)
+[05/29 17:51:32     23s] % Begin Save routing data ... (date=05/29 17:51:32, mem=1496.0M)
+[05/29 17:51:32     23s] Saving route file ...
+[05/29 17:51:32     23s] *** Completed saveRoute (cpu=0:00:00.0 real=0:00:00.0 mem=2295.2M) ***
+[05/29 17:51:32     23s] % End Save routing data ... (date=05/29 17:51:32, total cpu=0:00:00.1, real=0:00:00.0, peak res=1496.1M, current mem=1496.1M)
+[05/29 17:51:32     23s] Saving property file CHIP_floorplan.inn.dat.tmp/CHIP.prop
+[05/29 17:51:32     23s] *** Completed saveProperty (cpu=0:00:00.0 real=0:00:00.0 mem=2298.2M) ***
+[05/29 17:51:32     23s] % Begin Save power constraints data ... (date=05/29 17:51:32, mem=1496.1M)
+[05/29 17:51:32     23s] % End Save power constraints data ... (date=05/29 17:51:32, total cpu=0:00:00.0, real=0:00:00.0, peak res=1496.1M, current mem=1496.1M)
+[05/29 17:51:33     23s] Generated self-contained design CHIP_floorplan.inn.dat.tmp
+[05/29 17:51:33     23s] #% End save design ... (date=05/29 17:51:33, total cpu=0:00:00.9, real=0:00:02.0, peak res=1526.8M, current mem=1496.7M)
+[05/29 17:51:33     23s] *** Message Summary: 0 warning(s), 0 error(s)
+[05/29 17:51:33     23s] 
+[05/29 17:51:43     24s] <CMD> clearGlobalNets
+[05/29 17:51:43     24s] <CMD> globalNetConnect VCC -type pgpin -pin VCC -instanceBasename *
+[05/29 17:51:43     24s] <CMD> globalNetConnect VCC -type net -net VCC
+[05/29 17:51:43     24s] <CMD> globalNetConnect VCC -type tiehi -pin VCC -instanceBasename *
+[05/29 17:51:43     24s] <CMD> globalNetConnect GND -type pgpin -pin GND -instanceBasename *
+[05/29 17:51:43     24s] <CMD> globalNetConnect GND -type net -net GND
+[05/29 17:51:43     24s] <CMD> globalNetConnect GND -type tielo -pin GND -instanceBasename *
+[05/29 17:51:43     24s] <CMD> set sprCreateIeRingOffset 1.0
+[05/29 17:51:43     24s] <CMD> set sprCreateIeRingThreshold 1.0
+[05/29 17:51:43     24s] <CMD> set sprCreateIeRingJogDistance 1.0
+[05/29 17:51:43     24s] <CMD> set sprCreateIeRingLayers {}
+[05/29 17:51:43     24s] <CMD> set sprCreateIeRingOffset 1.0
+[05/29 17:51:43     24s] <CMD> set sprCreateIeRingThreshold 1.0
+[05/29 17:51:43     24s] <CMD> set sprCreateIeRingJogDistance 1.0
+[05/29 17:51:43     24s] <CMD> set sprCreateIeRingLayers {}
+[05/29 17:51:43     24s] <CMD> set sprCreateIeStripeWidth 10.0
+[05/29 17:51:43     24s] <CMD> set sprCreateIeStripeThreshold 1.0
+[05/29 17:51:43     24s] <CMD> set sprCreateIeStripeWidth 10.0
+[05/29 17:51:43     24s] <CMD> set sprCreateIeStripeThreshold 1.0
+[05/29 17:51:43     24s] <CMD> set sprCreateIeRingOffset 1.0
+[05/29 17:51:43     24s] <CMD> set sprCreateIeRingThreshold 1.0
+[05/29 17:51:43     24s] <CMD> set sprCreateIeRingJogDistance 1.0
+[05/29 17:51:43     24s] <CMD> set sprCreateIeRingLayers {}
+[05/29 17:51:43     24s] <CMD> set sprCreateIeStripeWidth 10.0
+[05/29 17:51:43     24s] <CMD> set sprCreateIeStripeThreshold 1.0
+[05/29 17:51:43     24s] <CMD> setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+[05/29 17:51:43     24s] The ring targets are set to core/block ring wires.
+[05/29 17:51:43     24s] addRing command will consider rows while creating rings.
+[05/29 17:51:43     24s] addRing command will disallow rings to go over rows.
+[05/29 17:51:43     24s] addRing command will ignore shorts while creating rings.
+[05/29 17:51:43     24s] <CMD> addRing -nets {GND VCC} -type core_rings -follow core -layer {top metal3 bottom metal3 left metal2 right metal2} -width {top 9 bottom 9 left 9 right 9} -spacing {top 0.28 bottom 0.28 left 0.28 right 0.28} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 1 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None -use_wire_group 1 -use_wire_group_bits 12 -use_interleaving_wire_group 1
+[05/29 17:51:43     24s] #% Begin addRing (date=05/29 17:51:43, mem=1496.9M)
+[05/29 17:51:43     24s] 
+[05/29 17:51:43     24s] Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2308.9M)
+[05/29 17:51:43     24s] Ring generation is complete.
+[05/29 17:51:43     24s] vias are now being generated.
+[05/29 17:51:43     24s] **WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via3 layer at (659.570007, 135.360001) (677.210022, 139.880005).
+[05/29 17:51:43     24s] Type 'man IMPPP-570' for more detail.
+[05/29 17:51:43     24s] **WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via2 layer at (659.570007, 135.360001) (677.210022, 139.880005).
+[05/29 17:51:43     24s] Type 'man IMPPP-570' for more detail.
+[05/29 17:51:43     24s] **WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via3 layer at (659.570007, 135.360001) (677.210022, 139.880005).
+[05/29 17:51:43     24s] Type 'man IMPPP-570' for more detail.
+[05/29 17:51:43     24s] **WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via2 layer at (659.570007, 135.360001) (677.210022, 139.880005).
+[05/29 17:51:43     24s] Type 'man IMPPP-570' for more detail.
+[05/29 17:51:43     24s] **WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via3 layer at (639.929993, 135.360001) (657.570007, 139.880005).
+[05/29 17:51:43     24s] Type 'man IMPPP-570' for more detail.
+[05/29 17:51:43     24s] **WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via2 layer at (639.929993, 135.360001) (657.570007, 139.880005).
+[05/29 17:51:43     24s] Type 'man IMPPP-570' for more detail.
+[05/29 17:51:43     24s] **WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via3 layer at (639.929993, 135.360001) (657.570007, 139.880005).
+[05/29 17:51:43     24s] Type 'man IMPPP-570' for more detail.
+[05/29 17:51:43     24s] **WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via2 layer at (639.929993, 135.360001) (657.570007, 139.880005).
+[05/29 17:51:43     24s] Type 'man IMPPP-570' for more detail.
+[05/29 17:51:43     24s] **WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via3 layer at (620.289978, 135.360001) (637.929993, 139.880005).
+[05/29 17:51:43     24s] Type 'man IMPPP-570' for more detail.
+[05/29 17:51:43     24s] **WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via2 layer at (620.289978, 135.360001) (637.929993, 139.880005).
+[05/29 17:51:43     24s] Type 'man IMPPP-570' for more detail.
+[05/29 17:51:43     24s] **WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via3 layer at (620.289978, 135.360001) (637.929993, 139.880005).
+[05/29 17:51:43     24s] Type 'man IMPPP-570' for more detail.
+[05/29 17:51:43     24s] **WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via2 layer at (620.289978, 135.360001) (637.929993, 139.880005).
+[05/29 17:51:43     24s] Type 'man IMPPP-570' for more detail.
+[05/29 17:51:43     24s] **WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via3 layer at (479.589996, 135.360001) (497.230011, 139.880005).
+[05/29 17:51:43     24s] Type 'man IMPPP-570' for more detail.
+[05/29 17:51:43     24s] **WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via2 layer at (479.589996, 135.360001) (497.230011, 139.880005).
+[05/29 17:51:43     24s] Type 'man IMPPP-570' for more detail.
+[05/29 17:51:43     24s] **WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via3 layer at (479.589996, 135.360001) (497.230011, 139.880005).
+[05/29 17:51:43     24s] Type 'man IMPPP-570' for more detail.
+[05/29 17:51:43     24s] **WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via2 layer at (479.589996, 135.360001) (497.230011, 139.880005).
+[05/29 17:51:43     24s] Type 'man IMPPP-570' for more detail.
+[05/29 17:51:43     24s] **WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via3 layer at (459.950012, 135.360001) (477.589996, 139.880005).
+[05/29 17:51:43     24s] Type 'man IMPPP-570' for more detail.
+[05/29 17:51:43     24s] **WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via2 layer at (459.950012, 135.360001) (477.589996, 139.880005).
+[05/29 17:51:43     24s] Type 'man IMPPP-570' for more detail.
+[05/29 17:51:43     24s] **WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via3 layer at (459.950012, 135.360001) (477.589996, 139.880005).
+[05/29 17:51:43     24s] Type 'man IMPPP-570' for more detail.
+[05/29 17:51:43     24s] **WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via2 layer at (459.950012, 135.360001) (477.589996, 139.880005).
+[05/29 17:51:43     24s] Type 'man IMPPP-570' for more detail.
+[05/29 17:51:43     24s] **WARN: (EMS-27):	Message (IMPPP-570) has exceeded the current message display limit of 20.
+[05/29 17:51:43     24s] To increase the message display limit, refer to the product command reference manual.
+[05/29 17:51:43     24s] addRing created 267 wires.
+[05/29 17:51:43     24s] ViaGen created 1052 vias, deleted 0 via to avoid violation.
+[05/29 17:51:43     24s] +--------+----------------+----------------+
+[05/29 17:51:43     24s] |  Layer |     Created    |     Deleted    |
+[05/29 17:51:43     24s] +--------+----------------+----------------+
+[05/29 17:51:43     24s] | metal2 |       129      |       NA       |
+[05/29 17:51:43     24s] |  via2  |      1052      |        0       |
+[05/29 17:51:43     24s] | metal3 |       138      |       NA       |
+[05/29 17:51:43     24s] +--------+----------------+----------------+
+[05/29 17:51:43     24s] #% End addRing (date=05/29 17:51:43, total cpu=0:00:00.2, real=0:00:00.0, peak res=1499.1M, current mem=1499.1M)
+[05/29 17:51:43     24s] <CMD> set sprCreateIeRingOffset 1.0
+[05/29 17:51:43     24s] <CMD> set sprCreateIeRingThreshold 1.0
+[05/29 17:51:43     24s] <CMD> set sprCreateIeRingJogDistance 1.0
+[05/29 17:51:43     24s] <CMD> set sprCreateIeRingLayers {}
+[05/29 17:51:43     24s] <CMD> set sprCreateIeRingOffset 1.0
+[05/29 17:51:43     24s] <CMD> set sprCreateIeRingThreshold 1.0
+[05/29 17:51:43     24s] <CMD> set sprCreateIeRingJogDistance 1.0
+[05/29 17:51:43     24s] <CMD> set sprCreateIeRingLayers {}
+[05/29 17:51:43     24s] <CMD> set sprCreateIeStripeWidth 10.0
+[05/29 17:51:43     24s] <CMD> set sprCreateIeStripeThreshold 1.0
+[05/29 17:51:43     24s] <CMD> set sprCreateIeStripeWidth 10.0
+[05/29 17:51:43     24s] <CMD> set sprCreateIeStripeThreshold 1.0
+[05/29 17:51:43     24s] <CMD> set sprCreateIeRingOffset 1.0
+[05/29 17:51:43     24s] <CMD> set sprCreateIeRingThreshold 1.0
+[05/29 17:51:43     24s] <CMD> set sprCreateIeRingJogDistance 1.0
+[05/29 17:51:43     24s] <CMD> set sprCreateIeRingLayers {}
+[05/29 17:51:43     24s] <CMD> set sprCreateIeStripeWidth 10.0
+[05/29 17:51:43     24s] <CMD> set sprCreateIeStripeThreshold 1.0
+[05/29 17:51:43     24s] <CMD> setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+[05/29 17:51:43     24s] The ring targets are set to core/block ring wires.
+[05/29 17:51:43     24s] addRing command will consider rows while creating rings.
+[05/29 17:51:43     24s] addRing command will disallow rings to go over rows.
+[05/29 17:51:43     24s] addRing command will ignore shorts while creating rings.
+[05/29 17:51:43     24s] <CMD> addRing -nets {GND VCC} -type block_rings -around each_block -layer {top metal3 bottom metal3 left metal2 right metal2} -width {top 2 bottom 2 left 2 right 2} -spacing {top 0.28 bottom 0.28 left 0.28 right 0.28} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+[05/29 17:51:43     24s] #% Begin addRing (date=05/29 17:51:43, mem=1499.1M)
+[05/29 17:51:43     24s] 
+[05/29 17:51:43     24s] Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2308.9M)
+[05/29 17:51:43     24s] Ring generation is complete.
+[05/29 17:51:43     24s] vias are now being generated.
+[05/29 17:51:43     24s] addRing created 40 wires.
+[05/29 17:51:43     24s] ViaGen created 40 vias, deleted 0 via to avoid violation.
+[05/29 17:51:43     24s] +--------+----------------+----------------+
+[05/29 17:51:43     24s] |  Layer |     Created    |     Deleted    |
+[05/29 17:51:43     24s] +--------+----------------+----------------+
+[05/29 17:51:43     24s] | metal2 |       20       |       NA       |
+[05/29 17:51:43     24s] |  via2  |       40       |        0       |
+[05/29 17:51:43     24s] | metal3 |       20       |       NA       |
+[05/29 17:51:43     24s] +--------+----------------+----------------+
+[05/29 17:51:43     24s] #% End addRing (date=05/29 17:51:43, total cpu=0:00:00.0, real=0:00:00.0, peak res=1499.6M, current mem=1499.6M)
+[05/29 17:51:43     24s] <CMD> setSrouteMode -viaConnectToShape { ring blockring }
+[05/29 17:51:43     24s] <CMD> sroute -connect { blockPin padPin } -layerChangeRange { metal1(1) metal6(6) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -allowJogging 1 -crossoverViaLayerRange { metal1(1) metal6(6) } -nets { GND VCC } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { metal1(1) metal6(6) }
+[05/29 17:51:43     24s] #% Begin sroute (date=05/29 17:51:43, mem=1499.7M)
+[05/29 17:51:43     24s] *** Begin SPECIAL ROUTE on Fri May 29 17:51:43 2026 ***
+[05/29 17:51:43     24s] SPECIAL ROUTE ran on directory: /RAID2/COURSE/2026_Spring/iclab/iclab062/Lab12_26S/Exercise/05_APR
+[05/29 17:51:43     24s] SPECIAL ROUTE ran on machine: ee28 (Linux 3.10.0-1160.88.1.el7.x86_64 x86_64 1.70Ghz)
+[05/29 17:51:43     24s] 
+[05/29 17:51:43     24s] Begin option processing ...
+[05/29 17:51:43     24s] srouteConnectPowerBump set to false
+[05/29 17:51:43     24s] routeSelectNet set to "GND VCC"
+[05/29 17:51:43     24s] routeSpecial set to true
+[05/29 17:51:43     24s] srouteBlockPin set to "useLef"
+[05/29 17:51:43     24s] srouteBottomLayerLimit set to 1
+[05/29 17:51:43     24s] srouteBottomTargetLayerLimit set to 1
+[05/29 17:51:43     24s] srouteConnectConverterPin set to false
+[05/29 17:51:43     24s] srouteConnectCorePin set to false
+[05/29 17:51:43     24s] srouteConnectStripe set to false
+[05/29 17:51:43     24s] srouteCrossoverViaBottomLayer set to 1
+[05/29 17:51:43     24s] srouteCrossoverViaTopLayer set to 6
+[05/29 17:51:43     24s] srouteFollowCorePinEnd set to 3
+[05/29 17:51:43     24s] srouteFollowPadPin set to false
+[05/29 17:51:43     24s] srouteJogControl set to "preferWithChanges differentLayer"
+[05/29 17:51:43     24s] srouteNoViaOnWireShape set to "padring stripe blockpin coverpin noshape blockwire corewire followpin iowire"
+[05/29 17:51:43     24s] sroutePadPinAllPorts set to true
+[05/29 17:51:43     24s] sroutePreserveExistingRoutes set to true
+[05/29 17:51:43     24s] srouteRoutePowerBarPortOnBothDir set to true
+[05/29 17:51:43     24s] srouteStopBlockPin set to "nearestTarget"
+[05/29 17:51:43     24s] srouteTopLayerLimit set to 6
+[05/29 17:51:43     24s] srouteTopTargetLayerLimit set to 6
+[05/29 17:51:43     24s] End option processing: cpu: 0:00:00, real: 0:00:00, peak: 3432.00 megs.
+[05/29 17:51:43     24s] 
+[05/29 17:51:43     24s] Reading DB technology information...
+[05/29 17:51:43     24s] Finished reading DB technology information.
+[05/29 17:51:43     24s] Reading floorplan and netlist information...
+[05/29 17:51:43     24s] Finished reading floorplan and netlist information.
+[05/29 17:51:43     24s] Read in 12 layers, 6 routing layers, 1 overlap layer
+[05/29 17:51:43     24s] Read in 106 macros, 106 used
+[05/29 17:51:43     24s] Read in 158 components
+[05/29 17:51:43     24s]   96 core components: 96 unplaced, 0 placed, 0 fixed
+[05/29 17:51:43     24s]   57 pad components: 0 unplaced, 53 placed, 4 fixed
+[05/29 17:51:43     24s]   5 block/ring components: 0 unplaced, 0 placed, 5 fixed
+[05/29 17:51:43     24s] Read in 29 logical pins
+[05/29 17:51:43     24s] Read in 6 blockages
+[05/29 17:51:43     24s] Read in 29 nets
+[05/29 17:51:43     24s] Read in 2 special nets, 2 routed
+[05/29 17:51:43     24s] Read in 218 terminals
+[05/29 17:51:43     24s] 2 nets selected.
+[05/29 17:51:43     24s] 
+[05/29 17:51:43     24s] Begin power routing ...
+[05/29 17:51:44     25s]   Number of IO ports routed: 42
+[05/29 17:51:44     25s]   Number of Block ports routed: 1848
+[05/29 17:51:44     25s]   Number of Power Bump ports routed: 0
+[05/29 17:51:44     25s] End power routing: cpu: 0:00:01, real: 0:00:01, peak: 3449.00 megs.
+[05/29 17:51:44     25s] 
+[05/29 17:51:44     25s] 
+[05/29 17:51:44     25s] 
+[05/29 17:51:44     25s]  Begin updating DB with routing results ...
+[05/29 17:51:44     25s]  Updating DB with 0 via definition ...
+[05/29 17:51:44     25s] sroute created 1890 wires.
+[05/29 17:51:44     25s] ViaGen created 2292 vias, deleted 0 via to avoid violation.
+[05/29 17:51:44     25s] +--------+----------------+----------------+
+[05/29 17:51:44     25s] |  Layer |     Created    |     Deleted    |
+[05/29 17:51:44     25s] +--------+----------------+----------------+
+[05/29 17:51:44     25s] | metal1 |      1440      |       NA       |
+[05/29 17:51:44     25s] |   via  |      1668      |        0       |
+[05/29 17:51:44     25s] | metal2 |       370      |       NA       |
+[05/29 17:51:44     25s] |  via2  |       624      |        0       |
+[05/29 17:51:44     25s] | metal3 |       80       |       NA       |
+[05/29 17:51:44     25s] +--------+----------------+----------------+
+[05/29 17:51:44     25s] #% End sroute (date=05/29 17:51:44, total cpu=0:00:01.2, real=0:00:01.0, peak res=1506.5M, current mem=1506.5M)
+[05/29 17:51:44     25s] <CMD> set sprCreateIeRingOffset 1.0
+[05/29 17:51:44     25s] <CMD> set sprCreateIeRingThreshold 1.0
+[05/29 17:51:44     25s] <CMD> set sprCreateIeRingJogDistance 1.0
+[05/29 17:51:44     25s] <CMD> set sprCreateIeRingLayers {}
+[05/29 17:51:44     25s] <CMD> set sprCreateIeRingOffset 1.0
+[05/29 17:51:44     25s] <CMD> set sprCreateIeRingThreshold 1.0
+[05/29 17:51:44     25s] <CMD> set sprCreateIeRingJogDistance 1.0
+[05/29 17:51:44     25s] <CMD> set sprCreateIeRingLayers {}
+[05/29 17:51:44     25s] <CMD> set sprCreateIeStripeWidth 10.0
+[05/29 17:51:44     25s] <CMD> set sprCreateIeStripeThreshold 1.0
+[05/29 17:51:44     25s] <CMD> set sprCreateIeStripeWidth 10.0
+[05/29 17:51:44     25s] <CMD> set sprCreateIeStripeThreshold 1.0
+[05/29 17:51:44     25s] <CMD> set sprCreateIeRingOffset 1.0
+[05/29 17:51:44     25s] <CMD> set sprCreateIeRingThreshold 1.0
+[05/29 17:51:44     25s] <CMD> set sprCreateIeRingJogDistance 1.0
+[05/29 17:51:44     25s] <CMD> set sprCreateIeRingLayers {}
+[05/29 17:51:44     25s] <CMD> set sprCreateIeStripeWidth 10.0
+[05/29 17:51:44     25s] <CMD> set sprCreateIeStripeThreshold 1.0
+[05/29 17:51:44     25s] <CMD> setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+[05/29 17:51:44     25s] addStripe will allow jog to connect padcore ring and block ring.
+[05/29 17:51:44     25s] 
+[05/29 17:51:44     25s] Stripes will stop at the boundary of the specified area.
+[05/29 17:51:44     25s] When breaking rings, the power planner will consider the existence of blocks.
+[05/29 17:51:44     25s] Stripes will not extend to closest target.
+[05/29 17:51:44     25s] The power planner will set stripe antenna targets to none (no trimming allowed).
+[05/29 17:51:44     25s] Stripes will not be created over regions without power planning wires.
+[05/29 17:51:44     25s] The entire stripe set will break at the domain if one of the nets is not in the domain.
+[05/29 17:51:44     25s] addStripe will break automatically at non-default domains when generating global stripes over the core area or default domain.
+[05/29 17:51:44     25s] Offset for stripe breaking is set to 0.
+[05/29 17:51:44     25s] <CMD> addStripe -nets {GND VCC} -layer metal2 -direction vertical -width 4 -spacing 0.28 -set_to_set_distance 80 -start_from left -start_offset 50 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit metal6 -padcore_ring_bottom_layer_limit metal1 -block_ring_top_layer_limit metal6 -block_ring_bottom_layer_limit metal1 -use_wire_group 0 -snap_wire_center_to_grid None
+[05/29 17:51:44     25s] #% Begin addStripe (date=05/29 17:51:44, mem=1506.5M)
+[05/29 17:51:44     25s] 
+[05/29 17:51:44     25s] Initialize fgc environment(mem: 2326.2M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+[05/29 17:51:44     25s] Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+[05/29 17:51:44     25s] Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+[05/29 17:51:44     25s] Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+[05/29 17:51:44     25s] Starting stripe generation ...
+[05/29 17:51:44     25s] Non-Default Mode Option Settings :
+[05/29 17:51:44     25s]   NONE
+[05/29 17:51:44     25s] Completing 10% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+[05/29 17:51:44     25s] Completing 20% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+[05/29 17:51:44     26s] Completing 30% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+[05/29 17:51:44     26s] Completing 40% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+[05/29 17:51:44     26s] Completing 50% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+[05/29 17:51:44     26s] Completing 60% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+[05/29 17:51:44     26s] Completing 70% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+[05/29 17:51:44     26s] Completing 80% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+[05/29 17:51:44     26s] Completing 90% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+[05/29 17:51:44     26s] Completing 100% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+[05/29 17:51:44     26s] Stripe generation is complete.
+[05/29 17:51:44     26s] vias are now being generated.
+[05/29 17:51:44     26s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal1 & metal2 at (470.38, 413.65) (471.59, 415.65).
+[05/29 17:51:44     26s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal1 & metal2 at (470.38, 2318.31) (471.59, 2320.31).
+[05/29 17:51:44     26s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal1 & metal2 at (470.38, 2318.31) (471.59, 2320.31).
+[05/29 17:51:44     26s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal1 & metal2 at (634.23, 413.65) (634.38, 415.65).
+[05/29 17:51:44     26s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal1 & metal2 at (634.23, 2318.31) (634.38, 2320.31).
+[05/29 17:51:44     26s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal1 & metal2 at (634.23, 2318.31) (634.38, 2320.31).
+[05/29 17:51:44     26s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal1 & metal2 at (1190.50, 397.80) (1192.50, 399.80).
+[05/29 17:51:44     26s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal1 & metal2 at (1190.50, 2302.46) (1192.50, 2304.46).
+[05/29 17:51:44     26s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal1 & metal2 at (1190.50, 2302.46) (1192.50, 2304.46).
+[05/29 17:51:44     26s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal1 & metal2 at (1270.38, 397.80) (1270.90, 399.80).
+[05/29 17:51:44     26s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal1 & metal2 at (1270.38, 2302.46) (1270.90, 2304.46).
+[05/29 17:51:44     26s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal1 & metal2 at (1270.38, 2302.46) (1270.90, 2304.46).
+[05/29 17:51:44     26s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal1 & metal2 at (1590.43, 1290.20) (1592.43, 1292.20).
+[05/29 17:51:44     26s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal1 & metal2 at (1590.43, 2290.28) (1592.43, 2292.28).
+[05/29 17:51:44     26s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal1 & metal2 at (1590.43, 2290.28) (1592.43, 2292.28).
+[05/29 17:51:44     26s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal1 & metal2 at (1670.38, 1290.20) (1670.83, 1292.20).
+[05/29 17:51:44     26s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal1 & metal2 at (1670.38, 2290.28) (1670.83, 2292.28).
+[05/29 17:51:44     26s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal1 & metal2 at (1670.38, 2290.28) (1670.83, 2292.28).
+[05/29 17:51:44     26s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal1 & metal2 at (1990.38, 407.89) (1991.36, 409.89).
+[05/29 17:51:44     26s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal1 & metal2 at (1990.38, 1418.51) (1991.36, 1420.51).
+[05/29 17:51:44     26s] **WARN: (EMS-27):	Message (IMPPP-532) has exceeded the current message display limit of 20.
+[05/29 17:51:44     26s] To increase the message display limit, refer to the product command reference manual.
+[05/29 17:51:44     26s] **WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via5 layer at (459.950012, 135.360001) (463.950012, 139.880005).
+[05/29 17:51:44     26s] Type 'man IMPPP-570' for more detail.
+[05/29 17:51:44     26s] **WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via4 layer at (459.950012, 135.360001) (463.950012, 139.880005).
+[05/29 17:51:44     26s] Type 'man IMPPP-570' for more detail.
+[05/29 17:51:44     26s] **WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via3 layer at (459.950012, 135.360001) (463.950012, 139.880005).
+[05/29 17:51:44     26s] Type 'man IMPPP-570' for more detail.
+[05/29 17:51:44     26s] **WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via layer at (459.950012, 135.360001) (463.950012, 139.880005).
+[05/29 17:51:44     26s] Type 'man IMPPP-570' for more detail.
+[05/29 17:51:44     26s] **WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via5 layer at (620.289978, 135.360001) (624.289978, 139.880005).
+[05/29 17:51:44     26s] Type 'man IMPPP-570' for more detail.
+[05/29 17:51:44     26s] **WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via4 layer at (620.289978, 135.360001) (624.289978, 139.880005).
+[05/29 17:51:44     26s] Type 'man IMPPP-570' for more detail.
+[05/29 17:51:44     26s] **WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via3 layer at (620.289978, 135.360001) (624.289978, 139.880005).
+[05/29 17:51:44     26s] Type 'man IMPPP-570' for more detail.
+[05/29 17:51:44     26s] **WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via layer at (620.289978, 135.360001) (624.289978, 139.880005).
+[05/29 17:51:44     26s] Type 'man IMPPP-570' for more detail.
+[05/29 17:51:44     26s] addStripe created 124 wires.
+[05/29 17:51:44     26s] ViaGen created 1261 vias, deleted 36 vias to avoid violation.
+[05/29 17:51:44     26s] +--------+----------------+----------------+
+[05/29 17:51:44     26s] |  Layer |     Created    |     Deleted    |
+[05/29 17:51:44     26s] +--------+----------------+----------------+
+[05/29 17:51:44     26s] | metal1 |       23       |       NA       |
+[05/29 17:51:44     26s] |   via  |       55       |        0       |
+[05/29 17:51:44     26s] | metal2 |       89       |       NA       |
+[05/29 17:51:44     26s] |  via2  |      1182      |       36       |
+[05/29 17:51:44     26s] | metal3 |       10       |       NA       |
+[05/29 17:51:44     26s] |  via3  |       24       |        0       |
+[05/29 17:51:44     26s] | metal4 |        2       |       NA       |
+[05/29 17:51:44     26s] +--------+----------------+----------------+
+[05/29 17:51:44     26s] #% End addStripe (date=05/29 17:51:44, total cpu=0:00:00.2, real=0:00:00.0, peak res=1508.3M, current mem=1508.3M)
+[05/29 17:51:44     26s] <CMD> setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+[05/29 17:51:44     26s] addStripe will allow jog to connect padcore ring and block ring.
+[05/29 17:51:44     26s] 
+[05/29 17:51:44     26s] Stripes will stop at the boundary of the specified area.
+[05/29 17:51:44     26s] When breaking rings, the power planner will consider the existence of blocks.
+[05/29 17:51:44     26s] Stripes will not extend to closest target.
+[05/29 17:51:44     26s] The power planner will set stripe antenna targets to none (no trimming allowed).
+[05/29 17:51:44     26s] Stripes will not be created over regions without power planning wires.
+[05/29 17:51:44     26s] The entire stripe set will break at the domain if one of the nets is not in the domain.
+[05/29 17:51:44     26s] addStripe will break automatically at non-default domains when generating global stripes over the core area or default domain.
+[05/29 17:51:44     26s] Offset for stripe breaking is set to 0.
+[05/29 17:51:44     26s] <CMD> addStripe -nets {GND VCC} -layer metal3 -direction horizontal -width 4 -spacing 0.28 -set_to_set_distance 80 -start_from bottom -start_offset 50 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit metal6 -padcore_ring_bottom_layer_limit metal1 -block_ring_top_layer_limit metal6 -block_ring_bottom_layer_limit metal1 -use_wire_group 0 -snap_wire_center_to_grid None
+[05/29 17:51:44     26s] #% Begin addStripe (date=05/29 17:51:44, mem=1508.3M)
+[05/29 17:51:44     26s] 
+[05/29 17:51:44     26s] Initialize fgc environment(mem: 2326.2M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+[05/29 17:51:44     26s] Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+[05/29 17:51:44     26s] Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+[05/29 17:51:44     26s] Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+[05/29 17:51:44     26s] Starting stripe generation ...
+[05/29 17:51:44     26s] Non-Default Mode Option Settings :
+[05/29 17:51:44     26s]   NONE
+[05/29 17:51:44     26s] The core ring for GND is incomplete. The core ring will not be used as a boundary for stripes. In this situation, the power planner will generate stripes only within the core area.
+[05/29 17:51:45     26s] Completing 10% stripe generation(cpu: 0:00:00.0, real: 0:00:01.0, peak mem: 2326.2M)
+[05/29 17:51:45     26s] Completing 20% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+[05/29 17:51:45     26s] Completing 30% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+[05/29 17:51:45     26s] Completing 40% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+[05/29 17:51:45     26s] Completing 50% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+[05/29 17:51:45     26s] Completing 60% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+[05/29 17:51:45     26s] Completing 70% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+[05/29 17:51:45     26s] Completing 80% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+[05/29 17:51:45     26s] Completing 90% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+[05/29 17:51:45     26s] Completing 100% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+[05/29 17:51:45     26s] Stripe generation is complete.
+[05/29 17:51:45     26s] vias are now being generated.
+[05/29 17:51:45     26s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal3 & metal1 at (453.07, 473.80) (455.07, 475.04).
+[05/29 17:51:45     26s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal3 & metal1 at (453.07, 473.80) (455.07, 475.04).
+[05/29 17:51:45     26s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal3 & metal1 at (1371.66, 472.83) (1373.66, 474.83).
+[05/29 17:51:45     26s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal3 & metal1 at (1371.66, 472.83) (1373.66, 474.83).
+[05/29 17:51:45     26s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal3 & metal1 at (453.07, 551.92) (455.07, 553.92).
+[05/29 17:51:45     26s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal3 & metal1 at (453.07, 551.92) (455.07, 553.92).
+[05/29 17:51:45     26s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal3 & metal1 at (1886.60, 554.84) (1888.60, 555.04).
+[05/29 17:51:45     26s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal3 & metal1 at (1886.60, 554.84) (1888.60, 555.04).
+[05/29 17:51:45     26s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal3 & metal1 at (2186.20, 552.36) (2188.20, 554.36).
+[05/29 17:51:45     26s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal3 & metal1 at (2186.20, 552.36) (2188.20, 554.36).
+[05/29 17:51:45     26s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal3 & metal1 at (453.07, 631.04) (455.07, 632.04).
+[05/29 17:51:45     26s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal3 & metal1 at (453.07, 631.04) (455.07, 632.04).
+[05/29 17:51:45     26s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal3 & metal1 at (1150.46, 631.55) (1152.46, 633.55).
+[05/29 17:51:45     26s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal3 & metal1 at (1150.46, 631.55) (1152.46, 633.55).
+[05/29 17:51:45     26s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal3 & metal1 at (1886.60, 632.96) (1888.60, 634.96).
+[05/29 17:51:45     26s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal3 & metal1 at (1886.60, 632.96) (1888.60, 634.96).
+[05/29 17:51:45     26s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal3 & metal1 at (803.35, 714.44) (805.35, 715.04).
+[05/29 17:51:45     26s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal3 & metal1 at (674.27, 714.98) (676.27, 715.04).
+[05/29 17:51:45     26s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal3 & metal1 at (803.35, 714.44) (805.35, 715.04).
+[05/29 17:51:45     26s] **WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal3 & metal1 at (674.27, 714.98) (676.27, 715.04).
+[05/29 17:51:45     26s] **WARN: (EMS-27):	Message (IMPPP-532) has exceeded the current message display limit of 20.
+[05/29 17:51:45     26s] To increase the message display limit, refer to the product command reference manual.
+[05/29 17:51:45     26s] addStripe created 245 wires.
+[05/29 17:51:45     26s] ViaGen created 2282 vias, deleted 13 vias to avoid violation.
+[05/29 17:51:45     26s] +--------+----------------+----------------+
+[05/29 17:51:45     26s] |  Layer |     Created    |     Deleted    |
+[05/29 17:51:45     26s] +--------+----------------+----------------+
+[05/29 17:51:45     26s] |   via  |        6       |        6       |
+[05/29 17:51:45     26s] |  via2  |      2271      |        7       |
+[05/29 17:51:45     26s] | metal3 |       242      |       NA       |
+[05/29 17:51:45     26s] |  via3  |        5       |        0       |
+[05/29 17:51:45     26s] | metal4 |        3       |       NA       |
+[05/29 17:51:45     26s] +--------+----------------+----------------+
+[05/29 17:51:45     26s] #% End addStripe (date=05/29 17:51:45, total cpu=0:00:00.2, real=0:00:01.0, peak res=1512.2M, current mem=1512.2M)
+[05/29 17:51:45     26s] <CMD> setSrouteMode -viaConnectToShape { ring stripe blockring }
+[05/29 17:51:45     26s] <CMD> sroute -connect { corePin } -layerChangeRange { metal1(1) metal6(6) } -blockPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -allowJogging 1 -crossoverViaLayerRange { metal1(1) metal6(6) } -nets { GND VCC } -allowLayerChange 1 -targetViaLayerRange { metal1(1) metal6(6) }
+[05/29 17:51:45     26s] #% Begin sroute (date=05/29 17:51:45, mem=1512.2M)
+[05/29 17:51:45     26s] **WARN: (IMPSR-4058):	Sroute option: blockPinTarget should be used in conjunction with option: -connect blockPin. 
+[05/29 17:51:45     26s] *** Begin SPECIAL ROUTE on Fri May 29 17:51:45 2026 ***
+[05/29 17:51:45     26s] SPECIAL ROUTE ran on directory: /RAID2/COURSE/2026_Spring/iclab/iclab062/Lab12_26S/Exercise/05_APR
+[05/29 17:51:45     26s] SPECIAL ROUTE ran on machine: ee28 (Linux 3.10.0-1160.88.1.el7.x86_64 x86_64 1.70Ghz)
+[05/29 17:51:45     26s] 
+[05/29 17:51:45     26s] Begin option processing ...
+[05/29 17:51:45     26s] srouteConnectPowerBump set to false
+[05/29 17:51:45     26s] routeSelectNet set to "GND VCC"
+[05/29 17:51:45     26s] routeSpecial set to true
+[05/29 17:51:45     26s] srouteBottomLayerLimit set to 1
+[05/29 17:51:45     26s] srouteBottomTargetLayerLimit set to 1
+[05/29 17:51:45     26s] srouteConnectBlockPin set to false
+[05/29 17:51:45     26s] srouteConnectConverterPin set to false
+[05/29 17:51:45     26s] srouteConnectPadPin set to false
+[05/29 17:51:45     26s] srouteConnectStripe set to false
+[05/29 17:51:45     26s] srouteCrossoverViaBottomLayer set to 1
+[05/29 17:51:45     26s] srouteCrossoverViaTopLayer set to 6
+[05/29 17:51:45     26s] srouteFollowCorePinEnd set to 3
+[05/29 17:51:45     26s] srouteFollowPadPin set to false
+[05/29 17:51:45     26s] srouteJogControl set to "preferWithChanges differentLayer"
+[05/29 17:51:45     26s] srouteNoViaOnWireShape set to "padring blockpin coverpin noshape blockwire corewire followpin iowire"
+[05/29 17:51:45     26s] sroutePadPinAllPorts set to true
+[05/29 17:51:45     26s] sroutePreserveExistingRoutes set to true
+[05/29 17:51:45     26s] srouteRoutePowerBarPortOnBothDir set to true
+[05/29 17:51:45     26s] srouteStopBlockPin set to "nearestTarget"
+[05/29 17:51:45     26s] srouteTopLayerLimit set to 6
+[05/29 17:51:45     26s] srouteTopTargetLayerLimit set to 6
+[05/29 17:51:45     26s] End option processing: cpu: 0:00:00, real: 0:00:00, peak: 3449.00 megs.
+[05/29 17:51:45     26s] 
+[05/29 17:51:45     26s] Reading DB technology information...
+[05/29 17:51:45     26s] Finished reading DB technology information.
+[05/29 17:51:45     26s] Reading floorplan and netlist information...
+[05/29 17:51:45     26s] Finished reading floorplan and netlist information.
+[05/29 17:51:45     26s] Read in 12 layers, 6 routing layers, 1 overlap layer
+[05/29 17:51:45     26s] Read in 405 macros, 107 used
+[05/29 17:51:45     26s] Read in 158 components
+[05/29 17:51:45     26s]   96 core components: 96 unplaced, 0 placed, 0 fixed
+[05/29 17:51:45     26s]   57 pad components: 0 unplaced, 53 placed, 4 fixed
+[05/29 17:51:45     26s]   5 block/ring components: 0 unplaced, 0 placed, 5 fixed
+[05/29 17:51:45     26s] Read in 29 logical pins
+[05/29 17:51:45     26s] Read in 6 blockages
+[05/29 17:51:45     26s] Read in 29 nets
+[05/29 17:51:45     26s] Read in 2 special nets, 2 routed
+[05/29 17:51:45     26s] Read in 218 terminals
+[05/29 17:51:45     26s] 2 nets selected.
+[05/29 17:51:45     26s] 
+[05/29 17:51:45     26s] Begin power routing ...
+[05/29 17:51:45     26s] CPU time for FollowPin 0 seconds
+[05/29 17:51:45     26s] CPU time for FollowPin 0 seconds
+[05/29 17:51:46     28s]   Number of Core ports routed: 3912
+[05/29 17:51:46     28s]   Number of Followpin connections: 1956
+[05/29 17:51:46     28s] End power routing: cpu: 0:00:02, real: 0:00:01, peak: 3463.00 megs.
+[05/29 17:51:46     28s] 
+[05/29 17:51:46     28s] 
+[05/29 17:51:46     28s] 
+[05/29 17:51:46     28s]  Begin updating DB with routing results ...
+[05/29 17:51:46     28s]  Updating DB with 7 via definition ...
+[05/29 17:51:46     28s] 
+sroute post-processing starts at Fri May 29 17:51:46 2026
+The viaGen is rebuilding shadow vias for net GND.
+[05/29 17:51:46     28s] sroute post-processing ends at Fri May 29 17:51:46 2026
+
+sroute post-processing starts at Fri May 29 17:51:46 2026
+The viaGen is rebuilding shadow vias for net VCC.
+[05/29 17:51:47     28s] sroute post-processing ends at Fri May 29 17:51:47 2026
+sroute created 5784 wires.
+[05/29 17:51:47     28s] ViaGen created 16567 vias, deleted 235 vias to avoid violation.
+[05/29 17:51:47     28s] +--------+----------------+----------------+
+[05/29 17:51:47     28s] |  Layer |     Created    |     Deleted    |
+[05/29 17:51:47     28s] +--------+----------------+----------------+
+[05/29 17:51:47     28s] | metal1 |      5511      |       NA       |
+[05/29 17:51:47     28s] |   via  |      15661     |       228      |
+[05/29 17:51:47     28s] | metal2 |       12       |       NA       |
+[05/29 17:51:47     28s] |  via2  |       904      |        5       |
+[05/29 17:51:47     28s] | metal3 |       261      |       NA       |
+[05/29 17:51:47     28s] |  via3  |        2       |        2       |
+[05/29 17:51:47     28s] +--------+----------------+----------------+
+[05/29 17:51:47     28s] #% End sroute (date=05/29 17:51:47, total cpu=0:00:01.8, real=0:00:02.0, peak res=1541.7M, current mem=1517.6M)
+[05/29 17:51:47     28s] <CMD> getMultiCpuUsage -localCpu
+[05/29 17:51:47     28s] <CMD> get_verify_drc_mode -disable_rules -quiet
+[05/29 17:51:47     28s] <CMD> get_verify_drc_mode -quiet -area
+[05/29 17:51:47     28s] <CMD> get_verify_drc_mode -quiet -layer_range
+[05/29 17:51:47     28s] <CMD> get_verify_drc_mode -check_ndr_spacing -quiet
+[05/29 17:51:47     28s] <CMD> get_verify_drc_mode -check_only -quiet
+[05/29 17:51:47     28s] <CMD> get_verify_drc_mode -check_same_via_cell -quiet
+[05/29 17:51:47     28s] <CMD> get_verify_drc_mode -exclude_pg_net -quiet
+[05/29 17:51:47     28s] <CMD> get_verify_drc_mode -ignore_trial_route -quiet
+[05/29 17:51:47     28s] <CMD> get_verify_drc_mode -max_wrong_way_halo -quiet
+[05/29 17:51:47     28s] <CMD> get_verify_drc_mode -use_min_spacing_on_block_obs -quiet
+[05/29 17:51:47     28s] <CMD> get_verify_drc_mode -limit -quiet
+[05/29 17:51:47     28s] <CMD> set_verify_drc_mode -disable_rules {} -check_ndr_spacing auto -check_only default -check_same_via_cell false -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report CHIP.drc.rpt -limit 1000
+[05/29 17:51:47     28s] <CMD> verify_drc
+[05/29 17:51:47     28s] #-check_ndr_spacing auto                 # enums={true false auto}, default=auto,  user setting
+[05/29 17:51:47     28s] #-report CHIP.drc.rpt                    # string, default="", user setting
+[05/29 17:51:47     28s]  *** Starting Verify DRC (MEM: 2338.4) ***
+[05/29 17:51:47     28s] 
+[05/29 17:51:47     28s] #create default rule from bind_ndr_rule rule=0x7ff652725500 0x7ff5f6906018
+[05/29 17:51:47     28s] ### import design signature (2): route=1 flt_obj=0 vio=1905142130 swire=1 shield_wire=1 net_attr=1 dirty_area=0 del_dirty_area=0 cell=0 placement=0 pin_access=1 inst_pattern=1 halo=0
+[05/29 17:51:47     28s]   VERIFY DRC ...... Starting Verification
+[05/29 17:51:47     28s]   VERIFY DRC ...... Initializing
+[05/29 17:51:47     28s]   VERIFY DRC ...... Deleting Existing Violations
+[05/29 17:51:47     28s]   VERIFY DRC ...... Creating Sub-Areas
+[05/29 17:51:47     28s]   VERIFY DRC ...... Using new threading
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {0.000 0.000 249.600 272.640} 1 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 1 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {249.600 0.000 499.200 272.640} 2 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 2 complete 1 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {499.200 0.000 748.800 272.640} 3 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 3 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {748.800 0.000 998.400 272.640} 4 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 4 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {998.400 0.000 1248.000 272.640} 5 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 5 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {1248.000 0.000 1497.600 272.640} 6 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 6 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {1497.600 0.000 1747.200 272.640} 7 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 7 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {1747.200 0.000 1996.800 272.640} 8 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 8 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {1996.800 0.000 2246.400 272.640} 9 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 9 complete 4 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {2246.400 0.000 2496.000 272.640} 10 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 10 complete 3 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {2496.000 0.000 2737.300 272.640} 11 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 11 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {0.000 272.640 249.600 545.280} 12 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 12 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {249.600 272.640 499.200 545.280} 13 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 13 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {499.200 272.640 748.800 545.280} 14 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 14 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {748.800 272.640 998.400 545.280} 15 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 15 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {998.400 272.640 1248.000 545.280} 16 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 16 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {1248.000 272.640 1497.600 545.280} 17 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 17 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {1497.600 272.640 1747.200 545.280} 18 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 18 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {1747.200 272.640 1996.800 545.280} 19 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 19 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {1996.800 272.640 2246.400 545.280} 20 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 20 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {2246.400 272.640 2496.000 545.280} 21 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 21 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {2496.000 272.640 2737.300 545.280} 22 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 22 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {0.000 545.280 249.600 817.920} 23 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 23 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {249.600 545.280 499.200 817.920} 24 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 24 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {499.200 545.280 748.800 817.920} 25 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 25 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {748.800 545.280 998.400 817.920} 26 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 26 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {998.400 545.280 1248.000 817.920} 27 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 27 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {1248.000 545.280 1497.600 817.920} 28 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 28 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {1497.600 545.280 1747.200 817.920} 29 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 29 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {1747.200 545.280 1996.800 817.920} 30 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 30 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {1996.800 545.280 2246.400 817.920} 31 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 31 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {2246.400 545.280 2496.000 817.920} 32 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 32 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {2496.000 545.280 2737.300 817.920} 33 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 33 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {0.000 817.920 249.600 1090.560} 34 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 34 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {249.600 817.920 499.200 1090.560} 35 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 35 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {499.200 817.920 748.800 1090.560} 36 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 36 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {748.800 817.920 998.400 1090.560} 37 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 37 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {998.400 817.920 1248.000 1090.560} 38 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 38 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {1248.000 817.920 1497.600 1090.560} 39 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 39 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {1497.600 817.920 1747.200 1090.560} 40 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 40 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {1747.200 817.920 1996.800 1090.560} 41 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 41 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {1996.800 817.920 2246.400 1090.560} 42 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 42 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {2246.400 817.920 2496.000 1090.560} 43 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 43 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {2496.000 817.920 2737.300 1090.560} 44 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 44 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {0.000 1090.560 249.600 1363.200} 45 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 45 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {249.600 1090.560 499.200 1363.200} 46 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 46 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {499.200 1090.560 748.800 1363.200} 47 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 47 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {748.800 1090.560 998.400 1363.200} 48 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 48 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {998.400 1090.560 1248.000 1363.200} 49 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 49 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {1248.000 1090.560 1497.600 1363.200} 50 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 50 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {1497.600 1090.560 1747.200 1363.200} 51 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 51 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {1747.200 1090.560 1996.800 1363.200} 52 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 52 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {1996.800 1090.560 2246.400 1363.200} 53 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 53 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {2246.400 1090.560 2496.000 1363.200} 54 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 54 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {2496.000 1090.560 2737.300 1363.200} 55 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 55 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {0.000 1363.200 249.600 1635.840} 56 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 56 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {249.600 1363.200 499.200 1635.840} 57 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 57 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {499.200 1363.200 748.800 1635.840} 58 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 58 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {748.800 1363.200 998.400 1635.840} 59 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 59 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {998.400 1363.200 1248.000 1635.840} 60 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 60 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {1248.000 1363.200 1497.600 1635.840} 61 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 61 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {1497.600 1363.200 1747.200 1635.840} 62 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 62 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {1747.200 1363.200 1996.800 1635.840} 63 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 63 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {1996.800 1363.200 2246.400 1635.840} 64 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 64 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {2246.400 1363.200 2496.000 1635.840} 65 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 65 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {2496.000 1363.200 2737.300 1635.840} 66 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 66 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {0.000 1635.840 249.600 1908.480} 67 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 67 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {249.600 1635.840 499.200 1908.480} 68 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 68 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {499.200 1635.840 748.800 1908.480} 69 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 69 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {748.800 1635.840 998.400 1908.480} 70 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 70 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {998.400 1635.840 1248.000 1908.480} 71 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 71 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {1248.000 1635.840 1497.600 1908.480} 72 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 72 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {1497.600 1635.840 1747.200 1908.480} 73 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 73 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {1747.200 1635.840 1996.800 1908.480} 74 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 74 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {1996.800 1635.840 2246.400 1908.480} 75 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 75 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {2246.400 1635.840 2496.000 1908.480} 76 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 76 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {2496.000 1635.840 2737.300 1908.480} 77 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 77 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {0.000 1908.480 249.600 2181.120} 78 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 78 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {249.600 1908.480 499.200 2181.120} 79 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 79 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {499.200 1908.480 748.800 2181.120} 80 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 80 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {748.800 1908.480 998.400 2181.120} 81 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 81 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {998.400 1908.480 1248.000 2181.120} 82 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 82 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {1248.000 1908.480 1497.600 2181.120} 83 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 83 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {1497.600 1908.480 1747.200 2181.120} 84 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 84 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {1747.200 1908.480 1996.800 2181.120} 85 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 85 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {1996.800 1908.480 2246.400 2181.120} 86 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 86 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {2246.400 1908.480 2496.000 2181.120} 87 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 87 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {2496.000 1908.480 2737.300 2181.120} 88 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 88 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {0.000 2181.120 249.600 2453.760} 89 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 89 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {249.600 2181.120 499.200 2453.760} 90 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 90 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {499.200 2181.120 748.800 2453.760} 91 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 91 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {748.800 2181.120 998.400 2453.760} 92 of 110
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area : 92 complete 0 Viols.
+[05/29 17:51:47     28s]   VERIFY DRC ...... Sub-Area: {998.400 2181.120 1248.000 2453.760} 93 of 110
+[05/29 17:51:47     29s]   VERIFY DRC ...... Sub-Area : 93 complete 0 Viols.
+[05/29 17:51:47     29s]   VERIFY DRC ...... Sub-Area: {1248.000 2181.120 1497.600 2453.760} 94 of 110
+[05/29 17:51:47     29s]   VERIFY DRC ...... Sub-Area : 94 complete 0 Viols.
+[05/29 17:51:47     29s]   VERIFY DRC ...... Sub-Area: {1497.600 2181.120 1747.200 2453.760} 95 of 110
+[05/29 17:51:47     29s]   VERIFY DRC ...... Sub-Area : 95 complete 0 Viols.
+[05/29 17:51:47     29s]   VERIFY DRC ...... Sub-Area: {1747.200 2181.120 1996.800 2453.760} 96 of 110
+[05/29 17:51:47     29s]   VERIFY DRC ...... Sub-Area : 96 complete 0 Viols.
+[05/29 17:51:47     29s]   VERIFY DRC ...... Sub-Area: {1996.800 2181.120 2246.400 2453.760} 97 of 110
+[05/29 17:51:47     29s]   VERIFY DRC ...... Sub-Area : 97 complete 0 Viols.
+[05/29 17:51:47     29s]   VERIFY DRC ...... Sub-Area: {2246.400 2181.120 2496.000 2453.760} 98 of 110
+[05/29 17:51:47     29s]   VERIFY DRC ...... Sub-Area : 98 complete 0 Viols.
+[05/29 17:51:47     29s]   VERIFY DRC ...... Sub-Area: {2496.000 2181.120 2737.300 2453.760} 99 of 110
+[05/29 17:51:47     29s]   VERIFY DRC ...... Sub-Area : 99 complete 0 Viols.
+[05/29 17:51:47     29s]   VERIFY DRC ...... Sub-Area: {0.000 2453.760 249.600 2692.600} 100 of 110
+[05/29 17:51:47     29s]   VERIFY DRC ...... Sub-Area : 100 complete 0 Viols.
+[05/29 17:51:47     29s]   VERIFY DRC ...... Sub-Area: {249.600 2453.760 499.200 2692.600} 101 of 110
+[05/29 17:51:47     29s]   VERIFY DRC ...... Sub-Area : 101 complete 1 Viols.
+[05/29 17:51:47     29s]   VERIFY DRC ...... Sub-Area: {499.200 2453.760 748.800 2692.600} 102 of 110
+[05/29 17:51:47     29s]   VERIFY DRC ...... Sub-Area : 102 complete 0 Viols.
+[05/29 17:51:47     29s]   VERIFY DRC ...... Sub-Area: {748.800 2453.760 998.400 2692.600} 103 of 110
+[05/29 17:51:47     29s]   VERIFY DRC ...... Sub-Area : 103 complete 0 Viols.
+[05/29 17:51:47     29s]   VERIFY DRC ...... Sub-Area: {998.400 2453.760 1248.000 2692.600} 104 of 110
+[05/29 17:51:47     29s]   VERIFY DRC ...... Sub-Area : 104 complete 0 Viols.
+[05/29 17:51:47     29s]   VERIFY DRC ...... Sub-Area: {1248.000 2453.760 1497.600 2692.600} 105 of 110
+[05/29 17:51:47     29s]   VERIFY DRC ...... Sub-Area : 105 complete 0 Viols.
+[05/29 17:51:47     29s]   VERIFY DRC ...... Sub-Area: {1497.600 2453.760 1747.200 2692.600} 106 of 110
+[05/29 17:51:47     29s]   VERIFY DRC ...... Sub-Area : 106 complete 0 Viols.
+[05/29 17:51:47     29s]   VERIFY DRC ...... Sub-Area: {1747.200 2453.760 1996.800 2692.600} 107 of 110
+[05/29 17:51:47     29s]   VERIFY DRC ...... Sub-Area : 107 complete 0 Viols.
+[05/29 17:51:47     29s]   VERIFY DRC ...... Sub-Area: {1996.800 2453.760 2246.400 2692.600} 108 of 110
+[05/29 17:51:47     29s]   VERIFY DRC ...... Sub-Area : 108 complete 0 Viols.
+[05/29 17:51:47     29s]   VERIFY DRC ...... Sub-Area: {2246.400 2453.760 2496.000 2692.600} 109 of 110
+[05/29 17:51:47     29s]   VERIFY DRC ...... Sub-Area : 109 complete 1 Viols.
+[05/29 17:51:47     29s]   VERIFY DRC ...... Sub-Area: {2496.000 2453.760 2737.300 2692.600} 110 of 110
+[05/29 17:51:47     29s]   VERIFY DRC ...... Sub-Area : 110 complete 0 Viols.
+[05/29 17:51:47     29s] 
+[05/29 17:51:47     29s]   Verification Complete : 10 Viols.
+[05/29 17:51:47     29s] 
+[05/29 17:51:47     29s]  Violation Summary By Layer and Type:
+[05/29 17:51:47     29s] 
+[05/29 17:51:47     29s] 	          Short   MetSpc   Totals
+[05/29 17:51:47     29s] 	metal2        0        4        4
+[05/29 17:51:47     29s] 	metal3        6        0        6
+[05/29 17:51:47     29s] 	Totals        6        4       10
+[05/29 17:51:47     29s] 
+[05/29 17:51:47     29s]  *** End Verify DRC (CPU: 0:00:00.6  ELAPSED TIME: 0.00  MEM: 14.0M) ***
+[05/29 17:51:47     29s] 
+[05/29 17:51:47     29s] <CMD> set_verify_drc_mode -area {0 0 0 0}
+[05/29 17:51:47     29s] <CMD> verifyConnectivity -net {GND VCC} -type special -error 1000 -warning 50
+[05/29 17:51:47     29s] VERIFY_CONNECTIVITY use new engine.
+[05/29 17:51:47     29s] 
+[05/29 17:51:47     29s] ******** Start: VERIFY CONNECTIVITY ********
+[05/29 17:51:47     29s] Start Time: Fri May 29 17:51:47 2026
+[05/29 17:51:47     29s] 
+[05/29 17:51:47     29s] Design Name: CHIP
+[05/29 17:51:47     29s] Database Units: 1000
+[05/29 17:51:47     29s] Design Boundary: (0.0000, 0.0000) (2737.3000, 2692.6000)
+[05/29 17:51:47     29s] Error Limit = 1000; Warning Limit = 50
+[05/29 17:51:47     29s] Check specified nets
+[05/29 17:51:47     29s] *** Checking Net VCC
+[05/29 17:51:47     29s] Net VCC: has special routes with opens, dangling Wire.
+[05/29 17:51:47     29s] *** Checking Net GND
+[05/29 17:51:47     29s] Net GND: dangling Wire.
+[05/29 17:51:47     29s] 
+[05/29 17:51:47     29s] Begin Summary 
+[05/29 17:51:47     29s]     7 Problem(s) (IMPVFC-200): Special Wires: Pieces of the net are not connected together.
+[05/29 17:51:47     29s]     331 Problem(s) (IMPVFC-94): The net has dangling wire(s).
+[05/29 17:51:47     29s]     338 total info(s) created.
+[05/29 17:51:47     29s] End Summary
+[05/29 17:51:47     29s] 
+[05/29 17:51:47     29s] End Time: Fri May 29 17:51:47 2026
+[05/29 17:51:47     29s] Time Elapsed: 0:00:00.0
+[05/29 17:51:47     29s] 
+[05/29 17:51:47     29s] ******** End: VERIFY CONNECTIVITY ********
+[05/29 17:51:47     29s]   Verification Complete : 338 Viols.  0 Wrngs.
+[05/29 17:51:47     29s]   (CPU Time: 0:00:00.0  MEM: 2.000M)
+[05/29 17:51:47     29s] 
+[05/29 17:51:47     29s] <CMD> saveDesign ./DBS/CHIP_powerplan.inn
+[05/29 17:51:48     29s] #% Begin save design ... (date=05/29 17:51:47, mem=1558.8M)
+[05/29 17:51:48     29s] % Begin Save ccopt configuration ... (date=05/29 17:51:48, mem=1558.8M)
+[05/29 17:51:48     29s] % End Save ccopt configuration ... (date=05/29 17:51:48, total cpu=0:00:00.0, real=0:00:00.0, peak res=1558.9M, current mem=1558.9M)
+[05/29 17:51:48     29s] % Begin Save netlist data ... (date=05/29 17:51:48, mem=1558.9M)
+[05/29 17:51:48     29s] Writing Binary DB to ./DBS/CHIP_powerplan.inn.dat.tmp/CHIP.v.bin in single-threaded mode...
+[05/29 17:51:48     29s] % End Save netlist data ... (date=05/29 17:51:48, total cpu=0:00:00.0, real=0:00:00.0, peak res=1558.9M, current mem=1558.9M)
+[05/29 17:51:48     29s] Saving symbol-table file ...
+[05/29 17:51:48     29s] Saving congestion map file ./DBS/CHIP_powerplan.inn.dat.tmp/CHIP.route.congmap.gz ...
+[05/29 17:51:48     29s] % Begin Save AAE data ... (date=05/29 17:51:48, mem=1559.2M)
+[05/29 17:51:48     29s] Saving AAE Data ...
+[05/29 17:51:48     29s] % End Save AAE data ... (date=05/29 17:51:48, total cpu=0:00:00.0, real=0:00:00.0, peak res=1559.2M, current mem=1559.2M)
+[05/29 17:51:48     29s] Saving preference file ./DBS/CHIP_powerplan.inn.dat.tmp/gui.pref.tcl ...
+[05/29 17:51:48     29s] Saving mode setting ...
+[05/29 17:51:48     29s] Saving global file ...
+[05/29 17:51:48     29s] % Begin Save floorplan data ... (date=05/29 17:51:48, mem=1559.5M)
+[05/29 17:51:48     29s] Saving floorplan file ...
+[05/29 17:51:49     29s] % End Save floorplan data ... (date=05/29 17:51:49, total cpu=0:00:00.1, real=0:00:01.0, peak res=1559.6M, current mem=1559.6M)
+[05/29 17:51:49     29s] Saving PG file ./DBS/CHIP_powerplan.inn.dat.tmp/CHIP.pg.gz, version#2, (Created by Innovus v20.15-s105_1 on Fri May 29 17:51:49 2026)
+[05/29 17:51:49     29s] *** Completed savePGFile (cpu=0:00:00.0 real=0:00:00.0 mem=2371.0M) ***
+[05/29 17:51:49     29s] Saving Drc markers ...
+[05/29 17:51:49     29s] ... 348 markers are saved ...
+[05/29 17:51:49     29s] ... 10 geometry drc markers are saved ...
+[05/29 17:51:49     29s] ... 0 antenna drc markers are saved ...
+[05/29 17:51:49     29s] % Begin Save placement data ... (date=05/29 17:51:49, mem=1559.6M)
+[05/29 17:51:49     29s] ** Saving stdCellPlacement_binary (version# 2) ...
+[05/29 17:51:49     29s] Save Adaptive View Pruning View Names to Binary file
+[05/29 17:51:49     29s] *** Completed savePlace (cpu=0:00:00.0 real=0:00:00.0 mem=2375.0M) ***
+[05/29 17:51:49     29s] % End Save placement data ... (date=05/29 17:51:49, total cpu=0:00:00.0, real=0:00:00.0, peak res=1559.6M, current mem=1559.6M)
+[05/29 17:51:49     29s] % Begin Save routing data ... (date=05/29 17:51:49, mem=1559.6M)
+[05/29 17:51:49     29s] Saving route file ...
+[05/29 17:51:49     29s] *** Completed saveRoute (cpu=0:00:00.0 real=0:00:00.0 mem=2372.0M) ***
+[05/29 17:51:49     29s] % End Save routing data ... (date=05/29 17:51:49, total cpu=0:00:00.1, real=0:00:00.0, peak res=1559.7M, current mem=1559.7M)
+[05/29 17:51:49     29s] Saving property file ./DBS/CHIP_powerplan.inn.dat.tmp/CHIP.prop
+[05/29 17:51:49     29s] *** Completed saveProperty (cpu=0:00:00.0 real=0:00:00.0 mem=2375.0M) ***
+[05/29 17:51:49     29s] % Begin Save power constraints data ... (date=05/29 17:51:49, mem=1559.7M)
+[05/29 17:51:49     29s] % End Save power constraints data ... (date=05/29 17:51:49, total cpu=0:00:00.0, real=0:00:00.0, peak res=1559.7M, current mem=1559.7M)
+[05/29 17:51:50     29s] Generated self-contained design CHIP_powerplan.inn.dat.tmp
+[05/29 17:51:50     30s] #% End save design ... (date=05/29 17:51:50, total cpu=0:00:00.8, real=0:00:02.0, peak res=1590.3M, current mem=1560.3M)
+[05/29 17:51:50     30s] *** Message Summary: 0 warning(s), 0 error(s)
+[05/29 17:51:50     30s] 
+[05/29 17:52:05     30s] <CMD> zoomBox -1072.40500 139.59000 3935.65400 2657.17100
+[05/29 17:52:06     31s] <CMD> zoomBox 279.17500 910.28400 2893.41300 2224.47700
+[05/29 17:52:07     31s] <CMD> zoomBox 687.48700 1147.15800 2576.27300 2096.66200
+[05/29 17:52:07     31s] <CMD> zoomBox 1096.82500 1385.13500 2256.77700 1968.25000
+[05/29 17:52:08     31s] <CMD> zoomBox 1192.55700 1440.16800 2178.51700 1935.81600
+[05/29 17:52:08     31s] <CMD> zoomBox 1400.64200 1560.50400 2006.14700 1864.89500
+[05/29 17:52:09     31s] <CMD> zoomBox 1492.38500 1613.65100 1929.86200 1833.57300
+[05/29 17:52:11     31s] <CMD> uiSetTool select
+[05/29 17:52:12     31s] <CMD> deselectAll
+[05/29 17:52:12     31s] <CMD> selectWire 1731.0800 1751.0400 2611.8800 1755.0400 3 GND
+[05/29 17:52:14     31s] <CMD> editTrim
+[05/29 17:52:14     31s] <CMD> zoomBox 1346.76300 1534.64100 2059.12000 1892.74700
+[05/29 17:52:15     31s] <CMD> zoomBox 1256.94600 1494.28400 2242.90700 1989.93200
+[05/29 17:52:15     31s] <CMD> zoomBox 1141.74100 1446.86900 2506.39300 2132.88800
+[05/29 17:52:16     31s] <CMD> zoomBox 996.75900 1403.71500 2885.55100 2353.22200
+[05/29 17:52:17     31s] <CMD> zoomBox 796.09100 1344.38700 3410.33900 2658.58500
+[05/29 17:52:19     32s] <CMD> fit
+[05/29 17:52:20     32s] <CMD> zoomBox -1145.21100 80.06900 3862.84800 2597.65000
+[05/29 17:52:21     32s] <CMD> zoomBox -170.70600 554.18400 2904.86900 2100.29400
+[05/29 17:52:22     32s] <CMD> zoomBox 435.17600 860.33600 2323.96500 1809.84100
+[05/29 17:52:22     32s] <CMD> zoomBox 971.59400 1131.38800 1809.66100 1552.68900
+[05/29 17:52:23     32s] <CMD> zoomBox 1089.65800 1193.00300 1695.16200 1497.39300
+[05/29 17:52:23     32s] <CMD> zoomBox 1172.91400 1238.77300 1610.39100 1458.69500
+[05/29 17:52:23     32s] <CMD> zoomBox 1228.24800 1268.41100 1544.32600 1427.30500
+[05/29 17:52:24     32s] <CMD> zoomBox 1283.10700 1298.33300 1477.22000 1395.91500
+[05/29 17:52:24     32s] <CMD> zoomBox 1306.10300 1311.15900 1446.35200 1381.66300
+[05/29 17:52:25     32s] <CMD> zoomBox 1340.89300 1330.11200 1403.12500 1361.39600
+[05/29 17:52:25     32s] <CMD> zoomBox 1344.98400 1332.36800 1397.88200 1358.96000
+[05/29 17:52:26     33s] <CMD> zoomBox 1351.45000 1335.91500 1389.67100 1355.12900
+[05/29 17:52:26     33s] <CMD> zoomBox 1356.32900 1338.57500 1383.94400 1352.45700
+[05/29 17:52:27     33s] <CMD> zoomBox 1359.80300 1340.80500 1379.75600 1350.83500
+[05/29 17:52:27     33s] <CMD> deselectAll
+[05/29 17:52:27     33s] <CMD> selectInst CORE/u_k_sram_SRAM2
+[05/29 17:52:28     33s] <CMD> editTrim
+[05/29 17:52:29     33s] <CMD> uiSetTool move
+[05/29 17:52:29     33s] <CMD> editTrim
+[05/29 17:52:30     33s] <CMD> uiSetTool select
+[05/29 17:52:32     33s] <CMD> fit
+[05/29 17:52:33     33s] <CMD> zoomBox -650.36500 59.50000 2967.95900 1878.45300
+[05/29 17:52:34     33s] <CMD> zoomBox 138.20000 234.90900 1743.67100 1041.98900
+[05/29 17:52:34     33s] <CMD> zoomBox 318.22800 274.02200 1478.18100 857.13700
+[05/29 17:52:35     33s] <CMD> zoomBox 547.86800 324.23700 1153.37200 628.62700
+[05/29 17:52:35     33s] <CMD> zoomBox 617.88800 344.54500 1055.36500 564.46700
+[05/29 17:52:35     33s] <CMD> zoomBox 668.41000 359.21800 984.48700 518.11200
+[05/29 17:52:36     33s] <CMD> zoomBox 718.86800 372.81800 912.98000 470.39900
+[05/29 17:52:36     34s] <CMD> zoomBox 740.82900 378.38900 881.07500 448.89100
+[05/29 17:52:37     34s] <CMD> deselectAll
+[05/29 17:52:37     34s] <CMD> selectWire 125.4200 391.0400 798.8200 395.0400 3 GND
+[05/29 17:52:38     34s] <CMD> editTrim
+[05/29 17:52:39     34s] <CMD> deselectAll
+[05/29 17:52:39     34s] <CMD> selectWire 794.6600 341.4900 798.6600 2351.5500 2 VCC
+[05/29 17:52:40     34s] <CMD> editTrim
+[05/29 17:52:41     34s] <CMD> zoomBox 726.44500 362.06600 920.55600 459.64700
+[05/29 17:52:41     34s] <CMD> zoomBox 700.32600 319.83000 1016.40400 478.72400
+[05/29 17:52:43     34s] <CMD> fit
+[05/29 17:52:44     34s] <CMD> zoomBox -524.31000 -7.80300 3732.54000 2132.14100
+[05/29 17:52:44     34s] <CMD> zoomBox 506.89000 120.60200 3121.12900 1434.79600
+[05/29 17:52:45     34s] <CMD> zoomBox 1291.35600 218.28300 2656.00900 904.30200
+[05/29 17:52:45     34s] <CMD> zoomBox 1685.17400 280.83900 2397.53500 638.94700
+[05/29 17:52:46     34s] <CMD> zoomBox 1797.38700 299.73900 2312.06800 558.47200
+[05/29 17:52:46     35s] <CMD> zoomBox 1873.39300 312.02700 2245.25100 498.96200
+[05/29 17:52:46     35s] <CMD> zoomBox 1928.18300 319.90700 2196.85100 454.96800
+[05/29 17:52:47     35s] <CMD> deselectAll
+[05/29 17:52:47     35s] <CMD> selectWire 2074.6600 341.4900 2078.6600 407.6100 2 VCC
+[05/29 17:52:48     35s] <CMD> editTrim
+[05/29 17:52:50     35s] <CMD> getMultiCpuUsage -localCpu
+[05/29 17:52:50     35s] <CMD> get_verify_drc_mode -disable_rules -quiet
+[05/29 17:52:50     35s] <CMD> get_verify_drc_mode -quiet -area
+[05/29 17:52:50     35s] <CMD> get_verify_drc_mode -quiet -layer_range
+[05/29 17:52:50     35s] <CMD> get_verify_drc_mode -check_ndr_spacing -quiet
+[05/29 17:52:50     35s] <CMD> get_verify_drc_mode -check_only -quiet
+[05/29 17:52:50     35s] <CMD> get_verify_drc_mode -check_same_via_cell -quiet
+[05/29 17:52:50     35s] <CMD> get_verify_drc_mode -exclude_pg_net -quiet
+[05/29 17:52:50     35s] <CMD> get_verify_drc_mode -ignore_trial_route -quiet
+[05/29 17:52:50     35s] <CMD> get_verify_drc_mode -max_wrong_way_halo -quiet
+[05/29 17:52:50     35s] <CMD> get_verify_drc_mode -use_min_spacing_on_block_obs -quiet
+[05/29 17:52:50     35s] <CMD> get_verify_drc_mode -limit -quiet
+[05/29 17:52:51     35s] <CMD> set_verify_drc_mode -disable_rules {} -check_ndr_spacing auto -check_only default -check_same_via_cell false -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report CHIP.drc.rpt -limit 1000
+[05/29 17:52:51     35s] <CMD> verify_drc
+[05/29 17:52:51     35s] #-check_ndr_spacing auto                 # enums={true false auto}, default=auto,  user setting
+[05/29 17:52:51     35s] #-report CHIP.drc.rpt                    # string, default="", user setting
+[05/29 17:52:51     35s]  *** Starting Verify DRC (MEM: 2404.2) ***
+[05/29 17:52:51     35s] 
+[05/29 17:52:51     35s]   VERIFY DRC ...... Starting Verification
+[05/29 17:52:51     35s]   VERIFY DRC ...... Initializing
+[05/29 17:52:51     35s]   VERIFY DRC ...... Deleting Existing Violations
+[05/29 17:52:51     35s]   VERIFY DRC ...... Creating Sub-Areas
+[05/29 17:52:51     35s]   VERIFY DRC ...... Using new threading
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {0.000 0.000 249.600 272.640} 1 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 1 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {249.600 0.000 499.200 272.640} 2 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 2 complete 1 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {499.200 0.000 748.800 272.640} 3 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 3 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {748.800 0.000 998.400 272.640} 4 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 4 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {998.400 0.000 1248.000 272.640} 5 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 5 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {1248.000 0.000 1497.600 272.640} 6 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 6 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {1497.600 0.000 1747.200 272.640} 7 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 7 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {1747.200 0.000 1996.800 272.640} 8 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 8 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {1996.800 0.000 2246.400 272.640} 9 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 9 complete 4 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {2246.400 0.000 2496.000 272.640} 10 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 10 complete 3 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {2496.000 0.000 2737.300 272.640} 11 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 11 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {0.000 272.640 249.600 545.280} 12 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 12 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {249.600 272.640 499.200 545.280} 13 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 13 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {499.200 272.640 748.800 545.280} 14 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 14 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {748.800 272.640 998.400 545.280} 15 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 15 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {998.400 272.640 1248.000 545.280} 16 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 16 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {1248.000 272.640 1497.600 545.280} 17 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 17 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {1497.600 272.640 1747.200 545.280} 18 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 18 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {1747.200 272.640 1996.800 545.280} 19 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 19 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {1996.800 272.640 2246.400 545.280} 20 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 20 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {2246.400 272.640 2496.000 545.280} 21 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 21 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {2496.000 272.640 2737.300 545.280} 22 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 22 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {0.000 545.280 249.600 817.920} 23 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 23 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {249.600 545.280 499.200 817.920} 24 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 24 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {499.200 545.280 748.800 817.920} 25 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 25 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {748.800 545.280 998.400 817.920} 26 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 26 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {998.400 545.280 1248.000 817.920} 27 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 27 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {1248.000 545.280 1497.600 817.920} 28 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 28 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {1497.600 545.280 1747.200 817.920} 29 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 29 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {1747.200 545.280 1996.800 817.920} 30 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 30 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {1996.800 545.280 2246.400 817.920} 31 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 31 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {2246.400 545.280 2496.000 817.920} 32 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 32 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {2496.000 545.280 2737.300 817.920} 33 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 33 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {0.000 817.920 249.600 1090.560} 34 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 34 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {249.600 817.920 499.200 1090.560} 35 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 35 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {499.200 817.920 748.800 1090.560} 36 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 36 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {748.800 817.920 998.400 1090.560} 37 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 37 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {998.400 817.920 1248.000 1090.560} 38 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 38 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {1248.000 817.920 1497.600 1090.560} 39 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 39 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {1497.600 817.920 1747.200 1090.560} 40 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 40 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {1747.200 817.920 1996.800 1090.560} 41 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 41 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {1996.800 817.920 2246.400 1090.560} 42 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 42 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {2246.400 817.920 2496.000 1090.560} 43 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 43 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {2496.000 817.920 2737.300 1090.560} 44 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 44 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {0.000 1090.560 249.600 1363.200} 45 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 45 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {249.600 1090.560 499.200 1363.200} 46 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 46 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {499.200 1090.560 748.800 1363.200} 47 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 47 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {748.800 1090.560 998.400 1363.200} 48 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 48 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {998.400 1090.560 1248.000 1363.200} 49 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 49 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {1248.000 1090.560 1497.600 1363.200} 50 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 50 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {1497.600 1090.560 1747.200 1363.200} 51 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 51 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {1747.200 1090.560 1996.800 1363.200} 52 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 52 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {1996.800 1090.560 2246.400 1363.200} 53 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 53 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {2246.400 1090.560 2496.000 1363.200} 54 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 54 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {2496.000 1090.560 2737.300 1363.200} 55 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 55 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {0.000 1363.200 249.600 1635.840} 56 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 56 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {249.600 1363.200 499.200 1635.840} 57 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 57 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {499.200 1363.200 748.800 1635.840} 58 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 58 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {748.800 1363.200 998.400 1635.840} 59 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 59 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {998.400 1363.200 1248.000 1635.840} 60 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 60 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {1248.000 1363.200 1497.600 1635.840} 61 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 61 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {1497.600 1363.200 1747.200 1635.840} 62 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 62 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {1747.200 1363.200 1996.800 1635.840} 63 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 63 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {1996.800 1363.200 2246.400 1635.840} 64 of 110
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area : 64 complete 0 Viols.
+[05/29 17:52:51     35s]   VERIFY DRC ...... Sub-Area: {2246.400 1363.200 2496.000 1635.840} 65 of 110
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area : 65 complete 0 Viols.
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area: {2496.000 1363.200 2737.300 1635.840} 66 of 110
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area : 66 complete 0 Viols.
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area: {0.000 1635.840 249.600 1908.480} 67 of 110
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area : 67 complete 0 Viols.
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area: {249.600 1635.840 499.200 1908.480} 68 of 110
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area : 68 complete 0 Viols.
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area: {499.200 1635.840 748.800 1908.480} 69 of 110
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area : 69 complete 0 Viols.
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area: {748.800 1635.840 998.400 1908.480} 70 of 110
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area : 70 complete 0 Viols.
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area: {998.400 1635.840 1248.000 1908.480} 71 of 110
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area : 71 complete 0 Viols.
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area: {1248.000 1635.840 1497.600 1908.480} 72 of 110
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area : 72 complete 0 Viols.
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area: {1497.600 1635.840 1747.200 1908.480} 73 of 110
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area : 73 complete 0 Viols.
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area: {1747.200 1635.840 1996.800 1908.480} 74 of 110
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area : 74 complete 0 Viols.
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area: {1996.800 1635.840 2246.400 1908.480} 75 of 110
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area : 75 complete 0 Viols.
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area: {2246.400 1635.840 2496.000 1908.480} 76 of 110
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area : 76 complete 0 Viols.
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area: {2496.000 1635.840 2737.300 1908.480} 77 of 110
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area : 77 complete 0 Viols.
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area: {0.000 1908.480 249.600 2181.120} 78 of 110
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area : 78 complete 0 Viols.
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area: {249.600 1908.480 499.200 2181.120} 79 of 110
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area : 79 complete 0 Viols.
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area: {499.200 1908.480 748.800 2181.120} 80 of 110
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area : 80 complete 0 Viols.
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area: {748.800 1908.480 998.400 2181.120} 81 of 110
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area : 81 complete 0 Viols.
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area: {998.400 1908.480 1248.000 2181.120} 82 of 110
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area : 82 complete 0 Viols.
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area: {1248.000 1908.480 1497.600 2181.120} 83 of 110
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area : 83 complete 0 Viols.
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area: {1497.600 1908.480 1747.200 2181.120} 84 of 110
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area : 84 complete 0 Viols.
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area: {1747.200 1908.480 1996.800 2181.120} 85 of 110
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area : 85 complete 0 Viols.
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area: {1996.800 1908.480 2246.400 2181.120} 86 of 110
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area : 86 complete 0 Viols.
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area: {2246.400 1908.480 2496.000 2181.120} 87 of 110
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area : 87 complete 0 Viols.
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area: {2496.000 1908.480 2737.300 2181.120} 88 of 110
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area : 88 complete 0 Viols.
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area: {0.000 2181.120 249.600 2453.760} 89 of 110
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area : 89 complete 0 Viols.
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area: {249.600 2181.120 499.200 2453.760} 90 of 110
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area : 90 complete 0 Viols.
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area: {499.200 2181.120 748.800 2453.760} 91 of 110
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area : 91 complete 0 Viols.
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area: {748.800 2181.120 998.400 2453.760} 92 of 110
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area : 92 complete 0 Viols.
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area: {998.400 2181.120 1248.000 2453.760} 93 of 110
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area : 93 complete 0 Viols.
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area: {1248.000 2181.120 1497.600 2453.760} 94 of 110
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area : 94 complete 0 Viols.
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area: {1497.600 2181.120 1747.200 2453.760} 95 of 110
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area : 95 complete 0 Viols.
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area: {1747.200 2181.120 1996.800 2453.760} 96 of 110
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area : 96 complete 0 Viols.
+[05/29 17:52:52     35s]   VERIFY DRC ...... Sub-Area: {1996.800 2181.120 2246.400 2453.760} 97 of 110
+[05/29 17:52:52     36s]   VERIFY DRC ...... Sub-Area : 97 complete 0 Viols.
+[05/29 17:52:52     36s]   VERIFY DRC ...... Sub-Area: {2246.400 2181.120 2496.000 2453.760} 98 of 110
+[05/29 17:52:52     36s]   VERIFY DRC ...... Sub-Area : 98 complete 0 Viols.
+[05/29 17:52:52     36s]   VERIFY DRC ...... Sub-Area: {2496.000 2181.120 2737.300 2453.760} 99 of 110
+[05/29 17:52:52     36s]   VERIFY DRC ...... Sub-Area : 99 complete 0 Viols.
+[05/29 17:52:52     36s]   VERIFY DRC ...... Sub-Area: {0.000 2453.760 249.600 2692.600} 100 of 110
+[05/29 17:52:52     36s]   VERIFY DRC ...... Sub-Area : 100 complete 0 Viols.
+[05/29 17:52:52     36s]   VERIFY DRC ...... Sub-Area: {249.600 2453.760 499.200 2692.600} 101 of 110
+[05/29 17:52:52     36s]   VERIFY DRC ...... Sub-Area : 101 complete 1 Viols.
+[05/29 17:52:52     36s]   VERIFY DRC ...... Sub-Area: {499.200 2453.760 748.800 2692.600} 102 of 110
+[05/29 17:52:52     36s]   VERIFY DRC ...... Sub-Area : 102 complete 0 Viols.
+[05/29 17:52:52     36s]   VERIFY DRC ...... Sub-Area: {748.800 2453.760 998.400 2692.600} 103 of 110
+[05/29 17:52:52     36s]   VERIFY DRC ...... Sub-Area : 103 complete 0 Viols.
+[05/29 17:52:52     36s]   VERIFY DRC ...... Sub-Area: {998.400 2453.760 1248.000 2692.600} 104 of 110
+[05/29 17:52:52     36s]   VERIFY DRC ...... Sub-Area : 104 complete 0 Viols.
+[05/29 17:52:52     36s]   VERIFY DRC ...... Sub-Area: {1248.000 2453.760 1497.600 2692.600} 105 of 110
+[05/29 17:52:52     36s]   VERIFY DRC ...... Sub-Area : 105 complete 0 Viols.
+[05/29 17:52:52     36s]   VERIFY DRC ...... Sub-Area: {1497.600 2453.760 1747.200 2692.600} 106 of 110
+[05/29 17:52:52     36s]   VERIFY DRC ...... Sub-Area : 106 complete 0 Viols.
+[05/29 17:52:52     36s]   VERIFY DRC ...... Sub-Area: {1747.200 2453.760 1996.800 2692.600} 107 of 110
+[05/29 17:52:52     36s]   VERIFY DRC ...... Sub-Area : 107 complete 0 Viols.
+[05/29 17:52:52     36s]   VERIFY DRC ...... Sub-Area: {1996.800 2453.760 2246.400 2692.600} 108 of 110
+[05/29 17:52:52     36s]   VERIFY DRC ...... Sub-Area : 108 complete 0 Viols.
+[05/29 17:52:52     36s]   VERIFY DRC ...... Sub-Area: {2246.400 2453.760 2496.000 2692.600} 109 of 110
+[05/29 17:52:52     36s]   VERIFY DRC ...... Sub-Area : 109 complete 1 Viols.
+[05/29 17:52:52     36s]   VERIFY DRC ...... Sub-Area: {2496.000 2453.760 2737.300 2692.600} 110 of 110
+[05/29 17:52:52     36s]   VERIFY DRC ...... Sub-Area : 110 complete 0 Viols.
+[05/29 17:52:52     36s] 
+[05/29 17:52:52     36s]   Verification Complete : 10 Viols.
+[05/29 17:52:52     36s] 
+[05/29 17:52:52     36s]  Violation Summary By Layer and Type:
+[05/29 17:52:52     36s] 
+[05/29 17:52:52     36s] 	          Short   MetSpc   Totals
+[05/29 17:52:52     36s] 	metal2        0        4        4
+[05/29 17:52:52     36s] 	metal3        6        0        6
+[05/29 17:52:52     36s] 	Totals        6        4       10
+[05/29 17:52:52     36s] 
+[05/29 17:52:52     36s]  *** End Verify DRC (CPU: 0:00:00.6  ELAPSED TIME: 1.00  MEM: 0.0M) ***
+[05/29 17:52:52     36s] 
+[05/29 17:52:52     36s] <CMD> set_verify_drc_mode -area {0 0 0 0}
+[05/29 17:53:06     37s] <CMD> fixVia -short
+[05/29 17:53:06     37s] 
+Start fixing short vias at Fri May 29 17:53:06 2026
+End fixing short vias at Fri May 29 17:53:06 2026
+<CMD> get_verify_drc_mode -disable_rules -quiet
+[05/29 17:53:10     37s] <CMD> get_verify_drc_mode -quiet -area
+[05/29 17:53:10     37s] <CMD> get_verify_drc_mode -quiet -layer_range
+[05/29 17:53:10     37s] <CMD> get_verify_drc_mode -check_ndr_spacing -quiet
+[05/29 17:53:10     37s] <CMD> get_verify_drc_mode -check_only -quiet
+[05/29 17:53:10     37s] <CMD> get_verify_drc_mode -check_same_via_cell -quiet
+[05/29 17:53:10     37s] <CMD> get_verify_drc_mode -exclude_pg_net -quiet
+[05/29 17:53:10     37s] <CMD> get_verify_drc_mode -ignore_trial_route -quiet
+[05/29 17:53:10     37s] <CMD> get_verify_drc_mode -max_wrong_way_halo -quiet
+[05/29 17:53:10     37s] <CMD> get_verify_drc_mode -use_min_spacing_on_block_obs -quiet
+[05/29 17:53:10     37s] <CMD> get_verify_drc_mode -limit -quiet
+[05/29 17:53:11     37s] <CMD> set_verify_drc_mode -disable_rules {} -check_ndr_spacing auto -check_only default -check_same_via_cell false -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report CHIP.drc.rpt -limit 1000
+[05/29 17:53:11     37s] <CMD> verify_drc
+[05/29 17:53:11     37s] #-check_ndr_spacing auto                 # enums={true false auto}, default=auto,  user setting
+[05/29 17:53:11     37s] #-report CHIP.drc.rpt                    # string, default="", user setting
+[05/29 17:53:11     37s]  *** Starting Verify DRC (MEM: 2404.2) ***
+[05/29 17:53:11     37s] 
+[05/29 17:53:11     37s]   VERIFY DRC ...... Starting Verification
+[05/29 17:53:11     37s]   VERIFY DRC ...... Initializing
+[05/29 17:53:11     37s]   VERIFY DRC ...... Deleting Existing Violations
+[05/29 17:53:11     37s]   VERIFY DRC ...... Creating Sub-Areas
+[05/29 17:53:11     37s]   VERIFY DRC ...... Using new threading
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {0.000 0.000 249.600 272.640} 1 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 1 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {249.600 0.000 499.200 272.640} 2 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 2 complete 1 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {499.200 0.000 748.800 272.640} 3 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 3 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {748.800 0.000 998.400 272.640} 4 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 4 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {998.400 0.000 1248.000 272.640} 5 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 5 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {1248.000 0.000 1497.600 272.640} 6 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 6 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {1497.600 0.000 1747.200 272.640} 7 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 7 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {1747.200 0.000 1996.800 272.640} 8 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 8 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {1996.800 0.000 2246.400 272.640} 9 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 9 complete 4 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {2246.400 0.000 2496.000 272.640} 10 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 10 complete 3 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {2496.000 0.000 2737.300 272.640} 11 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 11 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {0.000 272.640 249.600 545.280} 12 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 12 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {249.600 272.640 499.200 545.280} 13 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 13 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {499.200 272.640 748.800 545.280} 14 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 14 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {748.800 272.640 998.400 545.280} 15 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 15 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {998.400 272.640 1248.000 545.280} 16 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 16 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {1248.000 272.640 1497.600 545.280} 17 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 17 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {1497.600 272.640 1747.200 545.280} 18 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 18 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {1747.200 272.640 1996.800 545.280} 19 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 19 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {1996.800 272.640 2246.400 545.280} 20 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 20 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {2246.400 272.640 2496.000 545.280} 21 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 21 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {2496.000 272.640 2737.300 545.280} 22 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 22 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {0.000 545.280 249.600 817.920} 23 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 23 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {249.600 545.280 499.200 817.920} 24 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 24 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {499.200 545.280 748.800 817.920} 25 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 25 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {748.800 545.280 998.400 817.920} 26 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 26 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {998.400 545.280 1248.000 817.920} 27 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 27 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {1248.000 545.280 1497.600 817.920} 28 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 28 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {1497.600 545.280 1747.200 817.920} 29 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 29 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {1747.200 545.280 1996.800 817.920} 30 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 30 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {1996.800 545.280 2246.400 817.920} 31 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 31 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {2246.400 545.280 2496.000 817.920} 32 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 32 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {2496.000 545.280 2737.300 817.920} 33 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 33 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {0.000 817.920 249.600 1090.560} 34 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 34 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {249.600 817.920 499.200 1090.560} 35 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 35 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {499.200 817.920 748.800 1090.560} 36 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 36 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {748.800 817.920 998.400 1090.560} 37 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 37 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {998.400 817.920 1248.000 1090.560} 38 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 38 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {1248.000 817.920 1497.600 1090.560} 39 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 39 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {1497.600 817.920 1747.200 1090.560} 40 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 40 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {1747.200 817.920 1996.800 1090.560} 41 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 41 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {1996.800 817.920 2246.400 1090.560} 42 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 42 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {2246.400 817.920 2496.000 1090.560} 43 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 43 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {2496.000 817.920 2737.300 1090.560} 44 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 44 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {0.000 1090.560 249.600 1363.200} 45 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 45 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {249.600 1090.560 499.200 1363.200} 46 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 46 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {499.200 1090.560 748.800 1363.200} 47 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 47 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {748.800 1090.560 998.400 1363.200} 48 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 48 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {998.400 1090.560 1248.000 1363.200} 49 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 49 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {1248.000 1090.560 1497.600 1363.200} 50 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 50 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {1497.600 1090.560 1747.200 1363.200} 51 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 51 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {1747.200 1090.560 1996.800 1363.200} 52 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 52 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {1996.800 1090.560 2246.400 1363.200} 53 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 53 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {2246.400 1090.560 2496.000 1363.200} 54 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 54 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {2496.000 1090.560 2737.300 1363.200} 55 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 55 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {0.000 1363.200 249.600 1635.840} 56 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 56 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {249.600 1363.200 499.200 1635.840} 57 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 57 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {499.200 1363.200 748.800 1635.840} 58 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 58 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {748.800 1363.200 998.400 1635.840} 59 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 59 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {998.400 1363.200 1248.000 1635.840} 60 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 60 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {1248.000 1363.200 1497.600 1635.840} 61 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 61 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {1497.600 1363.200 1747.200 1635.840} 62 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 62 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {1747.200 1363.200 1996.800 1635.840} 63 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 63 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {1996.800 1363.200 2246.400 1635.840} 64 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 64 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {2246.400 1363.200 2496.000 1635.840} 65 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 65 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {2496.000 1363.200 2737.300 1635.840} 66 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 66 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {0.000 1635.840 249.600 1908.480} 67 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 67 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {249.600 1635.840 499.200 1908.480} 68 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 68 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {499.200 1635.840 748.800 1908.480} 69 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 69 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {748.800 1635.840 998.400 1908.480} 70 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 70 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {998.400 1635.840 1248.000 1908.480} 71 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 71 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {1248.000 1635.840 1497.600 1908.480} 72 of 110
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area : 72 complete 0 Viols.
+[05/29 17:53:11     37s]   VERIFY DRC ...... Sub-Area: {1497.600 1635.840 1747.200 1908.480} 73 of 110
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area : 73 complete 0 Viols.
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area: {1747.200 1635.840 1996.800 1908.480} 74 of 110
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area : 74 complete 0 Viols.
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area: {1996.800 1635.840 2246.400 1908.480} 75 of 110
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area : 75 complete 0 Viols.
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area: {2246.400 1635.840 2496.000 1908.480} 76 of 110
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area : 76 complete 0 Viols.
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area: {2496.000 1635.840 2737.300 1908.480} 77 of 110
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area : 77 complete 0 Viols.
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area: {0.000 1908.480 249.600 2181.120} 78 of 110
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area : 78 complete 0 Viols.
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area: {249.600 1908.480 499.200 2181.120} 79 of 110
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area : 79 complete 0 Viols.
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area: {499.200 1908.480 748.800 2181.120} 80 of 110
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area : 80 complete 0 Viols.
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area: {748.800 1908.480 998.400 2181.120} 81 of 110
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area : 81 complete 0 Viols.
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area: {998.400 1908.480 1248.000 2181.120} 82 of 110
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area : 82 complete 0 Viols.
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area: {1248.000 1908.480 1497.600 2181.120} 83 of 110
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area : 83 complete 0 Viols.
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area: {1497.600 1908.480 1747.200 2181.120} 84 of 110
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area : 84 complete 0 Viols.
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area: {1747.200 1908.480 1996.800 2181.120} 85 of 110
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area : 85 complete 0 Viols.
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area: {1996.800 1908.480 2246.400 2181.120} 86 of 110
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area : 86 complete 0 Viols.
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area: {2246.400 1908.480 2496.000 2181.120} 87 of 110
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area : 87 complete 0 Viols.
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area: {2496.000 1908.480 2737.300 2181.120} 88 of 110
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area : 88 complete 0 Viols.
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area: {0.000 2181.120 249.600 2453.760} 89 of 110
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area : 89 complete 0 Viols.
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area: {249.600 2181.120 499.200 2453.760} 90 of 110
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area : 90 complete 0 Viols.
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area: {499.200 2181.120 748.800 2453.760} 91 of 110
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area : 91 complete 0 Viols.
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area: {748.800 2181.120 998.400 2453.760} 92 of 110
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area : 92 complete 0 Viols.
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area: {998.400 2181.120 1248.000 2453.760} 93 of 110
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area : 93 complete 0 Viols.
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area: {1248.000 2181.120 1497.600 2453.760} 94 of 110
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area : 94 complete 0 Viols.
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area: {1497.600 2181.120 1747.200 2453.760} 95 of 110
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area : 95 complete 0 Viols.
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area: {1747.200 2181.120 1996.800 2453.760} 96 of 110
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area : 96 complete 0 Viols.
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area: {1996.800 2181.120 2246.400 2453.760} 97 of 110
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area : 97 complete 0 Viols.
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area: {2246.400 2181.120 2496.000 2453.760} 98 of 110
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area : 98 complete 0 Viols.
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area: {2496.000 2181.120 2737.300 2453.760} 99 of 110
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area : 99 complete 0 Viols.
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area: {0.000 2453.760 249.600 2692.600} 100 of 110
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area : 100 complete 0 Viols.
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area: {249.600 2453.760 499.200 2692.600} 101 of 110
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area : 101 complete 1 Viols.
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area: {499.200 2453.760 748.800 2692.600} 102 of 110
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area : 102 complete 0 Viols.
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area: {748.800 2453.760 998.400 2692.600} 103 of 110
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area : 103 complete 0 Viols.
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area: {998.400 2453.760 1248.000 2692.600} 104 of 110
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area : 104 complete 0 Viols.
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area: {1248.000 2453.760 1497.600 2692.600} 105 of 110
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area : 105 complete 0 Viols.
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area: {1497.600 2453.760 1747.200 2692.600} 106 of 110
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area : 106 complete 0 Viols.
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area: {1747.200 2453.760 1996.800 2692.600} 107 of 110
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area : 107 complete 0 Viols.
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area: {1996.800 2453.760 2246.400 2692.600} 108 of 110
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area : 108 complete 0 Viols.
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area: {2246.400 2453.760 2496.000 2692.600} 109 of 110
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area : 109 complete 1 Viols.
+[05/29 17:53:11     38s]   VERIFY DRC ...... Sub-Area: {2496.000 2453.760 2737.300 2692.600} 110 of 110
+[05/29 17:53:12     38s]   VERIFY DRC ...... Sub-Area : 110 complete 0 Viols.
+[05/29 17:53:12     38s] 
+[05/29 17:53:12     38s]   Verification Complete : 10 Viols.
+[05/29 17:53:12     38s] 
+[05/29 17:53:12     38s]  Violation Summary By Layer and Type:
+[05/29 17:53:12     38s] 
+[05/29 17:53:12     38s] 	          Short   MetSpc   Totals
+[05/29 17:53:12     38s] 	metal2        0        4        4
+[05/29 17:53:12     38s] 	metal3        6        0        6
+[05/29 17:53:12     38s] 	Totals        6        4       10
+[05/29 17:53:12     38s] 
+[05/29 17:53:12     38s]  *** End Verify DRC (CPU: 0:00:00.7  ELAPSED TIME: 1.00  MEM: 0.0M) ***
+[05/29 17:53:12     38s] 
+[05/29 17:53:12     38s] <CMD> set_verify_drc_mode -area {0 0 0 0}
+[05/29 17:53:19     38s] <CMD> setLayerPreference metal4 -isVisible 0
+[05/29 17:53:19     38s] <CMD> setLayerPreference via3 -isVisible 0
+[05/29 17:53:20     38s] <CMD> setLayerPreference via -isVisible 0
+[05/29 17:53:21     38s] <CMD> setLayerPreference metal1 -isVisible 0
+[05/29 17:53:22     38s] <CMD> setLayerPreference via4 -isVisible 0
+[05/29 17:53:23     39s] <CMD> setLayerPreference metal5 -isVisible 0
+[05/29 17:53:24     39s] <CMD> setLayerPreference via5 -isVisible 0
+[05/29 17:53:24     39s] <CMD> setLayerPreference metal6 -isVisible 0
+[05/29 17:53:25     39s] <CMD> fit
+[05/29 17:53:27     39s] <CMD> zoomBox -582.31600 -0.92100 3674.53400 2139.02300
+[05/29 17:53:28     39s] <CMD> zoomBox 443.94600 124.52200 3058.18400 1438.71500
+[05/29 17:53:28     39s] <CMD> zoomBox 1222.52400 219.95100 2587.17300 905.96800
+[05/29 17:53:29     39s] <CMD> zoomBox 1458.20800 248.87000 2444.16800 744.51800
+[05/29 17:53:29     39s] <CMD> zoomBox 1802.44600 290.09600 2239.92200 510.01800
+[05/29 17:53:30     39s] <CMD> zoomBox 1908.42200 302.78500 2177.08800 437.84500
+[05/29 17:53:30     39s] <CMD> zoomBox 1955.31600 309.91300 2149.42700 407.49400
+[05/29 17:53:30     39s] <CMD> zoomBox 1989.00500 315.74300 2129.25100 386.24500
+[05/29 17:53:31     39s] <CMD> zoomBox 2022.68500 322.21800 2108.81400 365.51600
+[05/29 17:53:32     40s] <CMD> deselectAll
+[05/29 17:53:32     40s] <CMD> selectMarker 0.0000 0.0000 2737.3000 2692.6000 -1 3 7
+[05/29 17:53:42     40s] <CMD> verifyConnectivity -net {GND VCC} -type special -error 1000 -warning 50
+[05/29 17:53:42     40s] VERIFY_CONNECTIVITY use new engine.
+[05/29 17:53:42     40s] 
+[05/29 17:53:42     40s] ******** Start: VERIFY CONNECTIVITY ********
+[05/29 17:53:42     40s] Start Time: Fri May 29 17:53:42 2026
+[05/29 17:53:42     40s] 
+[05/29 17:53:42     40s] Design Name: CHIP
+[05/29 17:53:42     40s] Database Units: 1000
+[05/29 17:53:42     40s] Design Boundary: (0.0000, 0.0000) (2737.3000, 2692.6000)
+[05/29 17:53:42     40s] Error Limit = 1000; Warning Limit = 50
+[05/29 17:53:42     40s] Check specified nets
+[05/29 17:53:42     40s] *** Checking Net VCC
+[05/29 17:53:42     40s] Net VCC: has special routes with opens, dangling Wire.
+[05/29 17:53:42     40s] *** Checking Net GND
+[05/29 17:53:42     40s] Net GND: dangling Wire.
+[05/29 17:53:42     40s] 
+[05/29 17:53:42     40s] Begin Summary 
+[05/29 17:53:42     40s]     7 Problem(s) (IMPVFC-200): Special Wires: Pieces of the net are not connected together.
+[05/29 17:53:42     40s]     328 Problem(s) (IMPVFC-94): The net has dangling wire(s).
+[05/29 17:53:42     40s]     335 total info(s) created.
+[05/29 17:53:42     40s] End Summary
+[05/29 17:53:42     40s] 
+[05/29 17:53:42     40s] End Time: Fri May 29 17:53:42 2026
+[05/29 17:53:42     40s] Time Elapsed: 0:00:00.0
+[05/29 17:53:42     40s] 
+[05/29 17:53:42     40s] ******** End: VERIFY CONNECTIVITY ********
+[05/29 17:53:42     40s]   Verification Complete : 335 Viols.  0 Wrngs.
+[05/29 17:53:42     40s]   (CPU Time: 0:00:00.1  MEM: 0.000M)
+[05/29 17:53:42     40s] 
+[05/29 17:53:46     41s] <CMD> fit
+[05/29 17:53:49     41s] <CMD> zoomBox -1131.92500 85.38400 3876.13400 2602.96500
+[05/29 17:53:50     41s] <CMD> zoomBox -158.13000 566.47100 2917.44500 2112.58100
+[05/29 17:53:50     41s] <CMD> zoomBox 439.90200 861.91800 2328.69000 1811.42300
+[05/29 17:53:51     41s] <CMD> zoomBox 807.16800 1043.36000 1967.12100 1626.47500
+[05/29 17:53:51     41s] <CMD> zoomBox 894.84400 1086.67500 1880.80500 1582.32300
+[05/29 17:53:52     41s] <CMD> zoomBox 1086.55900 1181.38900 1692.06300 1485.77900
+[05/29 17:53:53     41s] <CMD> zoomBox 707.66800 987.37800 2072.32300 1673.39800
+[05/29 17:53:53     41s] <CMD> zoomBox 279.71100 768.24400 2501.82600 1885.31400
+[05/29 17:53:53     41s] <CMD> zoomBox -146.25800 550.12600 2929.33500 2096.24500
+[05/29 17:53:54     41s] <CMD> zoomBox -1551.85800 -169.60900 4340.01600 2792.27100
+[05/29 17:53:54     41s] <CMD> zoomBox -2681.30200 -747.93900 5473.54200 3351.55000
+[05/29 17:54:01     42s] 
+[05/29 17:54:01     42s] *** Memory Usage v#1 (Current mem = 2390.500M, initial mem = 284.375M) ***
+[05/29 17:54:01     42s] 
+[05/29 17:54:01     42s] *** Summary of all messages that are not suppressed in this session:
+[05/29 17:54:01     42s] Severity  ID               Count  Summary                                  
+[05/29 17:54:01     42s] WARNING   IMPLF-58           392  MACRO '%s' has been found in the databas...
+[05/29 17:54:01     42s] WARNING   IMPLF-61             1  %d duplicated MACRO definitions have bee...
+[05/29 17:54:01     42s] WARNING   IMPLF-200          299  Pin '%s' in macro '%s' has no ANTENNAGAT...
+[05/29 17:54:01     42s] WARNING   IMPLF-201          256  Pin '%s' in macro '%s' has no ANTENNADIF...
+[05/29 17:54:01     42s] WARNING   IMPLF-119           12  LAYER '%s' has been found in the databas...
+[05/29 17:54:01     42s] WARNING   IMPFP-325            1  Floorplan of the design is resized. All ...
+[05/29 17:54:01     42s] WARNING   IMPFP-3961          24  The techSite '%s' has no related standar...
+[05/29 17:54:01     42s] WARNING   IMPEXT-6202          1  In addition to the technology file, the ...
+[05/29 17:54:01     42s] WARNING   IMPSYC-2             4  Timing information is not defined for ce...
+[05/29 17:54:01     42s] WARNING   IMPVL-159          770  Pin '%s' of cell '%s' is defined in LEF ...
+[05/29 17:54:01     42s] WARNING   IMPPP-532          259  ViaGen Warning: The top layer and bottom...
+[05/29 17:54:01     42s] WARNING   IMPPP-570           32  The power planner detected cut layer obs...
+[05/29 17:54:01     42s] WARNING   IMPSR-4058           1  Sroute option: %s should be used in conj...
+[05/29 17:54:01     42s] WARNING   IMPCTE-107           1  The following globals have been obsolete...
+[05/29 17:54:01     42s] WARNING   TECHLIB-302          2  No function defined for cell '%s'. The c...
+[05/29 17:54:01     42s] *** Message Summary: 2055 warning(s), 0 error(s)
+[05/29 17:54:01     42s] 
+[05/29 17:54:01     42s] --- Ending "Innovus" (totcpu=0:00:42.3, real=0:04:01, mem=2390.5M) ---

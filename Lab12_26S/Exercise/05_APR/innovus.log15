@@ -1,0 +1,1077 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2020 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v20.15-s105_1, built Tue Jul 27 14:15:35 PDT 2021
+Options:	
+Date:		Fri May 29 17:50:00 2026
+Host:		ee28 (x86_64 w/Linux 3.10.0-1160.88.1.el7.x86_64) (64cores*256cpus*AMD EPYC 7713 64-Core Processor 512KB)
+OS:		CentOS Linux release 7.9.2009 (Core)
+
+License:
+		invs	Innovus Implementation System	20.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (2063 mbytes). Set global soft_stack_size_limit to change the value.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> getVersion
+[INFO] Loading Pegasus 21.21 fill procedures
+<CMD> win
+<CMD> set init_design_uniquify 1
+<CMD> setDesignMode -process 180
+##  Process: 180           (User Set)               
+##     Node: (not set)                           
+
+##  Check design process and node:  
+##  Design tech node is not set.
+
+Applying the recommended capacitance filtering threshold values for 180nm process node: total_c_th=5, relative_c_th=0.03 and coupling_c_th=3.
+	These values will be used by all post-route extraction engines, including TQuantus, IQuantus and Quantus QRC extraction.
+	For postRoute effortLevel low extraction, the coupling_c_th value will be used only when the -capFilterMode parameter of the setExtractRCMode command is set to relAndCoup or relOrCoup. Default value of -capFilterMode parameter in postRoute extraction effortLevel low is relOnly.
+	The accuracy mode for postRoute effortLevel low extraction will be set to 'standard'.
+	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode is 'low'.
+<CMD> suppressMessage TECHLIB 1318
+<CMD> suppressMessage ENCEXT-2799
+<CMD> encMessage warning 0
+Suppress "**WARN ..." messages.
+<CMD> encMessage debug 0
+<CMD> encMessage info 0
+RC_Corner
+**WARN: (IMPLF-119):	LAYER 'metal1' has been found in the database. Its content except ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+**WARN: (IMPLF-119):	LAYER 'metal2' has been found in the database. Its content except ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+**WARN: (IMPLF-119):	LAYER 'metal3' has been found in the database. Its content except ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+**WARN: (IMPLF-119):	LAYER 'metal4' has been found in the database. Its content except ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+**WARN: (IMPLF-119):	LAYER 'metal5' has been found in the database. Its content except ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+**WARN: (IMPLF-119):	LAYER 'metal6' has been found in the database. Its content except ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+**WARN: (IMPLF-58):	MACRO 'AN2' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+**WARN: (IMPLF-58):	MACRO 'AN2B1' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+**WARN: (IMPLF-58):	MACRO 'AN2B1P' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+**WARN: (IMPLF-58):	MACRO 'AN2B1S' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+**WARN: (IMPLF-58):	MACRO 'AN2B1T' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+**WARN: (IMPLF-58):	MACRO 'AN2P' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+**WARN: (IMPLF-58):	MACRO 'AN2S' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+**WARN: (IMPLF-58):	MACRO 'AN2T' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+**WARN: (IMPLF-58):	MACRO 'AN3' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+**WARN: (IMPLF-58):	MACRO 'AN3B1' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+**WARN: (IMPLF-58):	MACRO 'AN3B1P' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+**WARN: (IMPLF-58):	MACRO 'AN3B1S' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+**WARN: (IMPLF-58):	MACRO 'AN3B1T' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+**WARN: (IMPLF-58):	MACRO 'AN3B2' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+**WARN: (IMPLF-58):	MACRO 'AN3B2P' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+**WARN: (IMPLF-58):	MACRO 'AN3B2S' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+**WARN: (IMPLF-58):	MACRO 'AN3B2T' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+**WARN: (IMPLF-58):	MACRO 'AN3P' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+**WARN: (IMPLF-58):	MACRO 'AN3S' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+**WARN: (IMPLF-58):	MACRO 'AN3T' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+**WARN: (EMS-27):	Message (IMPLF-58) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+**WARN: (IMPLF-119):	LAYER 'metal1' has been found in the database. Its content except ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+**WARN: (IMPLF-119):	LAYER 'metal2' has been found in the database. Its content except ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+**WARN: (IMPLF-119):	LAYER 'metal3' has been found in the database. Its content except ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+**WARN: (IMPLF-119):	LAYER 'metal4' has been found in the database. Its content except ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+**WARN: (IMPLF-119):	LAYER 'metal5' has been found in the database. Its content except ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+**WARN: (IMPLF-119):	LAYER 'metal6' has been found in the database. Its content except ANTENNA* data will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+**WARN: (IMPLF-61):	392 duplicated MACRO definitions have been found in the LEF file(s). Their content except DENSITY and PIN ANTENNA* data, and certain properties, have been ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+**WARN: (IMPLF-201):	Pin 'DO63' in macro 'SRAM_82X64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'DI63' in macro 'SRAM_82X64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'DO62' in macro 'SRAM_82X64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'DI62' in macro 'SRAM_82X64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'DO61' in macro 'SRAM_82X64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'DI61' in macro 'SRAM_82X64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'DO60' in macro 'SRAM_82X64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'DI60' in macro 'SRAM_82X64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'DO59' in macro 'SRAM_82X64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'DI59' in macro 'SRAM_82X64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'DO58' in macro 'SRAM_82X64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'DI58' in macro 'SRAM_82X64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'DO57' in macro 'SRAM_82X64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'DI57' in macro 'SRAM_82X64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'DO56' in macro 'SRAM_82X64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'DI56' in macro 'SRAM_82X64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'DO55' in macro 'SRAM_82X64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'DI55' in macro 'SRAM_82X64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'DO54' in macro 'SRAM_82X64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'DI54' in macro 'SRAM_82X64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'DO53' in macro 'SRAM_82X64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'DI53' in macro 'SRAM_82X64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'DO52' in macro 'SRAM_82X64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'DI52' in macro 'SRAM_82X64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'DO51' in macro 'SRAM_82X64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'DI51' in macro 'SRAM_82X64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'DO50' in macro 'SRAM_82X64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'DI50' in macro 'SRAM_82X64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'DO49' in macro 'SRAM_82X64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'DI49' in macro 'SRAM_82X64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'DO48' in macro 'SRAM_82X64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'DI48' in macro 'SRAM_82X64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'DO47' in macro 'SRAM_82X64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'DI47' in macro 'SRAM_82X64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'DO46' in macro 'SRAM_82X64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'DI46' in macro 'SRAM_82X64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'DO45' in macro 'SRAM_82X64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'DI45' in macro 'SRAM_82X64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-201):	Pin 'DO44' in macro 'SRAM_82X64' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (IMPLF-200):	Pin 'DI44' in macro 'SRAM_82X64' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+**WARN: (EMS-27):	Message (IMPLF-201) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+**WARN: (EMS-27):	Message (IMPLF-200) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+Loading view definition file from /RAID2/COURSE/2026_Spring/iclab/iclab062/Lab12_26S/Exercise/05_APR/CHIP_floorplan.inn.dat/viewDefinition.tcl
+**WARN: (TECHLIB-302):	No function defined for cell 'ANTENNA'. The cell will only be used for analysis. (File /RAID2/COURSE/BackUp/2023_Spring/iclab/iclabta01/UMC018_CBDK/orig_lib/fsa0m_a/2009Q2v2.0/GENERIC_CORE/FrontEnd/synopsys/fsa0m_a_generic_core_ss1p62v125c.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'ANTENNA'. The cell will only be used for analysis. (File /RAID2/COURSE/BackUp/2023_Spring/iclab/iclabta01/UMC018_CBDK/orig_lib/fsa0m_a/2009Q2v2.0/GENERIC_CORE/FrontEnd/synopsys/fsa0m_a_generic_core_ff1p98vm40c.lib)
+*** End library_loading (cpu=0.03min, real=0.02min, mem=21.9M, fe_cpu=0.28min, fe_real=0.70min, fe_mem=940.6M) ***
+**WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR4T' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR4T' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR4S' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR4S' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR4P' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR4P' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR4' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR4' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR3T' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR3T' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR3S' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR3S' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR3P' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR3P' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR3' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR3' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR2HT' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR2HT' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'GND' of cell 'XOR2HS' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'VCC' of cell 'XOR2HS' is defined in LEF but not in the timing library.
+**WARN: (EMS-27):	Message (IMPVL-159) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+*** Netlist is unique.
+**WARN: (IMPFP-3961):	The techSite 'iocore_f' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+**WARN: (IMPFP-3961):	The techSite 'iocore_e' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+**WARN: (IMPFP-3961):	The techSite 'iocore_ds' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+**WARN: (IMPFP-3961):	The techSite 'iocore_cs' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+**WARN: (IMPFP-3961):	The techSite 'iocore_d' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+**WARN: (IMPFP-3961):	The techSite 'iocore_c' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+**WARN: (IMPFP-3961):	The techSite 'iocore_b' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+**WARN: (IMPFP-3961):	The techSite 'iocore_a' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Loading preference file /RAID2/COURSE/2026_Spring/iclab/iclab062/Lab12_26S/Exercise/05_APR/CHIP_floorplan.inn.dat/gui.pref.tcl ...
+**WARN: (IMPSYC-2):	Timing information is not defined for cell VCCKD; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+**WARN: (IMPSYC-2):	Timing information is not defined for cell VCC3IOD; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+**WARN: (IMPSYC-2):	Timing information is not defined for cell GNDKD; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+**WARN: (IMPSYC-2):	Timing information is not defined for cell GNDIOD; Check the timing library (.lib) file and make sure the timing information exists for the cell and you can run the checkTimingLibrary command to verify if the timing library has complete information after the design is loaded.
+**WARN: (IMPFP-3961):	The techSite 'iocore_f' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+**WARN: (IMPFP-3961):	The techSite 'iocore_e' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+**WARN: (IMPFP-3961):	The techSite 'iocore_ds' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+**WARN: (IMPFP-3961):	The techSite 'iocore_cs' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+**WARN: (IMPFP-3961):	The techSite 'iocore_d' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+**WARN: (IMPFP-3961):	The techSite 'iocore_c' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+**WARN: (IMPFP-3961):	The techSite 'iocore_b' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+**WARN: (IMPFP-3961):	The techSite 'iocore_a' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Loading place ...
+**WARN: (IMPEXT-6202):	In addition to the technology file, the capacitance table file is specified for all the RC corners. If the technology file  is already specified for all the RC corners, the capacitance table file is not required for preRoute and postRoute extraction. In a new session, the capacitance table files can be removed from the create_rc_corner command to enable the technology file to be used for preRoute and postRoute (effort level medium/high/signoff) extraction engines.
+Delay_Corner_min Delay_Corner_max
+**WARN: (IMPCTE-107):	The following globals have been obsoleted since version 20.15-s105_1. They will be removed in the next release. 
+timing_enable_default_delay_arc
+<CMD> getIoFlowFlag
+<CMD> setIoFlowFlag 0
+<CMD> floorPlan -site core_5040 -r 0.979223619464 0.542895 200 200 200 200
+Adjusting Core to Bottom to: 200.9200.
+**WARN: (IMPFP-3961):	The techSite 'iocore_f' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_e' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_ds' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_cs' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_d' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_c' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_b' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'iocore_a' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+Start create_tracks
+Generated pitch 2.48 in metal6 is different from 2.4 defined in technology file in preferred direction.
+**WARN: (IMPFP-325):	Floorplan of the design is resized. All current floorplan objects are automatically derived based on specified new floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
+<CMD> uiSetTool select
+<CMD> getIoFlowFlag
+<CMD> fit
+<CMD> uiSetTool move
+<CMD> selectInst CORE/u_v_sram_SRAM2
+<CMD> setObjFPlanBox Instance CORE/u_v_sram_SRAM2 807.148 397.69 1022.748 2296.75
+<CMD> saveDesign DBS/CHIP_floorplan.inn
+#% Begin save design ... (date=05/29 17:51:17, mem=1465.6M)
+% Begin Save ccopt configuration ... (date=05/29 17:51:17, mem=1468.6M)
+% End Save ccopt configuration ... (date=05/29 17:51:17, total cpu=0:00:00.0, real=0:00:00.0, peak res=1469.4M, current mem=1469.4M)
+% Begin Save netlist data ... (date=05/29 17:51:17, mem=1489.2M)
+Writing Binary DB to DBS/CHIP_floorplan.inn.dat.tmp/CHIP.v.bin in single-threaded mode...
+% End Save netlist data ... (date=05/29 17:51:17, total cpu=0:00:00.1, real=0:00:00.0, peak res=1489.5M, current mem=1489.5M)
+Saving symbol-table file ...
+Saving congestion map file DBS/CHIP_floorplan.inn.dat.tmp/CHIP.route.congmap.gz ...
+% Begin Save AAE data ... (date=05/29 17:51:18, mem=1490.3M)
+Saving AAE Data ...
+% End Save AAE data ... (date=05/29 17:51:18, total cpu=0:00:00.0, real=0:00:00.0, peak res=1490.3M, current mem=1490.3M)
+Saving preference file DBS/CHIP_floorplan.inn.dat.tmp/gui.pref.tcl ...
+Saving mode setting ...
+Saving global file ...
+% Begin Save floorplan data ... (date=05/29 17:51:18, mem=1493.1M)
+Saving floorplan file ...
+% End Save floorplan data ... (date=05/29 17:51:18, total cpu=0:00:00.1, real=0:00:00.0, peak res=1493.1M, current mem=1493.1M)
+Saving Drc markers ...
+... No Drc file written since there is no markers found.
+% Begin Save placement data ... (date=05/29 17:51:18, mem=1493.2M)
+** Saving stdCellPlacement_binary (version# 2) ...
+Save Adaptive View Pruning View Names to Binary file
+% End Save placement data ... (date=05/29 17:51:18, total cpu=0:00:00.0, real=0:00:00.0, peak res=1493.4M, current mem=1493.4M)
+% Begin Save routing data ... (date=05/29 17:51:18, mem=1493.4M)
+Saving route file ...
+*** Completed saveRoute (cpu=0:00:00.0 real=0:00:01.0 mem=2258.7M) ***
+% End Save routing data ... (date=05/29 17:51:19, total cpu=0:00:00.0, real=0:00:01.0, peak res=1493.6M, current mem=1493.6M)
+Saving property file DBS/CHIP_floorplan.inn.dat.tmp/CHIP.prop
+*** Completed saveProperty (cpu=0:00:00.0 real=0:00:00.0 mem=2261.7M) ***
+% Begin Save power constraints data ... (date=05/29 17:51:19, mem=1494.1M)
+% End Save power constraints data ... (date=05/29 17:51:19, total cpu=0:00:00.0, real=0:00:00.0, peak res=1494.2M, current mem=1494.2M)
+RC_Corner
+RC_Corner
+RC_Corner
+Generated self-contained design CHIP_floorplan.inn.dat.tmp
+#% End save design ... (date=05/29 17:51:19, total cpu=0:00:00.8, real=0:00:02.0, peak res=1523.9M, current mem=1496.3M)
+*** Message Summary: 0 warning(s), 0 error(s)
+
+<CMD> saveDesign CHIP_floorplan.inn
+#% Begin save design ... (date=05/29 17:51:30, mem=1495.9M)
+% Begin Save ccopt configuration ... (date=05/29 17:51:31, mem=1495.9M)
+% End Save ccopt configuration ... (date=05/29 17:51:31, total cpu=0:00:00.0, real=0:00:00.0, peak res=1495.9M, current mem=1495.9M)
+% Begin Save netlist data ... (date=05/29 17:51:31, mem=1495.9M)
+Writing Binary DB to CHIP_floorplan.inn.dat.tmp/CHIP.v.bin in single-threaded mode...
+% End Save netlist data ... (date=05/29 17:51:31, total cpu=0:00:00.1, real=0:00:00.0, peak res=1495.9M, current mem=1495.9M)
+Saving symbol-table file ...
+Saving congestion map file CHIP_floorplan.inn.dat.tmp/CHIP.route.congmap.gz ...
+% Begin Save AAE data ... (date=05/29 17:51:31, mem=1495.9M)
+Saving AAE Data ...
+% End Save AAE data ... (date=05/29 17:51:31, total cpu=0:00:00.0, real=0:00:00.0, peak res=1495.9M, current mem=1495.9M)
+Saving preference file CHIP_floorplan.inn.dat.tmp/gui.pref.tcl ...
+Saving mode setting ...
+Saving global file ...
+% Begin Save floorplan data ... (date=05/29 17:51:31, mem=1496.0M)
+Saving floorplan file ...
+% End Save floorplan data ... (date=05/29 17:51:32, total cpu=0:00:00.1, real=0:00:01.0, peak res=1496.0M, current mem=1496.0M)
+Saving Drc markers ...
+... No Drc file written since there is no markers found.
+% Begin Save placement data ... (date=05/29 17:51:32, mem=1496.0M)
+** Saving stdCellPlacement_binary (version# 2) ...
+Save Adaptive View Pruning View Names to Binary file
+% End Save placement data ... (date=05/29 17:51:32, total cpu=0:00:00.0, real=0:00:00.0, peak res=1496.0M, current mem=1496.0M)
+% Begin Save routing data ... (date=05/29 17:51:32, mem=1496.0M)
+Saving route file ...
+*** Completed saveRoute (cpu=0:00:00.0 real=0:00:00.0 mem=2295.2M) ***
+% End Save routing data ... (date=05/29 17:51:32, total cpu=0:00:00.1, real=0:00:00.0, peak res=1496.1M, current mem=1496.1M)
+Saving property file CHIP_floorplan.inn.dat.tmp/CHIP.prop
+*** Completed saveProperty (cpu=0:00:00.0 real=0:00:00.0 mem=2298.2M) ***
+% Begin Save power constraints data ... (date=05/29 17:51:32, mem=1496.1M)
+% End Save power constraints data ... (date=05/29 17:51:32, total cpu=0:00:00.0, real=0:00:00.0, peak res=1496.1M, current mem=1496.1M)
+RC_Corner
+RC_Corner
+RC_Corner
+Generated self-contained design CHIP_floorplan.inn.dat.tmp
+#% End save design ... (date=05/29 17:51:33, total cpu=0:00:00.9, real=0:00:02.0, peak res=1526.8M, current mem=1496.7M)
+*** Message Summary: 0 warning(s), 0 error(s)
+
+<CMD> clearGlobalNets
+<CMD> globalNetConnect VCC -type pgpin -pin VCC -instanceBasename *
+<CMD> globalNetConnect VCC -type net -net VCC
+<CMD> globalNetConnect VCC -type tiehi -pin VCC -instanceBasename *
+<CMD> globalNetConnect GND -type pgpin -pin GND -instanceBasename *
+<CMD> globalNetConnect GND -type net -net GND
+<CMD> globalNetConnect GND -type tielo -pin GND -instanceBasename *
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+The ring targets are set to core/block ring wires.
+addRing command will consider rows while creating rings.
+addRing command will disallow rings to go over rows.
+addRing command will ignore shorts while creating rings.
+<CMD> addRing -nets {GND VCC} -type core_rings -follow core -layer {top metal3 bottom metal3 left metal2 right metal2} -width {top 9 bottom 9 left 9 right 9} -spacing {top 0.28 bottom 0.28 left 0.28 right 0.28} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 1 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None -use_wire_group 1 -use_wire_group_bits 12 -use_interleaving_wire_group 1
+#% Begin addRing (date=05/29 17:51:43, mem=1496.9M)
+
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2308.9M)
+Ring generation is complete.
+vias are now being generated.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via3 layer at (659.570007, 135.360001) (677.210022, 139.880005).
+Type 'man IMPPP-570' for more detail.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via2 layer at (659.570007, 135.360001) (677.210022, 139.880005).
+Type 'man IMPPP-570' for more detail.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via3 layer at (659.570007, 135.360001) (677.210022, 139.880005).
+Type 'man IMPPP-570' for more detail.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via2 layer at (659.570007, 135.360001) (677.210022, 139.880005).
+Type 'man IMPPP-570' for more detail.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via3 layer at (639.929993, 135.360001) (657.570007, 139.880005).
+Type 'man IMPPP-570' for more detail.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via2 layer at (639.929993, 135.360001) (657.570007, 139.880005).
+Type 'man IMPPP-570' for more detail.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via3 layer at (639.929993, 135.360001) (657.570007, 139.880005).
+Type 'man IMPPP-570' for more detail.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via2 layer at (639.929993, 135.360001) (657.570007, 139.880005).
+Type 'man IMPPP-570' for more detail.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via3 layer at (620.289978, 135.360001) (637.929993, 139.880005).
+Type 'man IMPPP-570' for more detail.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via2 layer at (620.289978, 135.360001) (637.929993, 139.880005).
+Type 'man IMPPP-570' for more detail.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via3 layer at (620.289978, 135.360001) (637.929993, 139.880005).
+Type 'man IMPPP-570' for more detail.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via2 layer at (620.289978, 135.360001) (637.929993, 139.880005).
+Type 'man IMPPP-570' for more detail.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via3 layer at (479.589996, 135.360001) (497.230011, 139.880005).
+Type 'man IMPPP-570' for more detail.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via2 layer at (479.589996, 135.360001) (497.230011, 139.880005).
+Type 'man IMPPP-570' for more detail.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via3 layer at (479.589996, 135.360001) (497.230011, 139.880005).
+Type 'man IMPPP-570' for more detail.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via2 layer at (479.589996, 135.360001) (497.230011, 139.880005).
+Type 'man IMPPP-570' for more detail.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via3 layer at (459.950012, 135.360001) (477.589996, 139.880005).
+Type 'man IMPPP-570' for more detail.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via2 layer at (459.950012, 135.360001) (477.589996, 139.880005).
+Type 'man IMPPP-570' for more detail.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via3 layer at (459.950012, 135.360001) (477.589996, 139.880005).
+Type 'man IMPPP-570' for more detail.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via2 layer at (459.950012, 135.360001) (477.589996, 139.880005).
+Type 'man IMPPP-570' for more detail.
+**WARN: (EMS-27):	Message (IMPPP-570) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+addRing created 267 wires.
+ViaGen created 1052 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+| metal2 |       129      |       NA       |
+|  via2  |      1052      |        0       |
+| metal3 |       138      |       NA       |
++--------+----------------+----------------+
+#% End addRing (date=05/29 17:51:43, total cpu=0:00:00.2, real=0:00:00.0, peak res=1499.1M, current mem=1499.1M)
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+The ring targets are set to core/block ring wires.
+addRing command will consider rows while creating rings.
+addRing command will disallow rings to go over rows.
+addRing command will ignore shorts while creating rings.
+<CMD> addRing -nets {GND VCC} -type block_rings -around each_block -layer {top metal3 bottom metal3 left metal2 right metal2} -width {top 2 bottom 2 left 2 right 2} -spacing {top 0.28 bottom 0.28 left 0.28 right 0.28} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+#% Begin addRing (date=05/29 17:51:43, mem=1499.1M)
+
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2308.9M)
+Ring generation is complete.
+vias are now being generated.
+addRing created 40 wires.
+ViaGen created 40 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+| metal2 |       20       |       NA       |
+|  via2  |       40       |        0       |
+| metal3 |       20       |       NA       |
++--------+----------------+----------------+
+#% End addRing (date=05/29 17:51:43, total cpu=0:00:00.0, real=0:00:00.0, peak res=1499.6M, current mem=1499.6M)
+<CMD> setSrouteMode -viaConnectToShape { ring blockring }
+<CMD> sroute -connect { blockPin padPin } -layerChangeRange { metal1(1) metal6(6) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -allowJogging 1 -crossoverViaLayerRange { metal1(1) metal6(6) } -nets { GND VCC } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { metal1(1) metal6(6) }
+#% Begin sroute (date=05/29 17:51:43, mem=1499.7M)
+*** Begin SPECIAL ROUTE on Fri May 29 17:51:43 2026 ***
+SPECIAL ROUTE ran on directory: /RAID2/COURSE/2026_Spring/iclab/iclab062/Lab12_26S/Exercise/05_APR
+SPECIAL ROUTE ran on machine: ee28 (Linux 3.10.0-1160.88.1.el7.x86_64 x86_64 1.70Ghz)
+
+Begin option processing ...
+srouteConnectPowerBump set to false
+routeSelectNet set to "GND VCC"
+routeSpecial set to true
+srouteBlockPin set to "useLef"
+srouteBottomLayerLimit set to 1
+srouteBottomTargetLayerLimit set to 1
+srouteConnectConverterPin set to false
+srouteConnectCorePin set to false
+srouteConnectStripe set to false
+srouteCrossoverViaBottomLayer set to 1
+srouteCrossoverViaTopLayer set to 6
+srouteFollowCorePinEnd set to 3
+srouteFollowPadPin set to false
+srouteJogControl set to "preferWithChanges differentLayer"
+srouteNoViaOnWireShape set to "padring stripe blockpin coverpin noshape blockwire corewire followpin iowire"
+sroutePadPinAllPorts set to true
+sroutePreserveExistingRoutes set to true
+srouteRoutePowerBarPortOnBothDir set to true
+srouteStopBlockPin set to "nearestTarget"
+srouteTopLayerLimit set to 6
+srouteTopTargetLayerLimit set to 6
+End option processing: cpu: 0:00:00, real: 0:00:00, peak: 3432.00 megs.
+
+Reading DB technology information...
+Finished reading DB technology information.
+Reading floorplan and netlist information...
+Finished reading floorplan and netlist information.
+Read in 12 layers, 6 routing layers, 1 overlap layer
+Read in 106 macros, 106 used
+Read in 158 components
+  96 core components: 96 unplaced, 0 placed, 0 fixed
+  57 pad components: 0 unplaced, 53 placed, 4 fixed
+  5 block/ring components: 0 unplaced, 0 placed, 5 fixed
+Read in 29 logical pins
+Read in 6 blockages
+Read in 29 nets
+Read in 2 special nets, 2 routed
+Read in 218 terminals
+2 nets selected.
+
+Begin power routing ...
+  Number of IO ports routed: 42
+  Number of Block ports routed: 1848
+  Number of Power Bump ports routed: 0
+End power routing: cpu: 0:00:01, real: 0:00:01, peak: 3449.00 megs.
+
+
+
+ Begin updating DB with routing results ...
+ Updating DB with 0 via definition ...
+sroute created 1890 wires.
+ViaGen created 2292 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+| metal1 |      1440      |       NA       |
+|   via  |      1668      |        0       |
+| metal2 |       370      |       NA       |
+|  via2  |       624      |        0       |
+| metal3 |       80       |       NA       |
++--------+----------------+----------------+
+#% End sroute (date=05/29 17:51:44, total cpu=0:00:01.2, real=0:00:01.0, peak res=1506.5M, current mem=1506.5M)
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+addStripe will allow jog to connect padcore ring and block ring.
+
+Stripes will stop at the boundary of the specified area.
+When breaking rings, the power planner will consider the existence of blocks.
+Stripes will not extend to closest target.
+The power planner will set stripe antenna targets to none (no trimming allowed).
+Stripes will not be created over regions without power planning wires.
+The entire stripe set will break at the domain if one of the nets is not in the domain.
+addStripe will break automatically at non-default domains when generating global stripes over the core area or default domain.
+Offset for stripe breaking is set to 0.
+<CMD> addStripe -nets {GND VCC} -layer metal2 -direction vertical -width 4 -spacing 0.28 -set_to_set_distance 80 -start_from left -start_offset 50 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit metal6 -padcore_ring_bottom_layer_limit metal1 -block_ring_top_layer_limit metal6 -block_ring_bottom_layer_limit metal1 -use_wire_group 0 -snap_wire_center_to_grid None
+#% Begin addStripe (date=05/29 17:51:44, mem=1506.5M)
+
+Initialize fgc environment(mem: 2326.2M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  NONE
+Completing 10% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+Completing 20% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+Completing 30% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+Completing 40% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+Completing 50% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+Completing 60% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+Completing 70% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+Completing 80% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+Completing 90% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+Completing 100% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+Stripe generation is complete.
+vias are now being generated.
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal1 & metal2 at (470.38, 413.65) (471.59, 415.65).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal1 & metal2 at (470.38, 2318.31) (471.59, 2320.31).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal1 & metal2 at (470.38, 2318.31) (471.59, 2320.31).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal1 & metal2 at (634.23, 413.65) (634.38, 415.65).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal1 & metal2 at (634.23, 2318.31) (634.38, 2320.31).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal1 & metal2 at (634.23, 2318.31) (634.38, 2320.31).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal1 & metal2 at (1190.50, 397.80) (1192.50, 399.80).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal1 & metal2 at (1190.50, 2302.46) (1192.50, 2304.46).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal1 & metal2 at (1190.50, 2302.46) (1192.50, 2304.46).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal1 & metal2 at (1270.38, 397.80) (1270.90, 399.80).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal1 & metal2 at (1270.38, 2302.46) (1270.90, 2304.46).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal1 & metal2 at (1270.38, 2302.46) (1270.90, 2304.46).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal1 & metal2 at (1590.43, 1290.20) (1592.43, 1292.20).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal1 & metal2 at (1590.43, 2290.28) (1592.43, 2292.28).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal1 & metal2 at (1590.43, 2290.28) (1592.43, 2292.28).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal1 & metal2 at (1670.38, 1290.20) (1670.83, 1292.20).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal1 & metal2 at (1670.38, 2290.28) (1670.83, 2292.28).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal1 & metal2 at (1670.38, 2290.28) (1670.83, 2292.28).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal1 & metal2 at (1990.38, 407.89) (1991.36, 409.89).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal1 & metal2 at (1990.38, 1418.51) (1991.36, 1420.51).
+**WARN: (EMS-27):	Message (IMPPP-532) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via5 layer at (459.950012, 135.360001) (463.950012, 139.880005).
+Type 'man IMPPP-570' for more detail.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via4 layer at (459.950012, 135.360001) (463.950012, 139.880005).
+Type 'man IMPPP-570' for more detail.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via3 layer at (459.950012, 135.360001) (463.950012, 139.880005).
+Type 'man IMPPP-570' for more detail.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via layer at (459.950012, 135.360001) (463.950012, 139.880005).
+Type 'man IMPPP-570' for more detail.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via5 layer at (620.289978, 135.360001) (624.289978, 139.880005).
+Type 'man IMPPP-570' for more detail.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via4 layer at (620.289978, 135.360001) (624.289978, 139.880005).
+Type 'man IMPPP-570' for more detail.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via3 layer at (620.289978, 135.360001) (624.289978, 139.880005).
+Type 'man IMPPP-570' for more detail.
+**WARN: (IMPPP-570):	The power planner detected cut layer obstruction(s) and cannot create via on the via layer at (620.289978, 135.360001) (624.289978, 139.880005).
+Type 'man IMPPP-570' for more detail.
+addStripe created 124 wires.
+ViaGen created 1261 vias, deleted 36 vias to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+| metal1 |       23       |       NA       |
+|   via  |       55       |        0       |
+| metal2 |       89       |       NA       |
+|  via2  |      1182      |       36       |
+| metal3 |       10       |       NA       |
+|  via3  |       24       |        0       |
+| metal4 |        2       |       NA       |
++--------+----------------+----------------+
+#% End addStripe (date=05/29 17:51:44, total cpu=0:00:00.2, real=0:00:00.0, peak res=1508.3M, current mem=1508.3M)
+<CMD> setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer metal6 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+addStripe will allow jog to connect padcore ring and block ring.
+
+Stripes will stop at the boundary of the specified area.
+When breaking rings, the power planner will consider the existence of blocks.
+Stripes will not extend to closest target.
+The power planner will set stripe antenna targets to none (no trimming allowed).
+Stripes will not be created over regions without power planning wires.
+The entire stripe set will break at the domain if one of the nets is not in the domain.
+addStripe will break automatically at non-default domains when generating global stripes over the core area or default domain.
+Offset for stripe breaking is set to 0.
+<CMD> addStripe -nets {GND VCC} -layer metal3 -direction horizontal -width 4 -spacing 0.28 -set_to_set_distance 80 -start_from bottom -start_offset 50 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit metal6 -padcore_ring_bottom_layer_limit metal1 -block_ring_top_layer_limit metal6 -block_ring_bottom_layer_limit metal1 -use_wire_group 0 -snap_wire_center_to_grid None
+#% Begin addStripe (date=05/29 17:51:44, mem=1508.3M)
+
+Initialize fgc environment(mem: 2326.2M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  NONE
+The core ring for GND is incomplete. The core ring will not be used as a boundary for stripes. In this situation, the power planner will generate stripes only within the core area.
+Completing 10% stripe generation(cpu: 0:00:00.0, real: 0:00:01.0, peak mem: 2326.2M)
+Completing 20% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+Completing 30% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+Completing 40% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+Completing 50% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+Completing 60% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+Completing 70% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+Completing 80% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+Completing 90% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+Completing 100% stripe generation(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2326.2M)
+Stripe generation is complete.
+vias are now being generated.
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal3 & metal1 at (453.07, 473.80) (455.07, 475.04).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal3 & metal1 at (453.07, 473.80) (455.07, 475.04).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal3 & metal1 at (1371.66, 472.83) (1373.66, 474.83).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal3 & metal1 at (1371.66, 472.83) (1373.66, 474.83).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal3 & metal1 at (453.07, 551.92) (455.07, 553.92).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal3 & metal1 at (453.07, 551.92) (455.07, 553.92).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal3 & metal1 at (1886.60, 554.84) (1888.60, 555.04).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal3 & metal1 at (1886.60, 554.84) (1888.60, 555.04).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal3 & metal1 at (2186.20, 552.36) (2188.20, 554.36).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal3 & metal1 at (2186.20, 552.36) (2188.20, 554.36).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal3 & metal1 at (453.07, 631.04) (455.07, 632.04).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal3 & metal1 at (453.07, 631.04) (455.07, 632.04).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal3 & metal1 at (1150.46, 631.55) (1152.46, 633.55).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal3 & metal1 at (1150.46, 631.55) (1152.46, 633.55).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal3 & metal1 at (1886.60, 632.96) (1888.60, 634.96).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal3 & metal1 at (1886.60, 632.96) (1888.60, 634.96).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal3 & metal1 at (803.35, 714.44) (805.35, 715.04).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal3 & metal1 at (674.27, 714.98) (676.27, 715.04).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal3 & metal1 at (803.35, 714.44) (805.35, 715.04).
+**WARN: (IMPPP-532):	ViaGen Warning: The top layer and bottom layer have same direction but only orthogonal via is allowed between layer metal3 & metal1 at (674.27, 714.98) (676.27, 715.04).
+**WARN: (EMS-27):	Message (IMPPP-532) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+addStripe created 245 wires.
+ViaGen created 2282 vias, deleted 13 vias to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|   via  |        6       |        6       |
+|  via2  |      2271      |        7       |
+| metal3 |       242      |       NA       |
+|  via3  |        5       |        0       |
+| metal4 |        3       |       NA       |
++--------+----------------+----------------+
+#% End addStripe (date=05/29 17:51:45, total cpu=0:00:00.2, real=0:00:01.0, peak res=1512.2M, current mem=1512.2M)
+<CMD> setSrouteMode -viaConnectToShape { ring stripe blockring }
+<CMD> sroute -connect { corePin } -layerChangeRange { metal1(1) metal6(6) } -blockPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -allowJogging 1 -crossoverViaLayerRange { metal1(1) metal6(6) } -nets { GND VCC } -allowLayerChange 1 -targetViaLayerRange { metal1(1) metal6(6) }
+#% Begin sroute (date=05/29 17:51:45, mem=1512.2M)
+**WARN: (IMPSR-4058):	Sroute option: blockPinTarget should be used in conjunction with option: -connect blockPin. 
+*** Begin SPECIAL ROUTE on Fri May 29 17:51:45 2026 ***
+SPECIAL ROUTE ran on directory: /RAID2/COURSE/2026_Spring/iclab/iclab062/Lab12_26S/Exercise/05_APR
+SPECIAL ROUTE ran on machine: ee28 (Linux 3.10.0-1160.88.1.el7.x86_64 x86_64 1.70Ghz)
+
+Begin option processing ...
+srouteConnectPowerBump set to false
+routeSelectNet set to "GND VCC"
+routeSpecial set to true
+srouteBottomLayerLimit set to 1
+srouteBottomTargetLayerLimit set to 1
+srouteConnectBlockPin set to false
+srouteConnectConverterPin set to false
+srouteConnectPadPin set to false
+srouteConnectStripe set to false
+srouteCrossoverViaBottomLayer set to 1
+srouteCrossoverViaTopLayer set to 6
+srouteFollowCorePinEnd set to 3
+srouteFollowPadPin set to false
+srouteJogControl set to "preferWithChanges differentLayer"
+srouteNoViaOnWireShape set to "padring blockpin coverpin noshape blockwire corewire followpin iowire"
+sroutePadPinAllPorts set to true
+sroutePreserveExistingRoutes set to true
+srouteRoutePowerBarPortOnBothDir set to true
+srouteStopBlockPin set to "nearestTarget"
+srouteTopLayerLimit set to 6
+srouteTopTargetLayerLimit set to 6
+End option processing: cpu: 0:00:00, real: 0:00:00, peak: 3449.00 megs.
+
+Reading DB technology information...
+Finished reading DB technology information.
+Reading floorplan and netlist information...
+Finished reading floorplan and netlist information.
+Read in 12 layers, 6 routing layers, 1 overlap layer
+Read in 405 macros, 107 used
+Read in 158 components
+  96 core components: 96 unplaced, 0 placed, 0 fixed
+  57 pad components: 0 unplaced, 53 placed, 4 fixed
+  5 block/ring components: 0 unplaced, 0 placed, 5 fixed
+Read in 29 logical pins
+Read in 6 blockages
+Read in 29 nets
+Read in 2 special nets, 2 routed
+Read in 218 terminals
+2 nets selected.
+
+Begin power routing ...
+CPU time for FollowPin 0 seconds
+CPU time for FollowPin 0 seconds
+  Number of Core ports routed: 3912
+  Number of Followpin connections: 1956
+End power routing: cpu: 0:00:02, real: 0:00:01, peak: 3463.00 megs.
+
+
+
+ Begin updating DB with routing results ...
+ Updating DB with 7 via definition ...
+
+sroute post-processing starts at Fri May 29 17:51:46 2026
+The viaGen is rebuilding shadow vias for net GND.
+sroute post-processing ends at Fri May 29 17:51:46 2026
+
+sroute post-processing starts at Fri May 29 17:51:46 2026
+The viaGen is rebuilding shadow vias for net VCC.
+sroute post-processing ends at Fri May 29 17:51:47 2026
+sroute created 5784 wires.
+ViaGen created 16567 vias, deleted 235 vias to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+| metal1 |      5511      |       NA       |
+|   via  |      15661     |       228      |
+| metal2 |       12       |       NA       |
+|  via2  |       904      |        5       |
+| metal3 |       261      |       NA       |
+|  via3  |        2       |        2       |
++--------+----------------+----------------+
+#% End sroute (date=05/29 17:51:47, total cpu=0:00:01.8, real=0:00:02.0, peak res=1541.7M, current mem=1517.6M)
+<CMD> getMultiCpuUsage -localCpu
+<CMD> get_verify_drc_mode -disable_rules -quiet
+<CMD> get_verify_drc_mode -quiet -area
+<CMD> get_verify_drc_mode -quiet -layer_range
+<CMD> get_verify_drc_mode -check_ndr_spacing -quiet
+<CMD> get_verify_drc_mode -check_only -quiet
+<CMD> get_verify_drc_mode -check_same_via_cell -quiet
+<CMD> get_verify_drc_mode -exclude_pg_net -quiet
+<CMD> get_verify_drc_mode -ignore_trial_route -quiet
+<CMD> get_verify_drc_mode -max_wrong_way_halo -quiet
+<CMD> get_verify_drc_mode -use_min_spacing_on_block_obs -quiet
+<CMD> get_verify_drc_mode -limit -quiet
+<CMD> set_verify_drc_mode -disable_rules {} -check_ndr_spacing auto -check_only default -check_same_via_cell false -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report CHIP.drc.rpt -limit 1000
+<CMD> verify_drc
+#-check_ndr_spacing auto                 # enums={true false auto}, default=auto,  user setting
+#-report CHIP.drc.rpt                    # string, default="", user setting
+ *** Starting Verify DRC (MEM: 2338.4) ***
+
+  VERIFY DRC ...... Starting Verification
+  VERIFY DRC ...... Initializing
+  VERIFY DRC ...... Deleting Existing Violations
+  VERIFY DRC ...... Creating Sub-Areas
+  VERIFY DRC ...... Using new threading
+
+  Verification Complete : 10 Viols.
+
+ Violation Summary By Layer and Type:
+
+	          Short   MetSpc   Totals
+	metal2        0        4        4
+	metal3        6        0        6
+	Totals        6        4       10
+
+ *** End Verify DRC (CPU: 0:00:00.6  ELAPSED TIME: 0.00  MEM: 14.0M) ***
+
+<CMD> set_verify_drc_mode -area {0 0 0 0}
+<CMD> verifyConnectivity -net {GND VCC} -type special -error 1000 -warning 50
+VERIFY_CONNECTIVITY use new engine.
+
+******** Start: VERIFY CONNECTIVITY ********
+Start Time: Fri May 29 17:51:47 2026
+
+Design Name: CHIP
+Database Units: 1000
+Design Boundary: (0.0000, 0.0000) (2737.3000, 2692.6000)
+Error Limit = 1000; Warning Limit = 50
+Check specified nets
+*** Checking Net VCC
+Net VCC: has special routes with opens, dangling Wire.
+*** Checking Net GND
+Net GND: dangling Wire.
+
+Begin Summary 
+    7 Problem(s) (IMPVFC-200): Special Wires: Pieces of the net are not connected together.
+    331 Problem(s) (IMPVFC-94): The net has dangling wire(s).
+    338 total info(s) created.
+End Summary
+
+End Time: Fri May 29 17:51:47 2026
+Time Elapsed: 0:00:00.0
+
+******** End: VERIFY CONNECTIVITY ********
+  Verification Complete : 338 Viols.  0 Wrngs.
+  (CPU Time: 0:00:00.0  MEM: 2.000M)
+
+<CMD> saveDesign ./DBS/CHIP_powerplan.inn
+#% Begin save design ... (date=05/29 17:51:47, mem=1558.8M)
+% Begin Save ccopt configuration ... (date=05/29 17:51:48, mem=1558.8M)
+% End Save ccopt configuration ... (date=05/29 17:51:48, total cpu=0:00:00.0, real=0:00:00.0, peak res=1558.9M, current mem=1558.9M)
+% Begin Save netlist data ... (date=05/29 17:51:48, mem=1558.9M)
+Writing Binary DB to ./DBS/CHIP_powerplan.inn.dat.tmp/CHIP.v.bin in single-threaded mode...
+% End Save netlist data ... (date=05/29 17:51:48, total cpu=0:00:00.0, real=0:00:00.0, peak res=1558.9M, current mem=1558.9M)
+Saving symbol-table file ...
+Saving congestion map file ./DBS/CHIP_powerplan.inn.dat.tmp/CHIP.route.congmap.gz ...
+% Begin Save AAE data ... (date=05/29 17:51:48, mem=1559.2M)
+Saving AAE Data ...
+% End Save AAE data ... (date=05/29 17:51:48, total cpu=0:00:00.0, real=0:00:00.0, peak res=1559.2M, current mem=1559.2M)
+Saving preference file ./DBS/CHIP_powerplan.inn.dat.tmp/gui.pref.tcl ...
+Saving mode setting ...
+Saving global file ...
+% Begin Save floorplan data ... (date=05/29 17:51:48, mem=1559.5M)
+Saving floorplan file ...
+% End Save floorplan data ... (date=05/29 17:51:49, total cpu=0:00:00.1, real=0:00:01.0, peak res=1559.6M, current mem=1559.6M)
+Saving PG file ./DBS/CHIP_powerplan.inn.dat.tmp/CHIP.pg.gz, version#2, (Created by Innovus v20.15-s105_1 on Fri May 29 17:51:49 2026)
+*** Completed savePGFile (cpu=0:00:00.0 real=0:00:00.0 mem=2371.0M) ***
+Saving Drc markers ...
+... 348 markers are saved ...
+... 10 geometry drc markers are saved ...
+... 0 antenna drc markers are saved ...
+% Begin Save placement data ... (date=05/29 17:51:49, mem=1559.6M)
+** Saving stdCellPlacement_binary (version# 2) ...
+Save Adaptive View Pruning View Names to Binary file
+% End Save placement data ... (date=05/29 17:51:49, total cpu=0:00:00.0, real=0:00:00.0, peak res=1559.6M, current mem=1559.6M)
+% Begin Save routing data ... (date=05/29 17:51:49, mem=1559.6M)
+Saving route file ...
+*** Completed saveRoute (cpu=0:00:00.0 real=0:00:00.0 mem=2372.0M) ***
+% End Save routing data ... (date=05/29 17:51:49, total cpu=0:00:00.1, real=0:00:00.0, peak res=1559.7M, current mem=1559.7M)
+Saving property file ./DBS/CHIP_powerplan.inn.dat.tmp/CHIP.prop
+*** Completed saveProperty (cpu=0:00:00.0 real=0:00:00.0 mem=2375.0M) ***
+% Begin Save power constraints data ... (date=05/29 17:51:49, mem=1559.7M)
+% End Save power constraints data ... (date=05/29 17:51:49, total cpu=0:00:00.0, real=0:00:00.0, peak res=1559.7M, current mem=1559.7M)
+RC_Corner
+RC_Corner
+RC_Corner
+Generated self-contained design CHIP_powerplan.inn.dat.tmp
+#% End save design ... (date=05/29 17:51:50, total cpu=0:00:00.8, real=0:00:02.0, peak res=1590.3M, current mem=1560.3M)
+*** Message Summary: 0 warning(s), 0 error(s)
+
+<CMD> zoomBox -1072.40500 139.59000 3935.65400 2657.17100
+<CMD> zoomBox 279.17500 910.28400 2893.41300 2224.47700
+<CMD> zoomBox 687.48700 1147.15800 2576.27300 2096.66200
+<CMD> zoomBox 1096.82500 1385.13500 2256.77700 1968.25000
+<CMD> zoomBox 1192.55700 1440.16800 2178.51700 1935.81600
+<CMD> zoomBox 1400.64200 1560.50400 2006.14700 1864.89500
+<CMD> zoomBox 1492.38500 1613.65100 1929.86200 1833.57300
+<CMD> uiSetTool select
+<CMD> deselectAll
+<CMD> selectWire 1731.0800 1751.0400 2611.8800 1755.0400 3 GND
+<CMD> editTrim
+<CMD> zoomBox 1346.76300 1534.64100 2059.12000 1892.74700
+<CMD> zoomBox 1256.94600 1494.28400 2242.90700 1989.93200
+<CMD> zoomBox 1141.74100 1446.86900 2506.39300 2132.88800
+<CMD> zoomBox 996.75900 1403.71500 2885.55100 2353.22200
+<CMD> zoomBox 796.09100 1344.38700 3410.33900 2658.58500
+<CMD> fit
+<CMD> zoomBox -1145.21100 80.06900 3862.84800 2597.65000
+<CMD> zoomBox -170.70600 554.18400 2904.86900 2100.29400
+<CMD> zoomBox 435.17600 860.33600 2323.96500 1809.84100
+<CMD> zoomBox 971.59400 1131.38800 1809.66100 1552.68900
+<CMD> zoomBox 1089.65800 1193.00300 1695.16200 1497.39300
+<CMD> zoomBox 1172.91400 1238.77300 1610.39100 1458.69500
+<CMD> zoomBox 1228.24800 1268.41100 1544.32600 1427.30500
+<CMD> zoomBox 1283.10700 1298.33300 1477.22000 1395.91500
+<CMD> zoomBox 1306.10300 1311.15900 1446.35200 1381.66300
+<CMD> zoomBox 1340.89300 1330.11200 1403.12500 1361.39600
+<CMD> zoomBox 1344.98400 1332.36800 1397.88200 1358.96000
+<CMD> zoomBox 1351.45000 1335.91500 1389.67100 1355.12900
+<CMD> zoomBox 1356.32900 1338.57500 1383.94400 1352.45700
+<CMD> zoomBox 1359.80300 1340.80500 1379.75600 1350.83500
+<CMD> deselectAll
+<CMD> selectInst CORE/u_k_sram_SRAM2
+<CMD> editTrim
+<CMD> uiSetTool move
+<CMD> editTrim
+<CMD> uiSetTool select
+<CMD> fit
+<CMD> zoomBox -650.36500 59.50000 2967.95900 1878.45300
+<CMD> zoomBox 138.20000 234.90900 1743.67100 1041.98900
+<CMD> zoomBox 318.22800 274.02200 1478.18100 857.13700
+<CMD> zoomBox 547.86800 324.23700 1153.37200 628.62700
+<CMD> zoomBox 617.88800 344.54500 1055.36500 564.46700
+<CMD> zoomBox 668.41000 359.21800 984.48700 518.11200
+<CMD> zoomBox 718.86800 372.81800 912.98000 470.39900
+<CMD> zoomBox 740.82900 378.38900 881.07500 448.89100
+<CMD> deselectAll
+<CMD> selectWire 125.4200 391.0400 798.8200 395.0400 3 GND
+<CMD> editTrim
+<CMD> deselectAll
+<CMD> selectWire 794.6600 341.4900 798.6600 2351.5500 2 VCC
+<CMD> editTrim
+<CMD> zoomBox 726.44500 362.06600 920.55600 459.64700
+<CMD> zoomBox 700.32600 319.83000 1016.40400 478.72400
+<CMD> fit
+<CMD> zoomBox -524.31000 -7.80300 3732.54000 2132.14100
+<CMD> zoomBox 506.89000 120.60200 3121.12900 1434.79600
+<CMD> zoomBox 1291.35600 218.28300 2656.00900 904.30200
+<CMD> zoomBox 1685.17400 280.83900 2397.53500 638.94700
+<CMD> zoomBox 1797.38700 299.73900 2312.06800 558.47200
+<CMD> zoomBox 1873.39300 312.02700 2245.25100 498.96200
+<CMD> zoomBox 1928.18300 319.90700 2196.85100 454.96800
+<CMD> deselectAll
+<CMD> selectWire 2074.6600 341.4900 2078.6600 407.6100 2 VCC
+<CMD> editTrim
+<CMD> getMultiCpuUsage -localCpu
+<CMD> get_verify_drc_mode -disable_rules -quiet
+<CMD> get_verify_drc_mode -quiet -area
+<CMD> get_verify_drc_mode -quiet -layer_range
+<CMD> get_verify_drc_mode -check_ndr_spacing -quiet
+<CMD> get_verify_drc_mode -check_only -quiet
+<CMD> get_verify_drc_mode -check_same_via_cell -quiet
+<CMD> get_verify_drc_mode -exclude_pg_net -quiet
+<CMD> get_verify_drc_mode -ignore_trial_route -quiet
+<CMD> get_verify_drc_mode -max_wrong_way_halo -quiet
+<CMD> get_verify_drc_mode -use_min_spacing_on_block_obs -quiet
+<CMD> get_verify_drc_mode -limit -quiet
+<CMD> set_verify_drc_mode -disable_rules {} -check_ndr_spacing auto -check_only default -check_same_via_cell false -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report CHIP.drc.rpt -limit 1000
+<CMD> verify_drc
+#-check_ndr_spacing auto                 # enums={true false auto}, default=auto,  user setting
+#-report CHIP.drc.rpt                    # string, default="", user setting
+ *** Starting Verify DRC (MEM: 2404.2) ***
+
+  VERIFY DRC ...... Starting Verification
+  VERIFY DRC ...... Initializing
+  VERIFY DRC ...... Deleting Existing Violations
+  VERIFY DRC ...... Creating Sub-Areas
+  VERIFY DRC ...... Using new threading
+
+  Verification Complete : 10 Viols.
+
+ Violation Summary By Layer and Type:
+
+	          Short   MetSpc   Totals
+	metal2        0        4        4
+	metal3        6        0        6
+	Totals        6        4       10
+
+ *** End Verify DRC (CPU: 0:00:00.6  ELAPSED TIME: 1.00  MEM: 0.0M) ***
+
+<CMD> set_verify_drc_mode -area {0 0 0 0}
+<CMD> fixVia -short
+
+Start fixing short vias at Fri May 29 17:53:06 2026
+End fixing short vias at Fri May 29 17:53:06 2026
+<CMD> get_verify_drc_mode -disable_rules -quiet
+<CMD> get_verify_drc_mode -quiet -area
+<CMD> get_verify_drc_mode -quiet -layer_range
+<CMD> get_verify_drc_mode -check_ndr_spacing -quiet
+<CMD> get_verify_drc_mode -check_only -quiet
+<CMD> get_verify_drc_mode -check_same_via_cell -quiet
+<CMD> get_verify_drc_mode -exclude_pg_net -quiet
+<CMD> get_verify_drc_mode -ignore_trial_route -quiet
+<CMD> get_verify_drc_mode -max_wrong_way_halo -quiet
+<CMD> get_verify_drc_mode -use_min_spacing_on_block_obs -quiet
+<CMD> get_verify_drc_mode -limit -quiet
+<CMD> set_verify_drc_mode -disable_rules {} -check_ndr_spacing auto -check_only default -check_same_via_cell false -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report CHIP.drc.rpt -limit 1000
+<CMD> verify_drc
+#-check_ndr_spacing auto                 # enums={true false auto}, default=auto,  user setting
+#-report CHIP.drc.rpt                    # string, default="", user setting
+ *** Starting Verify DRC (MEM: 2404.2) ***
+
+  VERIFY DRC ...... Starting Verification
+  VERIFY DRC ...... Initializing
+  VERIFY DRC ...... Deleting Existing Violations
+  VERIFY DRC ...... Creating Sub-Areas
+  VERIFY DRC ...... Using new threading
+
+  Verification Complete : 10 Viols.
+
+ Violation Summary By Layer and Type:
+
+	          Short   MetSpc   Totals
+	metal2        0        4        4
+	metal3        6        0        6
+	Totals        6        4       10
+
+ *** End Verify DRC (CPU: 0:00:00.7  ELAPSED TIME: 1.00  MEM: 0.0M) ***
+
+<CMD> set_verify_drc_mode -area {0 0 0 0}
+<CMD> setLayerPreference metal4 -isVisible 0
+<CMD> setLayerPreference via3 -isVisible 0
+<CMD> setLayerPreference via -isVisible 0
+<CMD> setLayerPreference metal1 -isVisible 0
+<CMD> setLayerPreference via4 -isVisible 0
+<CMD> setLayerPreference metal5 -isVisible 0
+<CMD> setLayerPreference via5 -isVisible 0
+<CMD> setLayerPreference metal6 -isVisible 0
+<CMD> fit
+<CMD> zoomBox -582.31600 -0.92100 3674.53400 2139.02300
+<CMD> zoomBox 443.94600 124.52200 3058.18400 1438.71500
+<CMD> zoomBox 1222.52400 219.95100 2587.17300 905.96800
+<CMD> zoomBox 1458.20800 248.87000 2444.16800 744.51800
+<CMD> zoomBox 1802.44600 290.09600 2239.92200 510.01800
+<CMD> zoomBox 1908.42200 302.78500 2177.08800 437.84500
+<CMD> zoomBox 1955.31600 309.91300 2149.42700 407.49400
+<CMD> zoomBox 1989.00500 315.74300 2129.25100 386.24500
+<CMD> zoomBox 2022.68500 322.21800 2108.81400 365.51600
+<CMD> deselectAll
+<CMD> selectMarker 0.0000 0.0000 2737.3000 2692.6000 -1 3 7
+<CMD> verifyConnectivity -net {GND VCC} -type special -error 1000 -warning 50
+VERIFY_CONNECTIVITY use new engine.
+
+******** Start: VERIFY CONNECTIVITY ********
+Start Time: Fri May 29 17:53:42 2026
+
+Design Name: CHIP
+Database Units: 1000
+Design Boundary: (0.0000, 0.0000) (2737.3000, 2692.6000)
+Error Limit = 1000; Warning Limit = 50
+Check specified nets
+*** Checking Net VCC
+Net VCC: has special routes with opens, dangling Wire.
+*** Checking Net GND
+Net GND: dangling Wire.
+
+Begin Summary 
+    7 Problem(s) (IMPVFC-200): Special Wires: Pieces of the net are not connected together.
+    328 Problem(s) (IMPVFC-94): The net has dangling wire(s).
+    335 total info(s) created.
+End Summary
+
+End Time: Fri May 29 17:53:42 2026
+Time Elapsed: 0:00:00.0
+
+******** End: VERIFY CONNECTIVITY ********
+  Verification Complete : 335 Viols.  0 Wrngs.
+  (CPU Time: 0:00:00.1  MEM: 0.000M)
+
+<CMD> fit
+<CMD> zoomBox -1131.92500 85.38400 3876.13400 2602.96500
+<CMD> zoomBox -158.13000 566.47100 2917.44500 2112.58100
+<CMD> zoomBox 439.90200 861.91800 2328.69000 1811.42300
+<CMD> zoomBox 807.16800 1043.36000 1967.12100 1626.47500
+<CMD> zoomBox 894.84400 1086.67500 1880.80500 1582.32300
+<CMD> zoomBox 1086.55900 1181.38900 1692.06300 1485.77900
+<CMD> zoomBox 707.66800 987.37800 2072.32300 1673.39800
+<CMD> zoomBox 279.71100 768.24400 2501.82600 1885.31400
+<CMD> zoomBox -146.25800 550.12600 2929.33500 2096.24500
+<CMD> zoomBox -1551.85800 -169.60900 4340.01600 2792.27100
+<CMD> zoomBox -2681.30200 -747.93900 5473.54200 3351.55000
+
+*** Memory Usage v#1 (Current mem = 2390.500M, initial mem = 284.375M) ***
+*** Message Summary: 2055 warning(s), 0 error(s)
+
+--- Ending "Innovus" (totcpu=0:00:42.3, real=0:04:01, mem=2390.5M) ---

@@ -1,0 +1,265 @@
+#!/usr/bin/env bash
+
+set -o pipefail
+
+usage() {
+    cat <<'USAGE'
+Usage:
+  ./06_run_vcs_rtl_multi_seed [options]
+
+Options:
+  -m, --mode <verify|gen|0|1>  PATTERN GEN_MODE. verify/debug/0 => 0, gen/generate/1 => 1
+  -n, --count <N>              Number of runs when --seeds is not used. Default: 10
+  -s, --start-seed <SEED>      First decimal seed. Default: current Unix time
+      --seeds "<S1 S2 ...>"    Explicit decimal seed list
+  -o, --log-dir <DIR>          Directory for per-run logs. Default: multi_seed_logs
+      --keep-going             Keep running after a failed seed. Default
+      --stop-on-fail           Stop immediately when a seed fails
+      --verbose                Print full VCS output to terminal
+  -h, --help                   Show this help
+
+Environment overrides:
+  PARAM_PATH   Hierarchical GEN_MODE parameter path. Default: TESTBED.u_PATTERN.GEN_MODE
+  SAVE_FSDB    Set to 1 to save DCCPU.fsdb per seed into the log directory
+
+Examples:
+  ./06_run_vcs_rtl_multi_seed --mode verify --count 20 --start-seed 1000
+  ./06_run_vcs_rtl_multi_seed --mode gen --seeds "123 456 789"
+USAGE
+}
+
+mode="verify"
+count=20
+start_seed="$(date +%s)"
+seed_list=""
+log_dir="multi_seed_logs"
+stop_on_fail=0
+verbose=0
+
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        -m|--mode)
+            mode="$2"
+            shift 2
+            ;;
+        -n|--count)
+            count="$2"
+            shift 2
+            ;;
+        -s|--start-seed)
+            start_seed="$2"
+            shift 2
+            ;;
+        --seeds)
+            seed_list="$2"
+            shift 2
+            ;;
+        -o|--log-dir)
+            log_dir="$2"
+            shift 2
+            ;;
+        --keep-going)
+            stop_on_fail=0
+            shift
+            ;;
+        --stop-on-fail)
+            stop_on_fail=1
+            shift
+            ;;
+        --verbose)
+            verbose=1
+            shift
+            ;;
+        -h|--help)
+            usage
+            exit 0
+            ;;
+        *)
+            echo "[ERROR] Unknown option: $1" >&2
+            usage >&2
+            exit 2
+            ;;
+    esac
+done
+
+case "$mode" in
+    verify|debug|sim|0)
+        gen_mode=0
+        mode_name="verify"
+        ;;
+    gen|generate|1)
+        gen_mode=1
+        mode_name="gen"
+        ;;
+    *)
+        echo "[ERROR] Invalid mode: $mode" >&2
+        usage >&2
+        exit 2
+        ;;
+esac
+
+if ! [[ "$count" =~ ^[0-9]+$ ]] || [[ "$count" -eq 0 ]]; then
+    echo "[ERROR] --count must be a positive integer" >&2
+    exit 2
+fi
+
+if ! [[ "$start_seed" =~ ^[0-9]+$ ]]; then
+    echo "[ERROR] --start-seed must be a decimal integer because PATTERN uses %d" >&2
+    exit 2
+fi
+
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$script_dir" || exit 1
+
+mkdir -p "$log_dir"
+
+if [[ -z "$seed_list" ]]; then
+    seeds=()
+    for ((i = 0; i < count; i++)); do
+        seeds+=("$((start_seed + i))")
+    done
+else
+    read -r -a seeds <<< "$seed_list"
+fi
+
+if [[ "${#seeds[@]}" -eq 0 ]]; then
+    echo "[ERROR] No seeds to run" >&2
+    exit 2
+fi
+
+for seed in "${seeds[@]}"; do
+    if ! [[ "$seed" =~ ^[0-9]+$ ]]; then
+        echo "[ERROR] Seed must be decimal for +SEED=%d: $seed" >&2
+        exit 2
+    fi
+done
+
+top_design="DCCPU"
+source_file="filelist.f"
+output_file="simv_multi_seed"
+num_CPU_cores="${num_CPU_cores:-4}"
+TIMESCALE="-timescale=1ns/1fs"
+VERDI="${VERDI:-/usr/cad/synopsys/verdi/2019.06/}"
+DW_SIM="${DW_SIM:-/usr/cad/synopsys/synthesis/cur/dw/sim_ver/}"
+PARAM_PATH="${PARAM_PATH:-TESTBED.u_PATTERN.GEN_MODE}"
+SAVE_FSDB="${SAVE_FSDB:-0}"
+
+pass_count=0
+fail_count=0
+failed_seeds=()
+latency_count=0
+latency_sum=0
+latency_min=""
+latency_max=""
+
+echo "[INFO] Mode       : ${mode_name} (GEN_MODE=${gen_mode})"
+echo "[INFO] Runs       : ${#seeds[@]}"
+echo "[INFO] Seeds      : ${seeds[*]}"
+echo "[INFO] Log dir    : ${log_dir}"
+echo "[INFO] Param path : ${PARAM_PATH}"
+if [[ "$verbose" -eq 0 ]]; then
+    echo "[INFO] Terminal   : quiet; use --verbose for full VCS output"
+fi
+echo
+
+run_idx=0
+total_runs="${#seeds[@]}"
+
+for seed in "${seeds[@]}"; do
+    ((run_idx++))
+    run_tag="${mode_name}_seed_${seed}"
+    log_file="${log_dir}/vcs_${run_tag}.log"
+    terminal_log="${log_dir}/terminal_${run_tag}.log"
+
+    printf "[%0*d/%0*d] seed=%s mode=%s ... " \
+        "${#total_runs}" "$run_idx" "${#total_runs}" "$total_runs" "$seed" "$mode_name"
+
+    if [[ "$verbose" -eq 1 ]]; then
+        echo
+        vcs ${TIMESCALE} \
+            -j"${num_CPU_cores}" \
+            -sverilog \
+            +v2k \
+            -full64 \
+            -Mupdate \
+            -R \
+            -debug_access+all \
+            -y "${DW_SIM}" \
+            +libext+.v \
+            -f "${source_file}" \
+            -o "${output_file}" \
+            -l "${log_file}" \
+            -P "${VERDI}/share/PLI/VCS/linux64/novas.tab" \
+               "${VERDI}/share/PLI/VCS/linux64/pli.a" \
+            +define+RTL \
+            +define+RUN \
+            +define+PERF \
+            +notimingchecks \
+            "-pvalue+${PARAM_PATH}=${gen_mode}" \
+            "+SEED=${seed}"
+    else
+        vcs ${TIMESCALE} \
+            -j"${num_CPU_cores}" \
+            -sverilog \
+            +v2k \
+            -full64 \
+            -Mupdate \
+            -R \
+            -debug_access+all \
+            -y "${DW_SIM}" \
+            +libext+.v \
+            -f "${source_file}" \
+            -o "${output_file}" \
+            -l "${log_file}" \
+            -P "${VERDI}/share/PLI/VCS/linux64/novas.tab" \
+               "${VERDI}/share/PLI/VCS/linux64/pli.a" \
+            +define+RTL \
+            +define+RUN \
+            +define+PERF \
+            +notimingchecks \
+            "-pvalue+${PARAM_PATH}=${gen_mode}" \
+            "+SEED=${seed}" \
+            > "${terminal_log}" 2>&1
+    fi
+
+    status=$?
+    if [[ "$status" -eq 0 ]]; then
+        ((pass_count++))
+        latency="$(awk '/PASS -- Total latency =/ {latency = $NF} END {if (latency != "") print latency}' "${log_file}")"
+        if [[ "$latency" =~ ^[0-9]+$ ]]; then
+            ((latency_count++))
+            ((latency_sum += latency))
+            if [[ -z "$latency_min" || "$latency" -lt "$latency_min" ]]; then
+                latency_min="$latency"
+            fi
+            if [[ -z "$latency_max" || "$latency" -gt "$latency_max" ]]; then
+                latency_max="$latency"
+            fi
+            echo "PASS latency=${latency}"
+        else
+            echo "PASS latency=N/A"
+        fi
+        if [[ "$SAVE_FSDB" == "1" && -f "${top_design}.fsdb" ]]; then
+            mv -f "${top_design}.fsdb" "${log_dir}/${top_design}_${run_tag}.fsdb"
+        fi
+    else
+        ((fail_count++))
+        failed_seeds+=("$seed")
+        echo "FAIL(exit=${status}, log=${log_file})"
+        if [[ "$stop_on_fail" -eq 1 ]]; then
+            break
+        fi
+    fi
+done
+
+total_count=$((pass_count + fail_count))
+echo "============================================================"
+echo "[SUMMARY] PASS=${pass_count} FAIL=${fail_count} TOTAL=${total_count}/${total_runs}"
+if [[ "$latency_count" -gt 0 ]]; then
+    latency_avg=$((latency_sum / latency_count))
+    echo "[SUMMARY] LATENCY_SUM=${latency_sum} LATENCY_AVG=${latency_avg} LATENCY_MIN=${latency_min} LATENCY_MAX=${latency_max} COUNT=${latency_count}"
+fi
+if [[ "$fail_count" -ne 0 ]]; then
+    echo "[SUMMARY] Failed seeds: ${failed_seeds[*]}" >&2
+    exit 1
+fi

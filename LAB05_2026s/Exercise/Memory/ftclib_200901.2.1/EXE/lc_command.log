@@ -1,0 +1,9 @@
+#@ # 
+#@ # Running lc_shell Version T-2022.03 for linux64 -- Feb 22, 2022
+#@ # Date:   Fri Jun 12 21:43:21 2026
+#@ # Run by: iclab062@ee28
+#@ 
+
+read_lib SRAM_512X16_WC.lib
+write_lib SRAM_512X16_WC -output SRAM_512X16_WC.db
+exit

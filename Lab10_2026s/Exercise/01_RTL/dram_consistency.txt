@@ -1,0 +1,1 @@
+# pat_idx p_no act exp_warn w0_hex w1_hex (DUT vs golden after pat)

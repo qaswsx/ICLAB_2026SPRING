@@ -1,0 +1,139 @@
+
+Results for ir (linear filters):
+================================
+
+*
+* Data filtering results for IR drop:
+	Minimum, Average, Maximum IR Drop: 0V, 0.0139626V, 0.0472183V
+	Range 1(0.041316V  - 0.047223V ):     4019 (5.12%)
+	Range 2(0.0354137V  - 0.041316V ):     2657 (3.39%)
+	Range 3(0.0295114V  - 0.0354137V ):     3720 (4.74%)
+	Range 4(0.0236092V  - 0.0295114V ):     1754 (2.24%)
+	Range 5(0.0177069V  - 0.0236092V ):    12354 (15.75%)
+	Range 6(0.0118046V  - 0.0177069V ):    12351 (15.75%)
+	Range 7(0.00590229V  - 0.0118046V ):    14595 (18.61%)
+	Range 8(       0V  - 0.00590229V ):    26973 (34.39%)
+
+
+
+Results for ir (limit filters):
+===============================
+
+*
+* Data filtering results for IR drop:
+	Minimum, Average, Maximum IR Drop: 0V, 0.0139626V, 0.0472183V
+	Range 1(     0.1V  -  0.10001V ):        0 (0.00%)
+	Range 2(0.0916667V  -      0.1V ):        0 (0.00%)
+	Range 3(0.0833333V  - 0.0916667V ):        0 (0.00%)
+	Range 4(   0.075V  - 0.0833333V ):        0 (0.00%)
+	Range 5(0.0666667V  -    0.075V ):        0 (0.00%)
+	Range 6(0.0583333V  - 0.0666667V ):        0 (0.00%)
+	Range 7(    0.05V  - 0.0583333V ):        0 (0.00%)
+	Range 8(-1.0001e-06V  -     0.05V ):    78423 (100.00%)
+
+======> FAILED ! (unconnected section(s) with 2853 nodes)
+
+
+Results for tc:
+===============
+
+*
+* Data filtering results for tap current:
+	Minimum, Average, Maximum Tap Current: -8.11688e-05A, -1.64014e-06A, 0A
+	Range 1(-1.0001e+09A  -   -0.001A ):        0 (0.00%)
+	Range 2(  -0.001A  -  -0.0001A ):        0 (0.00%)
+	Range 3( -0.0001A  -   -1e-05A ):     1035 (2.03%)
+	Range 4(  -1e-05A  -   -1e-06A ):     4685 (9.18%)
+	Range 5(  -1e-06A  -   -1e-07A ):     5735 (11.23%)
+	Range 6(  -1e-07A  -   -1e-08A ):     2311 (4.53%)
+	Range 7(  -1e-08A  -   -1e-09A ):     2604 (5.10%)
+	Range 8(  -1e-09A  -        0A ):    34689 (67.94%)
+
+
+
+Results for iv:
+===============
+
+*
+* Data filtering results for instance based IR drop:
+	Minimum, Average, Maximum Instance Based IR Drop: 0V, 0.0158041V, 0.0472183V
+	Range 1(     0.1V  -  0.10001V ):        0 (0.00%)
+	Range 2(0.0916667V  -      0.1V ):        0 (0.00%)
+	Range 3(0.0833333V  - 0.0916667V ):        0 (0.00%)
+	Range 4(   0.075V  - 0.0833333V ):        0 (0.00%)
+	Range 5(0.0666667V  -    0.075V ):        0 (0.00%)
+	Range 6(0.0583333V  - 0.0666667V ):        0 (0.00%)
+	Range 7(    0.05V  - 0.0583333V ):        0 (0.00%)
+	Range 8(-1.0001e-06V  -     0.05V ):    51059 (100.00%)
+
+
+
+Results for vc:
+===============
+
+*
+* Data filtering results for voltage source current:
+	Minimum, Average, Maximum Voltage Source Current: 0A, 0.000436165A, 0.00660376A
+*	Total current: 0.0837437A
+	Range 1(0.00577829A  - 0.00660442A ):        1 (0.52%)
+	Range 2(0.00495282A  - 0.00577829A ):        3 (1.56%)
+	Range 3(0.00412735A  - 0.00495282A ):        5 (2.60%)
+	Range 4(0.00330188A  - 0.00412735A ):        4 (2.08%)
+	Range 5(0.00247641A  - 0.00330188A ):        3 (1.56%)
+	Range 6(0.00165094A  - 0.00247641A ):        4 (2.08%)
+	Range 7(0.00082547A  - 0.00165094A ):        4 (2.08%)
+	Range 8(       0A  - 0.00082547A ):      168 (87.50%)
+
+
+
+Results for rc:
+===============
+
+*
+* Data filtering results for resistor current:
+	Minimum, Average, Maximum Resistor Current: 0A, 0.000122172A, 0.00660376A
+	Range 1(   0.001A  - 1.0001e+09A ):     2210 (2.49%)
+	Range 2(  0.0001A  -    0.001A ):    14595 (16.45%)
+	Range 3(   1e-05A  -   0.0001A ):    47313 (53.33%)
+	Range 4(   1e-06A  -    1e-05A ):    22073 (24.88%)
+	Range 5(   1e-07A  -    1e-06A ):     2067 (2.33%)
+	Range 6(   1e-08A  -    1e-07A ):      162 (0.18%)
+	Range 7(   1e-09A  -    1e-08A ):       13 (0.01%)
+	Range 8(       0A  -    1e-09A ):      287 (0.32%)
+
+
+
+Results for rv:
+===============
+
+*
+* Data filtering results for resistor voltage:
+	Minimum, Average, Maximum Resistor Voltage: 0V, 3.11913e-05V, 0.00200579V
+	Range 1(0.00175507V  - 0.00200599V ):        1 (0.00%)
+	Range 2(0.00150434V  - 0.00175507V ):        4 (0.00%)
+	Range 3(0.00125362V  - 0.00150434V ):       14 (0.02%)
+	Range 4(0.0010029V  - 0.00125362V ):       37 (0.04%)
+	Range 5(0.000752172V  - 0.0010029V ):      121 (0.14%)
+	Range 6(0.000501448V  - 0.000752172V ):      404 (0.46%)
+	Range 7(0.000250724V  - 0.000501448V ):     1607 (1.81%)
+	Range 8(       0V  - 0.000250724V ):    86532 (97.53%)
+
+
+
+Results for pi:
+===============
+
+*
+* Data filtering results for power gate I/Idsat:
+*	No data found.
+
+
+
+Results for pv:
+===============
+
+*
+* Data filtering results for power gate voltage:
+*	No data found.
+
+

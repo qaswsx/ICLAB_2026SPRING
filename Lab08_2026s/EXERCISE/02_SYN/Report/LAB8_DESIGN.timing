@@ -1,0 +1,109 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : LAB8_DESIGN
+Version: T-2022.03
+Date   : Mon May  4 13:06:49 2026
+****************************************
+
+Operating Conditions: WCCOM   Library: fsa0m_a_generic_core_ss1p62v125c
+Wire Load Model Mode: enclosed
+
+  Startpoint: cnt_reg[2] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: X_reg_reg[1][2][3]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  LAB8_DESIGN        enG30K                fsa0m_a_generic_core_ss1p62v125c
+  MAC                enG5K                 fsa0m_a_generic_core_ss1p62v125c
+  MOD_15_PLUS_1_1    enG5K                 fsa0m_a_generic_core_ss1p62v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  cnt_reg[2]/CK (QDFFRBT)                  0.00       0.00 r
+  cnt_reg[2]/Q (QDFFRBT)                   0.52       0.52 f
+  U4233/O (OR2T)                           0.23       0.75 f
+  U4235/O (NR2F)                           0.19       0.95 r
+  U3722/O (XNR2H)                          0.22       1.17 r
+  U3702/O (OR2)                            0.32       1.49 r
+  U4236/O (OR2T)                           0.24       1.73 r
+  U3263/O (OR2)                            0.21       1.94 r
+  U3238/O (INV2)                           0.07       2.01 f
+  U3237/O (INV3)                           0.26       2.27 r
+  U4259/O (INV12)                          0.16       2.43 f
+  U6351/O (AOI22S)                         0.24       2.67 r
+  U6353/O (ND3S)                           0.20       2.87 f
+  U6354/O (AO112)                          0.43       3.30 f
+  u_MAC/mult_in_B[2][4] (MAC)              0.00       3.30 f
+  u_MAC/U266/CO (FA1)                      0.41       3.70 f
+  u_MAC/U262/CO (FA1)                      0.36       4.06 f
+  u_MAC/U263/CO (FA1)                      0.37       4.43 f
+  u_MAC/U7/O (INV1S)                       0.11       4.55 r
+  u_MAC/U261/O (MOAI1)                     0.10       4.65 f
+  u_MAC/U264/S (HA1)                       0.31       4.96 f
+  u_MAC/U267/O (AO12)                      0.32       5.28 f
+  u_MAC/U268/O (AN2B1T)                    0.22       5.50 f
+  u_MAC/U270/C (HA1P)                      0.20       5.70 f
+  u_MAC/U283/CO (FA1)                      0.38       6.08 f
+  u_MAC/U286/C (HA1P)                      0.24       6.32 f
+  u_MAC/U285/O (MOAI1HP)                   0.21       6.53 r
+  u_MAC/U33/O (INV3)                       0.04       6.57 f
+  u_MAC/U245/O (NR2)                       0.28       6.85 r
+  u_MAC/U290/O (ND3P)                      0.14       6.99 f
+  u_MAC/U291/O (INV1S)                     0.14       7.13 r
+  u_MAC/U292/O (AOI13HS)                   0.10       7.22 f
+  u_MAC/U296/S (FA1S)                      0.82       8.05 r
+  u_MAC/U293/O (INV1S)                     0.22       8.27 f
+  u_MAC/U294/O (ND3S)                      0.19       8.46 r
+  u_MAC/U297/O (MAO222P)                   0.30       8.76 r
+  u_MAC/U27/O (ND2T)                       0.10       8.86 f
+  u_MAC/U301/O (ND3S)                      0.25       9.11 r
+  u_MAC/U312/O (OA222)                     0.56       9.67 r
+  u_MAC/U129/O (XNR2HS)                    0.19       9.86 r
+  u_MAC/U314/O (XNR2H)                     0.24      10.11 r
+  u_MAC/U315/O (ND3P)                      0.11      10.22 f
+  u_MAC/U319/O (MAO222)                    0.31      10.53 f
+  u_MAC/U25/O (ND2P)                       0.11      10.64 r
+  u_MAC/U193/O (ND2S)                      0.16      10.81 f
+  u_MAC/U320/O (MOAI1S)                    0.38      11.19 f
+  u_MAC/U329/CO (FA1)                      0.45      11.64 f
+  u_MAC/U328/S (FA1)                       0.68      12.31 f
+  u_MAC/U330/O (ND3S)                      0.13      12.44 r
+  u_MAC/U332/O (MAO222)                    0.29      12.74 r
+  u_MAC/U130/O (ND2P)                      0.07      12.81 f
+  u_MAC/U255/O (ND2)                       0.22      13.03 r
+  u_MAC/U76/O (INV1S)                      0.17      13.20 f
+  u_MAC/U333/O (ND3S)                      0.25      13.45 r
+  u_MAC/U931/O (OA12)                      0.42      13.86 r
+  u_MAC/x_out[2][2] (MAC)                  0.00      13.86 r
+  mod2/data_in[2] (MOD_15_PLUS_1_1)        0.00      13.86 r
+  mod2/U6/O (ND3S)                         0.30      14.17 f
+  mod2/U2/O (MOAI1H)                       0.40      14.56 f
+  mod2/out[3] (MOD_15_PLUS_1_1)            0.00      14.56 f
+  U4315/O (ND2S)                           0.17      14.73 r
+  U4096/O (ND2S)                           0.14      14.87 f
+  X_reg_reg[1][2][3]/D (QDFFS)             0.00      14.87 f
+  data arrival time                                  14.87
+
+  clock clk (rise edge)                   15.00      15.00
+  clock network delay (ideal)              0.00      15.00
+  X_reg_reg[1][2][3]/CK (QDFFS)            0.00      15.00 r
+  library setup time                      -0.13      14.87
+  data required time                                 14.87
+  -----------------------------------------------------------
+  data required time                                 14.87
+  data arrival time                                 -14.87
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+1

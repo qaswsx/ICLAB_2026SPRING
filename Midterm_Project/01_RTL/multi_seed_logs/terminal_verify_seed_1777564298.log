@@ -1,0 +1,74 @@
+*** Using c compiler gcc instead of cc ...
+                         Chronologic VCS (TM)
+         Version T-2022.06_Full64 -- Thu Apr 30 23:51:59 2026
+
+                    Copyright (c) 1991 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'TESTBED.v'
+Parsing included file 'PATTERN.v'.
+Parsing included file '../00_TESTBED/DRAM_MAP_define.v'.
+Back to file 'PATTERN.v'.
+Parsing included file '../00_TESTBED/pseudo_DRAM_inst1.v'.
+Back to file 'PATTERN.v'.
+Parsing included file '../00_TESTBED/pseudo_DRAM_inst2.v'.
+Back to file 'PATTERN.v'.
+Parsing included file '../00_TESTBED/pseudo_DRAM_data.v'.
+Back to file 'PATTERN.v'.
+Back to file 'TESTBED.v'.
+Parsing included file 'DCCPU.v'.
+Back to file 'TESTBED.v'.
+Parsing design file '../04_MEM/SRAM_256X16.v'
+Parsing design file '../04_MEM/SRAM_128X16.v'
+Parsing design file '../04_MEM/SRAM_64X16.v'
+Top Level Modules:
+       TESTBED
+       SRAM_256X16
+       SRAM_128X16
+assign 0 TESTBED.u_PATTERN.GEN_MODE (Command line)
+TimeScale is 10 ps / 1 ps
+Starting vcs inline pass...
+
+
+Note-[VCS_PARAL] Parallel code-gen enabled
+  VCS is running with parallel code generation(-j)...
+
+8 modules and 0 UDP read.
+	However, due to incremental compilation, no re-compilation is necessary.
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+ld -shared  -Bsymbolic   -o .//../simv_multi_seed.daidir//_cuarc0.so objs/amcQw_d.o 
+rm -f _cuarc0.so
+if [ -x ../simv_multi_seed ]; then chmod a-x ../simv_multi_seed; fi
+g++  -o ../simv_multi_seed      -rdynamic  -Wl,-rpath='$ORIGIN'/simv_multi_seed.daidir -Wl,-rpath=./simv_multi_seed.daidir -Wl,-rpath=/usr/cad/synopsys/vcs/2022.06/linux64/lib -L/usr/cad/synopsys/vcs/2022.06/linux64/lib  -Wl,-rpath-link=./  /usr/lib64/libnuma.so.1     _179797_archive_1.so _prev_archive_1.so _cuarc0.so  SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o           -lvirsim -lerrorinf -lsnpsmalloc -lvfs /usr/cad/synopsys/verdi/2019.06//share/PLI/VCS/linux64/pli.a    -lvcsnew -lsimprofile -luclinative /usr/cad/synopsys/vcs/2022.06/linux64/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive        _vcs_pli_stub_.o   /usr/cad/synopsys/vcs/2022.06/linux64/lib/vcs_save_restore_new.o /usr/cad/synopsys/verdi/2019.06//share/PLI/VCS/LINUX64/pli.a -ldl -lm  -lc -lpthread -ldl 
+../simv_multi_seed up to date
+Notice: timing checks disabled with +notimingcheck at compile-time
+Chronologic VCS simulator copyright 1991-2022
+Contains Synopsys proprietary information.
+Compiler version T-2022.06_Full64; Runtime version T-2022.06_Full64;  Apr 30 23:52 2026
+[INFO] Running with Custom Seed: 1777564298
+[INFO] TA DEMO: Debug/Simulation Mode
+** MEM_Error: Unknown value occurred (             2050 ps) in Address of TESTBED.u_DCCPU.Shared_I_Cache_SRAM.SRAM_inst.ErrorMessage
+[REG MISMATCH] core=1 ic=0 r7 DUT=0000 GOLDEN=0005
+####################################################
+   Simulation stopped. mismatch_cnt=1 ic1=0 ic2=0
+####################################################
+$finish called from file "PATTERN.v", line 2367.
+$finish at simulation time           1746600 ps
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 1746600 ps
+CPU Time:      0.250 seconds;       Data structure size:   0.6Mb
+Thu Apr 30 23:52:02 2026
+CPU time: .834 seconds to compile + .399 seconds to elab + .410 seconds to link + .280 seconds in simulation

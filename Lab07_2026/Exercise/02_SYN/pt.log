@@ -1,0 +1,187 @@
+Information: The max_cores limit for the local (current) process has been modified by 4 to 8. (CMCR-103)
+# specify parameters
+set DESIGN "HARVESTER_TOP"
+HARVESTER_TOP
+#Step 1 Read in the design data, which includes a gate-level netlist and associated logic libraries.
+set search_path         " ./ 			../02_SYN/Netlist                                 ../04_MEM/                                                    ~iclabTA01/UMC018_CBDK/CIC/SynopsysDC/db/                            ~iclabTA01/UMC018_CBDK/CIC/Sdb/                                  /usr/cad/synopsys/synthesis/cur/libraries/syn/                         /usr/cad/synopsys/synthesis/cur/dw "
+ ./    ../02_SYN/Netlist                                 ../04_MEM/                                                    ~iclabTA01/UMC018_CBDK/CIC/SynopsysDC/db/                            ~iclabTA01/UMC018_CBDK/CIC/Sdb/                                  /usr/cad/synopsys/synthesis/cur/libraries/syn/                         /usr/cad/synopsys/synthesis/cur/dw 
+set target_library      " fsa0m_a_generic_core_ss1p62v125c.db DUAL_64X32X1BM1_WC.db"
+ fsa0m_a_generic_core_ss1p62v125c.db DUAL_64X32X1BM1_WC.db
+set link_library        " * $target_library dw_foundation.sldb standard.sldb DUAL_64X32X1BM1_WC.db"
+ *  fsa0m_a_generic_core_ss1p62v125c.db DUAL_64X32X1BM1_WC.db dw_foundation.sldb standard.sldb DUAL_64X32X1BM1_WC.db
+read_verilog Netlist/$DESIGN\_SYN.v
+1
+current_design $DESIGN
+Information: current_design won't return any data before link (DES-071)
+link_design -keep_sub_designs $DESIGN
+Loading verilog file '/RAID2/COURSE/2026_Spring/iclab/iclab062/Lab07_2026/Exercise/02_SYN/Netlist/HARVESTER_TOP_SYN.v'
+Loading db file '/RAID2/COURSE/BackUp/2023_Spring/iclab/iclabta01/UMC018_CBDK/CIC/SynopsysDC/db/fsa0m_a_generic_core_ss1p62v125c.db'
+Loading db file '/RAID2/COURSE/2026_Spring/iclab/iclab062/Lab07_2026/Exercise/04_MEM/DUAL_64X32X1BM1_WC.db'
+Loading db file '/usr/cad/synopsys/synthesis/cur/libraries/syn/dw_foundation.sldb'
+Loading db file '/usr/cad/synopsys/synthesis/cur/libraries/syn/standard.sldb'
+Warning: -keep_sub_design option of link_design will be made obsolete and removed from future releases of PrimeTime starting with the 2017.12 release. (PT-007)
+Linking design HARVESTER_TOP...
+Information: 254 (66.49%) library cells are unused in library fsa0m_a_generic_core_ss1p62v125c..... (LNK-045)
+Information: 1004 (100.00%) library cells are unused in library dw_foundation.sldb..... (LNK-045)
+Information: 178 (100.00%) library cells are unused in library standard.sldb..... (LNK-045)
+Information: total 1436 library cells are unused (LNK-046)
+Design 'HARVESTER_TOP' was successfully linked.
+Information: There are 25430 leaf cells, ports, hiers and 28257 nets in the design (LNK-047)
+1
+#create_clock -period $CLK_period CLK
+read_sdc Netlist/$DESIGN\_SYN.sdc
+
+Reading SDC version 2.1...
+Warning: Setting input delay on clock port (clk1) relative to a clock (clk1) defined at the same port. Command is ignored. (UITE-489)
+Warning: Setting input delay on clock port (clk2) relative to a clock (clk2) defined at the same port. Command is ignored. (UITE-489)
+Warning: Setting input delay on clock port (clk3) relative to a clock (clk3) defined at the same port. Command is ignored. (UITE-489)
+1
+1
+#Step 6 Specify case and mode analysis settings.
+#Step 7 Back-annotate delay and parasitics.
+read_sdf Netlist/$DESIGN\_SYN.sdf
+
+****************************************
+Report : read_sdf /RAID2/COURSE/2026_Spring/iclab/iclab062/Lab07_2026/Exercise/02_SYN/Netlist/HARVESTER_TOP_SYN.sdf
+	-load_delay cell
+	-analysis_type on_chip_variation
+	-min_type sdf_min
+	-max_type sdf_max
+Design : HARVESTER_TOP
+Version: P-2019.03-SP5-1
+Date   : Mon May 18 18:30:54 2026
+****************************************
+
+        0 error(s)
+        Number of annotated cell delay arcs :    344718
+        Number of annotated net delay arcs  :     66976
+        Number of annotated timing checks   :     22693
+        Number of annotated constraints     :     11108
+        TEMPERATURE: 125.00 (min)  125.00 (max)
+        VOLTAGE    : 1.62 (min)  1.62 (max)
+        PROCESS    : WCCOM (min)  WCCOM (max)
+1
+# set_annotated_check 
+# modify here 
+# set all_dffs [get_cells -hierarchical -filter "ref_name =~ *DFF*"]
+foreach_in_collection x [get_cell */A1_reg] {
+  set_annotated_check -0 -setup -from [get_object_name $x]/CK -to [get_object_name $x]/D -clock rise
+  set_annotated_check -0 -hold  -from [get_object_name $x]/CK -to [get_object_name $x]/D -clock rise
+}
+write_sdf Netlist/$DESIGN\_SYN_pt.sdf
+Warning: Zero transition time will be used at to pins of annotated arcs. Delays on not annotated delay arcs will be estimated using best available slew.  (PTE-066)
+Information: Using automatic min wire load selection group 'DEFAULT'. (ENV-003)
+Information: Using automatic max wire load selection group 'DEFAULT'. (ENV-003)
+Information: Using automatic min wire load selection group 'DEFAULT'. (ENV-003)
+Information: Building multi voltage information for entire design. (MV-022)
+Warning: Some timing arcs have been disabled for breaking timing loops or because of constant propagation. Use the 'report_disable_timing' command to get the list of these disabled timing arcs. (PTE-003)
+Information: Zero transition time used at to pin of annotated arcs. Delays on not annotated delay arcs will be estimated using best available slew.  (PTE-054)
+Information: Zero transition time used at to pin of annotated arcs. Delays on not annotated delay arcs will be estimated using best available slew.  (PTE-054)
+1
+#Step 8 (Optional) Apply variation.
+#Step 9 Specify power information
+#Step 10 (Optional) Specify options and data for signal integrity analysis.
+#Step 11 (Optional) Apply options for specific design techniques.
+#Step 12 Check the design data and analysis setup.
+check_timing
+Information: Checking 'no_input_delay'.
+Information: Checking 'no_driving_cell'.
+Information: Checking 'unconstrained_endpoints'.
+Information: Checking 'unexpandable_clocks'.
+Information: Checking 'latch_fanout'.
+Information: Checking 'no_clock'.
+Information: Checking 'partial_input_delay'.
+Information: Checking 'generic'.
+Information: Checking 'loops'.
+Information: Checking 'generated_clocks'.
+Information: Checking 'pulse_clock_non_pulse_clock_merge'.
+Information: Checking 'pll_configuration'.
+check_timing succeeded.
+1
+#Step 13 Perform a full timing analysis and examine the results.
+report_timing > Report/$DESIGN\_pt.timing
+report_timing
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-max_paths 1
+	-sort_by slack
+Design : HARVESTER_TOP
+Version: P-2019.03-SP5-1
+Date   : Mon May 18 18:30:55 2026
+****************************************
+
+
+  Startpoint: u_HARVESTER_stack_push_reg_2_
+               (rising edge-triggered flip-flop clocked by clk2)
+  Endpoint: u_HARVESTER_cur_val_reg_57_
+               (rising edge-triggered flip-flop clocked by clk2)
+  Path Group: clk2
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk2 (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_HARVESTER_stack_push_reg_2_/CK (QDFFRBT)              0.00       0.00 r
+  u_HARVESTER_stack_push_reg_2_/Q (QDFFRBT)               0.54 *     0.54 r
+  U6687/O (INV3)                                          0.14 *     0.68 f
+  U2643/O (ND3)                                           0.39 *     1.07 r
+  U1741/O (INV6)                                          0.31 *     1.39 f
+  U2363/O (INV12)                                         0.26 *     1.65 r
+  U8552/O (OAI22S)                                        0.19 *     1.84 f
+  U8555/O (NR2)                                           0.30 *     2.14 r
+  U2304/O (ND3P)                                          0.37 *     2.51 f
+  U10764/O (INV2)                                         1.07 *     3.58 r
+  U14423/O (NR2)                                          0.21 *     3.79 f
+  U2226/CO (FA1S)                                         0.67 *     4.47 f
+  U14429/CO (FA1)                                         0.42 *     4.89 f
+  U816/CO (FA1S)                                          0.53 *     5.42 f
+  U2104/CO (FA1S)                                         0.58 *     6.00 f
+  U735/CO (FA1S)                                          0.62 *     6.62 f
+  U14483/CO (FA1)                                         0.46 *     7.09 f
+  U14594/S (FA1)                                          0.68 *     7.77 f
+  U14596/S (FA1)                                          0.35 *     8.11 f
+  U14599/S (FA1)                                          0.64 *     8.75 f
+  U14741/O (ND2P)                                         0.17 *     8.92 r
+  U1370/O (INV1S)                                         0.18 *     9.10 f
+  U1996/O (AOI12H)                                        0.35 *     9.46 r
+  U1986/O (OAI12H)                                        0.24 *     9.70 f
+  U1958/O (AOI12H)                                        0.33 *    10.03 r
+  U14747/O (OAI12HT)                                      0.17 *    10.20 f
+  U1618/O (INV8)                                          0.17 *    10.36 r
+  U14791/O (OAI12H)                                       0.10 *    10.47 f
+  U2538/O (XNR2HS)                                        0.17 *    10.64 r
+  U2536/O (ND2S)                                          0.16 *    10.80 f
+  U1604/O (ND3)                                           0.22 *    11.02 r
+  u_HARVESTER_cur_val_reg_57_/D (QDFFRBS)                 0.00 *    11.02 r
+  data arrival time                                                 11.02
+
+  clock clk2 (rise edge)                                 11.30      11.30
+  clock network delay (ideal)                             0.00      11.30
+  clock reconvergence pessimism                           0.00      11.30
+  clock uncertainty                                      -0.10      11.20
+  u_HARVESTER_cur_val_reg_57_/CK (QDFFRBS)                          11.20 r
+  library setup time                                     -0.18 *    11.02
+  data required time                                                11.02
+  ------------------------------------------------------------------------------
+  data required time                                                11.02
+  data arrival time                                                -11.02
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
+#Step 14 (Optional) Perform ECO to fix timing violations and recover power.
+#Step 15 Save the PrimeTime session.
+#save_session
+exit
+Information: Defining new variable 'x'. (CMD-041)
+Information: Defining new variable 'DESIGN'. (CMD-041)
+Maximum memory usage for this session: 1129.21 MB
+CPU usage for this session: 11 seconds 
+Elapsed time for this session: 6 seconds
+Diagnostics summary: 6 warnings, 15 informationals
+
+Thank you for using pt_shell!
