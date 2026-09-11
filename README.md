@@ -1,25 +1,24 @@
 # ICLAB_2026SPRING
 
-## Score 與 Rank
+## Score
 
-| Lab | Score | Rank |
-|---|---:|---:|
-| [Lab01](./lab01) | 92.97 | rank 27 |
-| [Lab02](./lab02) | 96.40 | rank 13 |
-| [Lab03](./lab03) | 103 | rank 1 |
-| [Lab04](./lab04) | 99.65 | rank 2 |
-| [Lab05](./lab05) | 96.67 | rank 8 |
-| [Lab06](./lab06) | 99.62 | rank 2 |
-| [OT](./OT_2026S_0612) | 50 | 3rd demo |
-| [Midterm Project](./Midterm_Project) | 103.95 | rank 3 |
-| Midterm Exam | 69.5 | |
-| [Lab07](./lab07) | 95 | First demo |
-| [Lab08](./lab08) | 93.98 | rank 26 |
-| [Lab09](./lab09) | 70 | rank 1 (2nd demo) |
-| [Lab10](./lab10) | 100 | First demo |
-| [Lab11](./lab11) | 90.14 | rank 25 |
-| [Lab12](./lab12) | 100 | First demo |
-| [Final Project](./Final_Project) | 89.08 | rank 17 |
-| Final Exam | 99.5 | |
-| [Bonus](./LabBonus_2026_S) | 100 | 1st demo |
-| Total | 90.83 + 4 | rank 8 |
+|  | [Lab 01](./lab01) | [Lab 02](./lab02) | [Lab 03](./lab03) | [Lab 04](./lab04) | [Lab 05](./lab05) | [Lab 06](./lab06) | [Midterm Project](./Midterm_Project) |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| **Score**<br>**(Rank)** | 92.97<br>(27) | 96.40<br>(13) | 103<br>(1) | 99.65<br>(2) | 96.67<br>(8) | 99.62<br>(2) | 103.95<br>(3) |
+
+<br>
+
+|  | [Lab 07](./lab07) | [Lab 08](./lab08) | [Lab 09](./lab09) | [Lab 10](./lab10) | [Lab 11](./lab11) | [Lab 12](./lab12) | [Final Project](./Final_Project) |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| **Score**<br>**(Rank)** | 95<br>(First demo) | 93.98<br>(26) | 70<br>(1, 2nd demo) | 100<br>(First demo) | 90.14<br>(25) | 100<br>(First demo) | 89.08<br>(17) |
+
+<br>
+
+|  | Midterm Exam | [OT](./OT_2026S_0612) | Final Exam | [Bonus](./LabBonus_2026_S) |
+|---|---:|---:|---:|---:|
+| **Score** | 69.5 | 50<br>(3rd demo) | 99.5 | 100<br>(1st demo) |
+
+<br>
+
+**Total Score:** A+ (90.83 + 4)  
+**Overall Rank:** 8
