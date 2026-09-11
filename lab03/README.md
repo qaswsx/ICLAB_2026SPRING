@@ -14,7 +14,7 @@
 - Data width：64 bits
 - Clock period ≤ 40 ns
 - 每個 operation latency ≤ 10,000 cycles
-- HARVESTER、DRAM_CTRL area 各 ≤ 7,500,000
+- HARVESTER Area ≤ 7,500,000
 - Test Bench：45%
 - Design Functionality：30%
 - Performance：25%
@@ -78,7 +78,34 @@ Bank Merge
 
 Merge 時同時預先送出多筆 read request，搭配小型 FIFO 保存各路資料，盡量讓 DRAM access 與 sorting / writing 重疊，降低總 latency。
 
+### PATTERN
+
+這次除了 design 之外，也需要自己完成 `PATTERN.v`，負責產生測資、計算 golden answer，以及檢查 AXI4-Lite protocol。
+
+PATTERN 共產生 100 組 random patterns，READ / WRITE / CALC / SORT 的比例約為 `1 : 1 : 3 : 3`，並隨機產生 bank、source row 與 destination row。
+
+Golden answer 直接在 PATTERN 內計算：
+
+- READ：從 golden DRAM 取出 256 筆資料
+- WRITE：產生 random data 並同步更新 golden DRAM
+- CALC：使用 recursive task 走訪 Prefix Expression Tree
+- SORT：將 1024 筆資料排序，value 相同時以原始 address 決定順序
+
+另外也實作 MAIN 與 AXI spec checking，包括 reset、output cycle、latency、DRAM correctness，以及 AXI 的 stability、dependency、address range 與 timeout。
+
+```text
+Random Pattern
+     ↓
+Golden Calculation
+     ↓
+Run Design
+     ↓
+Output / DRAM Check
+     ↓
+AXI Protocol Check
+
 ---
+
 
 ## Result
 
