@@ -1,8 +1,11 @@
 # ICLAB_2026SPRING
 
-## 成績與 Performance
+Score: A+ (90.83 + 4(bonus))
+Rank: 8
 
-| 項目 | 成績 | Rank |
+## Score 與 Rank
+
+| Lab | Score | Rank |
 |---|---:|---:|
 | [Lab01](./lab01) | 92.97 | rank 27 |
 | [Lab02](./lab02) | 96.40 | rank 13 |
@@ -21,4 +24,5 @@
 | [Lab12](./lab12) | 100 | First demo |
 | [Final Project](./Final_Project) | 89.08 | rank 17 |
 | Final Exam | 99.5 | |
+| [Bonus](./LabBonus_2026_S) | 100 | 1st demo |
 | [Bonus](./LabBonus_2026_S) | 100 | 1st demo |
