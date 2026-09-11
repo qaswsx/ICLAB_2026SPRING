@@ -29,9 +29,7 @@ Performance 計算方式：
 
 ---
 
-## Design
-
-### PATTERN
+## PATTERN
 
 這次除了 design 之外，也需要自行完成 `PATTERN.v`，負責產生 random pattern、計算 golden answer，並檢查 design 是否符合規格。
 
@@ -57,6 +55,10 @@ Output / DRAM Check
      ↓
 AXI Protocol Check
 ```
+
+---
+
+## Design
 
 ### AXI & DRAM Controller
 
