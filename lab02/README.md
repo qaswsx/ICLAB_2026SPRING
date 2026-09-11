@@ -19,7 +19,7 @@ ISP 處理流程：
 - Latency ≤ 1500 cycles
 - Total cell area ≤ 2,500,000
 - Function Validity：70%
-- Performance：30%
+- Performance(Area^2 * Latency * CT)：30%
 
 ---
 
