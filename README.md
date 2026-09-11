@@ -1,5 +1,25 @@
 # ICLAB_2026SPRING
 
+## Labs
+
+| Lab | Design |
+|---|---|---|
+| [Lab01](./lab01) | Design Rule Check Accelerator | 
+| [Lab02](./lab02) | Mini Image Signal Processor | 
+| [Lab03](./lab03) | Tree Harvester | 
+| [Lab04](./lab04) | Convolution and Deconvolution Network Accelerator | 
+| [Lab05](./lab05) | Diffusion Model Accelerator | 
+| [Lab06](./lab06) | Huffman Coding | 
+| [MP](./Midterm_Project) | Customized ISA Processor | 
+| [OT](./OT_2026S_0612) | 忘記題目 | 
+| [Lab07](./lab07) | Harvester with Clock Domain Crossing | 
+| [Lab08](./lab08) | Coupling Network | 
+| [Lab09](./lab09) | Dessert Shop Simulator | 
+| [Lab10](./lab10) | Coverage and Assertion |
+| [Lab11](./lab11) | Mini ISP APR | 
+| [Lab12](./lab12) | Diffusion Model APR | 
+| [FP](./Final_Project) | Customized ISA Processor APR / Clock Gating | 
+
 ## Score
 
 |  | [Lab 01](./lab01) | [Lab 02](./lab02) | [Lab 03](./lab03) | [Lab 04](./lab04) | [Lab 05](./lab05) | [Lab 06](./lab06) | [Midterm Project](./Midterm_Project) |
