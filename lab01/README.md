@@ -78,8 +78,12 @@ Spacing 是判斷兩個 shape 中間連續的 `0` 是否太短。
 
 | Item | Result |
 |---|---:|
+| Demo | 1 |
+| CT | 9.46 |
+| Area | 212089.6 |
+| Perf | 2006367.616 |
 | Score | 92.97 |
-| Performance Rank | 27 |
+| Rank | 27 |
 
 ---
 
@@ -90,4 +94,4 @@ Spacing 是判斷兩個 shape 中間連續的 `0` 是否太短。
 如果直接使用 rectangle 座標做大量比較，判斷條件會相當複雜。  
 因此我將 layout 轉成 bitmap，再利用 bit pattern 判斷 width 與 spacing，讓整體邏輯更容易整理。
 
-這次也讓我更熟悉在寫 RTL 前，先從資料表示方式思考硬體架構。
+因為是comb circuit，所以優化主要在簡化邏輯，盡量讓 CT 壓的小一點，簡化邏輯的同時 Area 可能也會跟著變小。
