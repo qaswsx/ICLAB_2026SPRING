@@ -3,7 +3,7 @@
 ## Labs
 
 | Lab | Design |
-|---|---|---|
+|---|---|
 | [Lab01](./lab01) | Design Rule Check Accelerator | 
 | [Lab02](./lab02) | Mini Image Signal Processor | 
 | [Lab03](./lab03) | Tree Harvester | 
