@@ -2,7 +2,7 @@
 
 ## 成績與 Performance
 
-| 項目 | 成績 | Performance 排名／Demo |
+| 項目 | 成績 | Rank |
 |---|---:|---:|
 | [Lab01](./lab01) | 92.97 | rank 27 |
 | [Lab02](./lab02) | 96.40 | rank 13 |
@@ -12,7 +12,7 @@
 | [Lab06](./lab06) | 99.62 | rank 2 |
 | [OT](./Midterm_Project) | 50 | 3rd demo |
 | [Midterm Project](./Midterm_Project) | 103.95 | rank 3 |
-| [Midterm Exam] | 69.5 | |
+| Midterm Exam | 69.5 | |
 | [Lab07](./lab07) | 95 | First demo |
 | [Lab08](./lab08) | 93.98 | rank 26 |
 | [Lab09](./lab09) | 70 | rank 1 (2nd demo) |
@@ -20,5 +20,5 @@
 | [Lab11](./lab11) | 90.14 | rank 25 |
 | [Lab12](./lab12) | 100 | First demo |
 | [Final Project](./Final_Project) | 89.08 | rank 17 |
-| [Final Exam] | 99.5 | |
+| Final Exam | 99.5 | |
 | [Bonus](./Final_Project) | 100 | 1st demo |
