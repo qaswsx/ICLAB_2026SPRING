@@ -10,7 +10,7 @@
 
 |  | [Lab 07](./lab07) | [Lab 08](./lab08) | [Lab 09](./lab09) | [Lab 10](./lab10) | [Lab 11](./lab11) | [Lab 12](./lab12) | [Final Project](./Final_Project) |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| **Score**<br>**(Rank)** | 95<br>(First demo) | 93.98<br>(26) | 70<br>(1, 2nd demo) | 100<br>(First demo) | 90.14<br>(25) | 100<br>(First demo) | 89.08<br>(17) |
+| **Score**<br>**(Rank)** | 95<br>(1st demo) | 93.98<br>(26) | 70<br>(1, 2nd demo) | 100<br>(1st demo) | 90.14<br>(25) | 100<br>(1st demo) | 89.08<br>(17) |
 
 <br>
 
