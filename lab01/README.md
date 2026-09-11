@@ -18,7 +18,11 @@ Layout 座標限制在 **16 × 16 grid**，共包含 7 種 layer：
 - Clock period < 20 ns
 - Total cell area < 800,000
 - Function Validity：70%
-- Performance(Area * CT)：30%
+- Performance：30%
+
+Performance 計算方式：
+
+`Cycle Time × Area`
 
 ---
 
