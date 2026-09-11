@@ -10,7 +10,7 @@
 | [Lab04](./lab04) | 99.65 | rank 2 |
 | [Lab05](./lab05) | 96.67 | rank 8 |
 | [Lab06](./lab06) | 99.62 | rank 2 |
-| [OT](./Midterm_Project) | 50 | 3rd demo |
+| [OT](./OT_2026S_0612) | 50 | 3rd demo |
 | [Midterm Project](./Midterm_Project) | 103.95 | rank 3 |
 | Midterm Exam | 69.5 | |
 | [Lab07](./lab07) | 95 | First demo |
@@ -21,4 +21,4 @@
 | [Lab12](./lab12) | 100 | First demo |
 | [Final Project](./Final_Project) | 89.08 | rank 17 |
 | Final Exam | 99.5 | |
-| [Bonus](./Final_Project) | 100 | 1st demo |
+| [Bonus](./LabBonus_2026_S) | 100 | 1st demo |
