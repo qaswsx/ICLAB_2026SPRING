@@ -230,3 +230,5 @@ Activation 則將 ReLU / Leaky ReLU 與 Sigmoid / Tanh 分開處理，簡單的 
 這題主要就是在 **Latency、Area、IP 數量與 Pipeline Depth** 之間做取捨，盡量讓 IP 可以被不同 stage 重複使用。
 
 然後我這份比較特別是沒有寫 FSM，全程用數 Counter，我自己覺得如果想要摸清楚整個 flow，可以嘗試看看這個 lab 自己刻 Counter，雖然有點累就是了，但可以很清楚地看看這條路徑走了多長，需不需要切 Pipeline，我覺得對後面的 Lab 也是有幫助，當然如果你是大神就另當別論，畢竟我是小菜雞。
+
+還有就是其實 Latnecy 應該可以再少一點，我好像多切了一拍，但我那時候已經數到頭昏眼花了，所以再切 pipeline 前可以先想好要開幾顆 IP，什麼樣的 IP，還有要在哪裡檔 FF，這樣就會比較輕鬆。
