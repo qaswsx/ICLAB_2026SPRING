@@ -1,8 +1,5 @@
 # ICLAB_2026SPRING
 
-Score: A+ (90.83 + 4(bonus))
-Rank: 8
-
 ## Score 與 Rank
 
 | Lab | Score | Rank |
@@ -25,4 +22,4 @@ Rank: 8
 | [Final Project](./Final_Project) | 89.08 | rank 17 |
 | Final Exam | 99.5 | |
 | [Bonus](./LabBonus_2026_S) | 100 | 1st demo |
-| [Bonus](./LabBonus_2026_S) | 100 | 1st demo |
+| Total | 90.83 + 4 | rank 8 |
