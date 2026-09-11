@@ -102,6 +102,6 @@ Merge 時同時預先送出多筆 read request，搭配小型 FIFO 保存各路�
 
 CALC 的部分也很麻煩，走訪 Prefix Expression Tree 時，除了要一路往下讀節點，還需要記住尚未處理的 right pointer，因此使用 stack 保存 operator、pointer 與中間結果。
 
-SORT 一共有 1024 筆資料，如果全部存在內部硬體會造成很大的 area，因此改成將資料拆成小區塊排序，再逐步 merge。同時善用 DRAM 的 **Row 63 作為 temporary buffer**，避免所有中間資料都放在內部 register / memory。前期忘記可以使用 Row 63，合成後總 area 一度超過 **10,000,000**，後來把部分暫存資料搬到 DRAM 後才明顯下降。
+SORT 一共有 1024 筆資料，如果全部存在內部硬體會造成很大的 area，因此改成將資料拆成小區塊排序，再逐步 merge。同時善用 DRAM 的 **Row 63 作為 temporary buffer**，避免所有中間資料都放在內部 register / memory。一開始忘記可以使用 Row 63，合成後 area 一直超過 **10,000,000**，本來要放棄了，後來隊友提醒我可以把部分暫存資料搬到 DRAM 後才明顯下降，感謝我的隊友。
 
-除了降低 latency，這題的 performance 也會受到 area 影響，因此設計時也盡量共用硬體，例如 WRITE 與 SORT 共用 local buffer、READ / WRITE 共用 DRAM controller 的 bank control，以及 CALC 的 ADD / SUB 共用同一條 datapath，在 latency 與 area 之間做取捨。
+除了降低 latency，這題的 perf 也會受到 area 影響，因此設計時也盡量共用硬體，例如 WRITE 與 SORT 共用 local buffer、READ / WRITE 共用 DRAM controller 的 bank control，以及 CALC 的 ADD / SUB 共用同一條 datapath，在 latency 與 area 之間做取捨。
