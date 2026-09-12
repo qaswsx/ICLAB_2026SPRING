@@ -53,7 +53,6 @@ Performance 計算方式：
 整體只有 `IDLE / CALC` 兩個 state，主要由 `cnt / calc_cnt` 排程，並讓部分 input 與 calculation overlap。  
 `A_flat / B_flat` 重複利用來保存 matrix 與部分 coefficient，X1 / Y1 / X2 / Y2 共用同一組 4-lane MAC。  
 Modulo 15 使用 shift / add / compare，Backward division 只用一組 `DIV_8_BY_4` 重複計算。  
-Clock Gating 共使用 **35 個 `GATED_OR`** 控制主要 registers，最後再用 JasperGold SEC 驗證等價。
 
 ---
 
