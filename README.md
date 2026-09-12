@@ -1,4 +1,4 @@
-# ICLAB_2026SPRING
+# ICLAB_2026_SPRING
 
 ## Labs
 
