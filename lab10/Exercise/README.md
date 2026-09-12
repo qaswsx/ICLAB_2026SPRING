@@ -46,126 +46,21 @@ Assertion 共 9 項：
 
 ## PATTERN
 
-### Constrained Random
-
-使用 `Randomizer` class 搭配 constraint 產生合法 input：
-
-```text
-Action
-Dessert Type
-Order Mode
-Date
-DRAM No.
-Restock Amount
-Hire Staff Number
-Valid Delay
-```
-
-Date constraint 直接限制不同月份的合法日期，Restock Amount 限制在 `[0:2047]`，Staff 則限制在 `[1:30]`。
-
-但這次沒有單純只靠 random pattern 撐 coverage，而是搭配大量 directed pattern。
-
-### Directed Coverage
-
-PATTERN 會依照 `patcount` 分成不同 phase：
-
-```text
-Pattern 0 ~ 5199
-    ↓
-Action Transition + Warning Directed Pattern
-
-Pattern 5200 ~ 6399
-    ↓
-Dessert Type × Order Mode Directed Pattern
-
-Pattern 6400 ~ 9999
-    ↓
-Random Safe Pattern
-```
-
-前半段利用固定的 action sequence，讓五種 Action 的 transition 可以平均被 hit。
-
-```text
-Make → Make
-Make → Restock
-Make → Hire Staff
-...
-Check Valid Date → Check Valid Date
-```
-
-Dessert Type 與 Order Mode 則將 8 × 3 共 24 種組合輪流產生，確保 cross coverage 可以收滿。
-
-### Warning Generation
-
-為了確保每種 warning 都能被 hit，不是只隨機挑 shop，而是直接搜尋目前的 `golden_DRAM`。
-
-例如：
-
-```text
-find_make_safe_shop
-find_make_stock_warn_shop
-find_no_staff_shop
-find_hire_staff_warn_shop
-find_hire_balance_warn_shop
-find_payday_balance_warn_shop
-find_cvd_date_warn_shop
-```
-
-先根據目前 DRAM 內容找出能產生指定結果的 shop，再將該 `Data No.` 送給 DUT。
-
-這樣即使前面的 operations 已經改變 DRAM 狀態，後面的 directed pattern 仍然可以根據最新的 Golden DRAM 找到適合的測資。
-
-### Restock Coverage
-
-Restock Amount 需要覆蓋 128 bins。
-
-我直接依照 bin index 產生對應數值：
-
-```text
-Bin 0   → 8
-Bin 1   → 24
-Bin 2   → 40
-...
-Bin 127
-```
-
-五種 ingredient 使用不同 offset 輪流 hit bins，再搜尋可以安全執行該組 Restock Amount 的 shop。
-
-### Golden Model
-
-PATTERN 內部維護一份：
-
-`golden_DRAM`
-
-每次 operation 前先從 Golden DRAM 取出 shop data，再依照 Lab09 的規格自行計算：
-
-```text
-Input
-  ↓
-Golden Model
-  ↓
-Golden Complete / Warning
-  ↓
-Update Golden DRAM
-  ↓
-Compare DUT Output
-```
-
-支援完整的：
-
-- Make and Sell
-- Restock
-- Hire Staff
-- Pay Day
-- Check Valid Date
-
-如果 DUT 的 `complete` 或 `warn_msg` 與 Golden Answer 不同，就立即輸出 Wrong Answer 並停止 simulation。
-
-另外也檢查 `out_valid / complete` 是否只維持一個 cycle。
+使用 `Randomizer` class 搭配 constraint 產生合法的 Action、Dessert Type、Order Mode、Date、DRAM No.、Restock Amount、Staff 與 valid delay。  
+這次不是完全靠 random，而是把 10000 組 pattern 分成不同 phase，前半段用 directed pattern 補 **Action Transition、Warning**，中間專門補 **Dessert Type × Order Mode Cross Coverage**，最後再跑 random safe pattern。  
+為了穩定 hit 各種 warning，會直接依照目前的 `golden_DRAM` 搜尋適合的 shop，再產生對應 input。  
+Restock Amount 的 128 bins 也會刻意輪流產生，避免單靠 random 很難把所有 bins hit 滿。  
+PATTERN 內部同時維護 `golden_DRAM`，每個 operation 都自行計算 Golden `complete / warn_msg`，並在 DUT output 後立即比對。
 
 ---
 
 ## CHECKER
+
+CHECKER 共建立 7 組 covergroup，分別檢查 Dessert Type、Order Mode、Cross Coverage、Warning、Action Transition、Restock Amount 與 Complete。  
+Dessert Type 與 Order Mode 不會同 cycle 出現，因此先保存前面的 Dessert Type，再於 `mode_valid` 時完成 cross sampling。  
+Action Transition 使用 transition bins 覆蓋所有 5 × 5 combinations。  
+SVA 則負責檢查 9 類 protocol / timing specification，包含 latency、valid 間隔、input overlap、`out_valid`、合法日期與 AXI read/write overlap。  
+另外使用 `$onehot0` 確保七組 input valid 同一個 cycle 最多只有一組為 High。
 
 ### Functional Coverage
 
@@ -244,6 +139,15 @@ February        → 1 ~ 28
 Apr/Jun/Sep/Nov → 1 ~ 30
 Other Months    → 1 ~ 31
 ```
+
+---
+
+## Design
+
+`PATTERN.sv` 使用 constrained random 搭配 directed pattern，共產生 10000 組測資並維護 `golden_DRAM`。  
+Directed pattern 主要補 Warning、Action Transition、Restock bins 與 Dessert Type × Order Mode cross coverage。  
+`CHECKER.sv` 建立 7 組 covergroup，並使用 SVA 檢查 9 類 protocol / timing specification。  
+最後 Coverage 達到 100%，Assertions 全部通過。
 
 ---
 
