@@ -40,31 +40,12 @@ Performance 計算方式：
 
 ## Design
 
-### FSM Control
+使用 15-state FSM 控制 `Down Conv → QKV → Attention → FFN → Up Conv → Interpolation → Denoise`。  
+總共使用 **5 顆 SRAM、3 種規格** 保存 weight、image 與 intermediate data，並重複利用 SRAM，Q 則在需要時重新計算。  
+主要矩陣運算共用一組 16-way MAC，固定倍率的 normalization / interpolation 大量使用 shift、bit slicing 與 add。  
+SRAM read、MAC 與 summation 之間加入 pipeline FF，讓較長的 arithmetic path 分段。
 
-這次使用 FSM 控制完整的 Diffusion flow，共切成 15 個 states。
-
-```text
-Load
- ↓
-Down Conv
- ↓
-Q / K / V
- ↓
-Attention
- ↓
-FFN
- ↓
-Up Conv
- ↓
-Interpolation
- ↓
-Denoise
- ↓
-Next Iteration / Output
-```
-
-每個 stage 再搭配 local counter 控制 pixel、channel、kernel step 與 memory address。
+---
 
 ### SRAM
 
