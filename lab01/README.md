@@ -28,55 +28,10 @@ Performance 計算方式：
 
 ## Design
 
-### Shape Decode
-
-先將每個 shape 拆成：
-
-- Layer type
-- `(x1, y1)`
-- `(x2, y2)`
-
-再依照 `drc_sel` 選出目前需要檢查的 layer。
-
-### Bitmap
-
-由於座標範圍只有 0 ~ 15，因此我將矩形轉換成 **16 × 16 bitmap**。
-
-```text
-Rectangle
-   ↓
-Row Bitmap
-   ↓
-Column Bitmap
-```
-
-透過 row 與 column 兩個方向分別檢查，可以共用大部分的判斷邏輯。
-
-### Width Check
-
-Width violation 是檢查連續的 `1` 是否小於指定寬度。
-
-```text
-010       → width = 1
-0110      → width = 2
-01110     → width = 3
-```
-
-若 X、Y 方向都違反規則，會分別計算 violation。
-
-### Spacing Check
-
-Spacing 是判斷兩個 shape 中間連續的 `0` 是否太短。
-
-```text
-101       → spacing = 1
-1001      → spacing = 2
-10001     → spacing = 3
-```
-
-只考慮水平與垂直方向的 spacing，不計算單純的 diagonal distance。
-
----
+- 先將 rectangle 依 `drc_sel` 篩出指定 layer，再轉成 **16 × 16 bitmap**。
+- 分別從 row / column 兩個方向檢查 width 與 spacing。
+- Width 以連續 `1` 判斷，Spacing 以兩個 shape 中間連續 `0` 判斷。
+- 透過 bitmap 與 bit pattern 簡化原本複雜的 rectangle 座標比較。
 
 ## Result
 
