@@ -60,52 +60,10 @@ AXI Protocol Check
 
 ## Design
 
-### AXI & DRAM Controller
-
-`DRAM_CTRL` 使用 queue 暫存 AXI read / write request，並記錄四個 bank 目前開啟的 row。
-
-```text
-AXI Request
-    ↓
-Request Queue
-    ↓
-Bank / Row Check
-    ↓
-ACT / READ / WRITE / PRE
-```
-
-不同 bank 可以交錯處理，用來隱藏 `tRCD / tCL / tRP` 等 DRAM waiting time。
-
-### CALC
-
-CALC mode 依序處理四個 bank 的 Prefix Expression Tree。
-
-我使用 depth-8 stack 記錄 operator、right pointer 與 left value，依照 tree pointer 逐步讀取 DRAM，最後透過 64-bit ALU 完成：
-
-- ADD
-- SUB
-- MULT
-- Arithmetic Shift Right
-
-ALU 中間加入 pipeline register，降低 combinational path。
-
-### SORT
-
-SORT 需要排序四個 bank 共 1024 筆資料。
-
-我先將資料切成 64-word chunks，在 local RAM 內做 odd-even sort，再分兩階段 merge：
-
-```text
-64-word Sort
-    ↓
-Bank Merge
-    ↓
-4-Bank Merge
-    ↓
-1024 Sorted Data
-```
-
-Merge 時同時預先送出多筆 read request，搭配小型 FIFO 保存各路資料，盡量讓 DRAM access 與 sorting / writing 重疊，降低總 latency。
+- `PATTERN.v` 負責 READ / WRITE / CALC / SORT 的 random pattern、Golden Answer 與 AXI spec checking。
+- `DRAM_CTRL` 使用 queue 與 bank / row 狀態控制 ACT、READ、WRITE、PRE，並利用 bank interleaving 隱藏等待時間。
+- CALC 使用 depth-8 stack 保存 operator、right pointer 與中間結果，逐步走訪 Prefix Expression Tree。
+- SORT 將 1024 筆資料拆成小區塊排序後再 merge，並利用 DRAM Row 63 作 temporary buffer。
 
 ---
 
