@@ -263,8 +263,8 @@ GAUSS 需要讀取大量資料，而且總共需要掃描 1024 筆兩次，因�
 |---|---:|
 | Demo | First Demo |
 | Clock | 20.1 / 11.3 / 34.7 ns |
-| Latency | 未達 Average 8000 cycles Goal |
-| Area | 達成 ≤ 1,200,000 Goal |
+| Latency | 1475607 |
+| Area | 1169767 |
 | Score | 95 |
 | Rank | First demo |
 
