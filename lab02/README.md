@@ -29,10 +29,9 @@ Performance 計算方式：
 
 ## Design
 
-- 整體依序完成 `BLC → LSC → DPC → Demosaicing → CCM`。
-- DPC 使用 5 × 5 window，比較四個方向的 median 與 SAD 選出 Target。
-- 使用 line buffer 保存前面 pixel，提供 DPC 與 Demosaicing 所需的 neighborhood。
-- 固定係數運算盡量用 shift / add，並共用可重複使用的 arithmetic datapath。
+整體依序完成 `BLC → LSC → DPC → Demosaicing → CCM`。  
+DPC 使用 5 × 5 window，比較四個方向的 median 與 SAD；Demosaicing 再利用 3 × 3 neighborhood 補出 RGB。  
+使用 line buffer 保存前面的 pixel，固定係數運算則盡量用 shift / add，並共用可重複使用的運算邏輯。
 
 ---
 
