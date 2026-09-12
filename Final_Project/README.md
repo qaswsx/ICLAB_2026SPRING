@@ -12,9 +12,9 @@
 | Peak Power | 0.1045 |
 | Perf 1 | 1.75E+11 |
 | Rank 1 | 19 |
-| Perf 1 | 193.702571 |
-| Rank 1 | 14 |
+| Perf 2 | 193.702571 |
+| Rank 2 | 14 |
 | Score | 89.08 |
-| Rank | 25 |
+| Rank | 17 |
 
 ---
