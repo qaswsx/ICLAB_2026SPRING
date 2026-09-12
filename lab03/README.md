@@ -60,10 +60,9 @@ AXI Protocol Check
 
 ## Design
 
-- `PATTERN.v` 負責 READ / WRITE / CALC / SORT 的 random pattern、Golden Answer 與 AXI spec checking。
-- `DRAM_CTRL` 使用 queue 與 bank / row 狀態控制 ACT、READ、WRITE、PRE，並利用 bank interleaving 隱藏等待時間。
-- CALC 使用 depth-8 stack 保存 operator、right pointer 與中間結果，逐步走訪 Prefix Expression Tree。
-- SORT 將 1024 筆資料拆成小區塊排序後再 merge，並利用 DRAM Row 63 作 temporary buffer。
+`PATTERN.v` 負責產生 READ / WRITE / CALC / SORT 測資、Golden Answer 與 AXI specification checking。  
+`DRAM_CTRL` 以 queue 搭配 bank / row 狀態控制 DRAM，並利用 bank interleaving 與 outstanding request 減少等待。  
+CALC 使用 depth-8 stack 走訪 Prefix Expression Tree；SORT 則將 1024 筆資料拆成小區塊排序後再 merge，並善用 DRAM Row 63 暫存中間資料。
 
 ---
 
