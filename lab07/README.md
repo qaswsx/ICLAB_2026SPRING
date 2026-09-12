@@ -4,8 +4,8 @@
 
 | Item | Result |
 |---|---:|
-| Demo | First Demo |
-| Clock | 20.1 / 11.3 / 34.7 ns |
+| Demo | 1 |
+| Clock | 20.1 / 11.3 / 34.7 |
 | Latency | 1475607 |
 | Area | 1169767 |
 | Score | 95 |
