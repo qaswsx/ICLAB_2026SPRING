@@ -4,8 +4,8 @@
 
 | Item | Result |
 |---|---:|
-| Demo | Second demo |
-| CT | 3.3|
+| Demo | 2 |
+| CT | 3.3 |
 | Latency | 803894 |
 | Area | 110699.2 |
 | Perf | 2.94E+11 |
