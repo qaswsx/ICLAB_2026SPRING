@@ -29,56 +29,10 @@ Performance 計算方式：
 
 ## Design
 
-### BLC & LSC
-
-BLC 依照 Bayer pixel 的位置使用不同 black level 做修正。
-
-LSC 則先儲存四組 6 × 6 gain table，再依 pixel 座標取出鄰近四個 gain，完成 bilinear interpolation。
-
-```text
-RAW Pixel
-   ↓
-BLC
-   ↓
-LSC
-```
-
-為了降低運算複雜度，LSC 的 interpolation 直接轉成固定係數運算。
-
-### DPC
-
-DPC 使用 5 × 5 window，分別建立：
-
-- Horizontal
-- Vertical
-- Diagonal 1
-- Diagonal 2
-
-四個方向各自計算 median 與 SAD，選出最平滑的方向作為 Target。
-
-```text
-5×5 Window
-   ↓
-4 Directions
-   ↓
-Median + SAD
-   ↓
-Select Target
-```
-
-若中心 pixel 與 Target 差距超過 threshold，則以 Target 取代。
-
-### Demosaicing
-
-DPC 完成後，再利用 3 × 3 neighborhood 補出 Bayer RAW 缺少的 RGB channel。
-
-不同 R / G / B 位置使用不同鄰近 pixel 做平均，邊界則使用 reflect padding。
-
-### CCM
-
-最後使用 3 × 3 Color Correction Matrix 修正 RGB。
-
-在 RTL 中將三個 channel 可共用的計算先合併，減少重複的乘法與加法邏輯。
+- 整體依序完成 `BLC → LSC → DPC → Demosaicing → CCM`。
+- DPC 使用 5 × 5 window，比較四個方向的 median 與 SAD 選出 Target。
+- 使用 line buffer 保存前面 pixel，提供 DPC 與 Demosaicing 所需的 neighborhood。
+- 固定係數運算盡量用 shift / add，並共用可重複使用的 arithmetic datapath。
 
 ---
 
